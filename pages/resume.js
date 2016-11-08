@@ -1,15 +1,27 @@
 import React, { Component } from 'react';
-import Body from '../components/container/Body';
+import Head from 'next/head'
+import {insertRule} from 'next/css';
+import ResumeIndex from '../components/container/ResumeIndex';
 
-const Heading = () => (<div>heading</div>);
+insertRule(`body {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.1em;
+  line-height: 120%;
+  margin: 0px;
+  width: 100%;
+}`);
+
 class Resume extends Component {
   static displayName: 'Resume'
 
   render() {
     return (
       <div>
-        <Heading/>
-        <Body/>
+        <Head>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+          <link href="/static/ScratchDetail.ttf" rel="stylesheet"/>
+        </Head>
+        <ResumeIndex />
       </div>
     );
   }

@@ -1,40 +1,48 @@
 import React, { Component } from 'react';
-import {style} from 'next/css';
+import {style, merge} from 'next/css';
 
 // import JobPositionCard from './JobPositionCard';
 const JobPositionCard = () => (<div>JobPositionCard</div>)
 const styles = {
-  container: {
+  main: {
     display: 'flex',
-    content: 'center'
+    content: 'center',
+    flexWrap: 'wrap'
   },
   sectionHeading: {
     borderBottom: '3px solid lightgray',
-    fontFamily: '\'Pacifico\', cursive',
-    fontSize: '30px',
-    margin: '0px 10px 0px 4px'
+    // fontFamily: '\'Pacifico\', cursive',
+    fontFamily: `'Scratch', sans-serif`,
+    textTransform: 'uppercase',
+    fontSize: '24px',
+    letterSpacing: '3px',
+    padding: '0px 0px 4px 0px'
+    // margin: '0px 10px 0px 4px'
   },
   bodySection: {
     margin: '16px'
+  },
+  sectionLeft: {
+    flex: '11',
+    textAlign: 'left'
+  },
+  sectionRight: {
+    flex: '20',
+    textAlign: 'right'
   }
 };
 
 const SectionHeading = (displayText) => {
-  return <h2 style={styles.sectionHeading}> {displayText} </h2>;
+  return <h2 className={style(styles.sectionHeading)}> {displayText} </h2>;
 }
 
-class Resume extends Component {
-  static displayName = 'Resume'
+class ResumeBody extends Component {
+  static displayName = 'ResumeBody'
 
   render() {
     return (
-      <div className={style(styles.container)}>
-        <section
-          className={style(styles.bodySection)}
-          style={{
-            flex: 20,
-            textAlign: 'right'
-          }}>
+      <div className={style(styles.main)}>
+        <section className={merge(styles.bodySection, styles.sectionRight)}>
           {SectionHeading('Experience')}
           <JobPositionCard
             jobTitle="Web Engineer"
@@ -65,10 +73,7 @@ class Resume extends Component {
             clearance from July 2012 - March 2015"
             />
         </section>
-        <div className={style(styles.bodySection)} style={{
-          flex: 11,
-          textAlign: 'left'
-        }}>
+        <div className={merge(styles.bodySection, styles.sectionLeft)}>
           {SectionHeading('Skills')}
           <p>JavaScript</p>
           <p>html</p>
@@ -80,4 +85,4 @@ class Resume extends Component {
   }
 }
 
-export default Resume;
+export default ResumeBody;
