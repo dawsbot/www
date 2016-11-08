@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import {style, merge} from 'next/css';
 
-// import JobPositionCard from './JobPositionCard';
-const JobPositionCard = () => (<div>JobPositionCard</div>)
+import JobPosition from './JobPosition';
 const styles = {
   main: {
     display: 'flex',
@@ -44,33 +43,33 @@ class ResumeBody extends Component {
       <div className={style(styles.main)}>
         <section className={merge(styles.bodySection, styles.sectionRight)}>
           {SectionHeading('Experience')}
-          <JobPositionCard
+          <JobPosition
             jobTitle="Web Engineer"
             companyName="Uber"
             companyUrl="https://uber.com"
             jobDescription="Improved and Standardized Uber
-            's online frontend using React and Node."
+            's web frontend using React and Node."
           />
-          <JobPositionCard
+          <JobPosition
             jobTitle="Web Engineer"
             companyName="Shape Security"
             companyUrl="https://shapesecurity.com"
-            jobDescription="Part of KPCB Fellowship in Silicon Valley
+            jobDescription="KPCB Fellow in Silicon Valley
             where less than 3% of applicants are accepted."
           />
-          <JobPositionCard
-            jobTitle="Co-founder and Director"
+          <JobPosition
+            jobTitle="Co-founder & Director"
             companyName="HackCU"
             companyUrl="https://hackcu.org"
             jobDescription="Started and grew this collegiate
-            hackathon to over 200 students and a $20,000 budget in two years."
+            hackathon to over 200 students and a $20,000 budget."
           />
-          <JobPositionCard
+          <JobPosition
             jobTitle="Software Engineer"
             companyName="NSA"
             companyUrl="https://nsa.gov"
-            jobDescription="Held a U.S. Top-Secret security
-            clearance from July 2012 - March 2015"
+            jobDescription="Held a U.S. Top-Secret Security
+            Clearance July 2012 - March 2015"
             />
         </section>
         <div className={merge(styles.bodySection, styles.sectionLeft)}>
