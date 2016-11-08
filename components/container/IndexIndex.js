@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {style, merge} from 'next/css';
-
+import PaddedLi from '../presentational/PaddedLi';
 
 const styles = {
   sectionWrapper: {
@@ -25,9 +25,6 @@ const styles = {
       top: '0px',
     }
   },
-  li: {
-    marginBottom: '8px'
-  },
   inline: {
     display: 'inline'
   },
@@ -42,16 +39,6 @@ const styles = {
     color: 'black'
   }
 };
-
-class PaddedLi extends Component {
-  static displayName = 'PaddedLi'
-  static propTypes = {
-    children: React.PropTypes.node
-  }
-  render() {
-    return (<li className={style(styles.li)}>{this.props.children}</li>);
-  }
-}
 
 class IndexIndex extends Component {
   static displayName: 'IndexIndex'

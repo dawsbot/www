@@ -3,7 +3,6 @@ import Head from 'next/head'
 // import Link from 'next/Link';
 import IndexIndex from '../components/container/IndexIndex';
 import {insertRule} from 'next/css';
-
 insertRule(`body {
   font-family: 'Work Sans', sans-serif;
   font-size: 1.1em;
