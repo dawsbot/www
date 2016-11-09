@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import {style, merge} from 'next/css';
 
 import JobPosition from './JobPosition';
+import PaddedLi from '../presentational/PaddedLi';
+import UnpaddedUl from '../presentational/UnpaddedUl';
+
 const styles = {
   main: {
     display: 'flex',
@@ -16,7 +19,6 @@ const styles = {
     fontSize: '24px',
     letterSpacing: '3px',
     padding: '0px 0px 4px 0px'
-    // margin: '0px 10px 0px 4px'
   },
   bodySection: {
     margin: '16px'
@@ -26,58 +28,85 @@ const styles = {
     textAlign: 'left'
   },
   sectionRight: {
-    flex: '20',
+    flex: '18',
     textAlign: 'right'
+  },
+  h2: {
+    marginBottom: '0px',
+    fontSize: '20px'
   }
 };
 
 const SectionHeading = (displayText) => {
   return <h2 className={style(styles.sectionHeading)}> {displayText} </h2>;
-}
+};
 
 class ResumeBody extends Component {
   static displayName = 'ResumeBody'
 
   render() {
     return (
-      <div className={style(styles.main)}>
-        <section className={merge(styles.bodySection, styles.sectionRight)}>
-          {SectionHeading('Experience')}
-          <JobPosition
-            jobTitle="Web Engineer"
-            companyName="Uber"
-            companyUrl="https://uber.com"
-            jobDescription="Improved and Standardized Uber
-            's web frontend using React and Node."
-          />
-          <JobPosition
-            jobTitle="Web Engineer"
-            companyName="Shape Security"
-            companyUrl="https://shapesecurity.com"
-            jobDescription="KPCB Fellow in Silicon Valley
-            where less than 3% of applicants are accepted."
-          />
-          <JobPosition
-            jobTitle="Co-founder & Director"
-            companyName="HackCU"
-            companyUrl="https://hackcu.org"
-            jobDescription="Started and grew this collegiate
-            hackathon to over 200 students and a $20,000 budget."
-          />
-          <JobPosition
-            jobTitle="Software Engineer"
-            companyName="NSA"
-            companyUrl="https://nsa.gov"
-            jobDescription="Held a U.S. Top-Secret Security
-            Clearance July 2012 - March 2015"
+      <div>
+        <div className={style(styles.main)}>
+          <section className={merge(styles.bodySection, styles.sectionRight)}>
+            {SectionHeading('Experience')}
+            <JobPosition
+              jobTitle="Web Engineer"
+              companyName="Uber"
+              companyUrl="https://uber.com"
+              jobDescription="Improved and Standardized Uber's
+              web frontend using React and Node.js."
             />
-        </section>
-        <div className={merge(styles.bodySection, styles.sectionLeft)}>
-          {SectionHeading('Skills')}
-          <p>JavaScript</p>
-          <p>html</p>
-          <p>css</p>
-          <p>Node.js</p>
+            <JobPosition
+              jobTitle="Web Engineer"
+              companyName="Shape Security"
+              companyUrl="https://shapesecurity.com"
+              jobDescription="KPCB Fellowship in Silicon Valley
+              with < 3% acceptance."
+            />
+            <JobPosition
+              jobTitle="Co-founder & Director"
+              companyName="HackCU"
+              companyUrl="https://hackcu.org"
+              jobDescription="Started and grew this collegiate
+              hackathon to 200 students and a 20K budget."
+            />
+            <JobPosition
+              jobTitle="Software Engineer"
+              companyName="NSA"
+              companyUrl="https://nsa.gov"
+              jobDescription="Held a U.S. Top-Secret Security
+              Clearance July 2012 - March 2015"
+              />
+          </section>
+          <div className={merge(styles.bodySection, styles.sectionLeft)}>
+            {SectionHeading('Skills')}
+            <ul>
+              <PaddedLi>
+                JavaScript
+              </PaddedLi>
+              <UnpaddedUl>
+                <PaddedLi>
+                  React.js (This resume was coded with it)
+                </PaddedLi>
+                <PaddedLi>
+                  Node.js
+                </PaddedLi>
+              </UnpaddedUl>
+              <PaddedLi>HTML</PaddedLi>
+              <PaddedLi>CSS</PaddedLi>
+            </ul>
+          </div>
+        </div>
+
+        <div className={style(styles.main)}>
+          <section className={merge(styles.bodySection, styles.sectionRight)}>
+            {SectionHeading('Education')}
+            <h2 className={style(styles.h2)}>B.S. Computer Science</h2>
+            University of Colorado - 2016
+          </section>
+          <div className={merge(styles.bodySection, styles.sectionLeft)}>
+          </div>
         </div>
       </div>
     );

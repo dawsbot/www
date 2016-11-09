@@ -1,11 +1,25 @@
 import React, { Component } from 'react';
+// import {style} from 'next/css';
+
+const styles = {
+  container: {
+    marginBottom: '3px'
+  },
+  anchor: {
+    color: 'black'
+  },
+  icon: {
+    paddingRight: '6px'
+  }
+};
 
 class SocialIcon extends Component {
   static displayName: 'SocialIcon'
 
   static propTypes = {
-    /** TODO replace */
-    // testString: React.PropTypes.string
+    iconName: React.PropTypes.string,
+    url: React.PropTypes.string,
+    label: React.PropTypes.string.isRequired
   };
 
   static defaultProps = {
@@ -13,9 +27,18 @@ class SocialIcon extends Component {
   };
 
   render() {
+    const Icon = this.props.iconName ?
+        (<i style={styles.icon} className={`fa fa-${this.props.iconName}`}
+          aria-hidden="true"></i>) : null;
     return (
-      <div>
-        Social Icon
+      <div style={styles.container}>
+        <a
+          href={this.props.url}
+          style={styles.anchor}
+          >
+          {Icon}
+          {this.props.label}
+        </a>
       </div>
     );
   }

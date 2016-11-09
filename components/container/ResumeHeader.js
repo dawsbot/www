@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {style} from 'next/css';
+import SocialIcon from '../presentational/SocialIcon';
 
 const styles = {
   main: {
@@ -16,7 +17,7 @@ const styles = {
     margin: '30px 0px 10px 0px',
     textTransform: 'uppercase',
     // make text not as huge on smaller screens
-    '@media(max-width: 595px)': {
+    '@media screen(max-width: 670px)': {
       fontSize: '40px'
     }
   },
@@ -24,10 +25,10 @@ const styles = {
     margin: '30px 0px 0px 0px',
     textAlign: 'right'
   }
-}
-function SocialIcon() {
-  return <div>SocialIcon</div>
-}
+};
+
+// const SocialIcon = () => (<div>SocialIcon</div>);
+
 class ResumeHeader extends Component {
   displayName: 'ResumeHeader'
 
