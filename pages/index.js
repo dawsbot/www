@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import Head from 'next/head';
-// import Link from 'next/Link';
+
+import TopNav from '../components/container/TopNav';
 import IndexIndex from '../components/container/IndexIndex';
 import {insertRule} from 'next/css';
+
 insertRule(`body {
   font-family: 'Work Sans', sans-serif;
   font-size: 1.1em;
@@ -30,6 +32,7 @@ class Index extends Component {
 
           <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet"/>
         </Head>
+        <TopNav/>
         <IndexIndex/>
       </div>
     );

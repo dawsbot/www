@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Head from 'next/head';
 import {insertRule} from 'next/css';
 import ResumeIndex from '../components/container/ResumeIndex';
+import TopNav from '../components/container/TopNav';
 
 insertRule(`body {
   font-family: 'Work Sans', sans-serif;
@@ -23,6 +24,7 @@ class Resume extends Component {
           <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet"/>
           <script src="https://use.fontawesome.com/669d282f9a.js"></script>
         </Head>
+        <TopNav/>
         <ResumeIndex />
       </div>
     );
