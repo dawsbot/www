@@ -6,9 +6,9 @@ import {merge} from 'next/css';
 const styles = {
   page: {
     // collapse printable-page view on smaller screens
-    '@media(min-width: 595px)': {
+    '@media(min-width: 670px)': {
       height: '842px',
-      width: '595px',
+      width: '670px',
     }
   },
   sectionWrapper: {
@@ -16,7 +16,7 @@ const styles = {
     maxWidth: '800px',
     margin: '0 auto'
   }
-}
+};
 
 class ResumeIndex extends Component {
   static displayName: 'ResumeIndex'

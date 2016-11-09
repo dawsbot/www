@@ -16,13 +16,13 @@ const styles = {
   anchor: {
     color: 'black'
   }
-}
+};
 
 class JobPosition extends Component {
   displayName: 'JobPosition'
 
   render() {
-    const {companyUrl, companyName, jobDescription, jobTitle} = this.props
+    const {companyUrl, companyName, jobDescription, jobTitle} = this.props;
 
     const company = companyUrl ? (
       <a
@@ -30,7 +30,7 @@ class JobPosition extends Component {
         className={style(styles.anchor)}>
         @{companyName}
       </a>) :
-      `@${companyName}`
+      `@${companyName}`;
     return (
       <div className={style(styles.cardWrapper)}>
         <h2 className={style(styles.header)}>{jobTitle} {company}</h2>
@@ -48,6 +48,6 @@ JobPosition.propTypes = {
   companyUrl: React.PropTypes.string,
   jobTitle: React.PropTypes.string.isRequired,
   jobDescription: React.PropTypes.string.isRequired
-}
+};
 
 export default JobPosition;

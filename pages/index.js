@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Head from 'next/head'
+import Head from 'next/head';
 // import Link from 'next/Link';
 import IndexIndex from '../components/container/IndexIndex';
 import {insertRule} from 'next/css';
