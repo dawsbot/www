@@ -19,6 +19,11 @@ module.exports = {
   },
   "rules": {
     "react/jsx-indent": [2, 2],
+    "react/prop-types": [2, {
+      ignore: [
+        'children'
+      ]
+    }],
     "prefer-const": 2,
     "no-var": 2,
     "semi": [2, "always"],
