@@ -18,6 +18,15 @@ module.exports = {
     }
   },
   "rules": {
-    "react/jsx-indent": [2, 2]
+    "react/jsx-indent": [2, 2],
+    "prefer-const": 2,
+    "no-var": 2,
+    "semi": [2, "always"],
+    quotes: [
+      "error",
+      "single", {
+        "allowTemplateLiterals": true
+      }
+    ]
   }
 }
