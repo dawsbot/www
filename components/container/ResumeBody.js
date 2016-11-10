@@ -58,18 +58,18 @@ class ResumeBody extends Component {
               web frontend using React and Node.js."
             />
             <JobPosition
-              jobTitle="Web Engineer"
-              companyName="Shape Security"
-              companyUrl="https://shapesecurity.com"
-              jobDescription="KPCB Fellowship in Silicon Valley
-              with < 3% acceptance."
-            />
-            <JobPosition
               jobTitle="Co-founder & Director"
               companyName="HackCU"
               companyUrl="https://hackcu.org"
               jobDescription="Started and grew this collegiate
-              hackathon to 200 students and a 20K budget."
+              hackathon to > 200 students."
+            />
+            <JobPosition
+              jobTitle="Web Engineer Intern"
+              companyName="Shape Security"
+              companyUrl="https://shapesecurity.com"
+              jobDescription="KPCB Fellowship in Silicon Valley
+              with < 3% acceptance."
             />
             <JobPosition
               jobTitle="Software Engineer"
@@ -81,13 +81,13 @@ class ResumeBody extends Component {
           </section>
           <div className={merge(styles.bodySection, styles.sectionLeft)}>
             {SectionHeading('Skills')}
-            <ul>
+            <ul style={{paddingLeft: '32px'}}>
               <PaddedLi>
                 JavaScript
               </PaddedLi>
               <UnpaddedUl>
                 <PaddedLi>
-                  React.js (This resume was coded with it)
+                  React.js <small>(This resume was coded with it)</small>
                 </PaddedLi>
                 <PaddedLi>
                   Node.js
