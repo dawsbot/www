@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {style} from 'next/css';
 import SocialIcon from '../presentational/SocialIcon';
-import Button from '../presentational/Button';
 
 const styles = {
   main: {
