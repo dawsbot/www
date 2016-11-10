@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {style, merge} from 'next/css';
-import Link from 'next/Link';
+import Link from 'next/link';
 
 const styles = {
   main: {
