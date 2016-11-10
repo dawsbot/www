@@ -9,7 +9,7 @@ const styles = {
     borderColor: 'black',
     borderWidth: '2px',
     borderRadius: '3px',
-    padding: '8px 16px',
+    padding: '8px 18px',
     fontSize: '16px',
     cursor: 'pointer'
   }
@@ -17,6 +17,10 @@ const styles = {
 
 class Button extends Component {
   static displayName: 'Button'
+
+  static propTypes = {
+    styles: React.PropTypes.object
+  }
 
   render() {
     const props = omit(this.props, ['styles']);

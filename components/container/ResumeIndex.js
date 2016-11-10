@@ -4,6 +4,7 @@ import ResumeHeader from './ResumeHeader';
 import {style, merge} from 'next/css';
 import Button from '../presentational/Button';
 
+/* eslint-disable no-undef */
 const styles = {
   page: {
     // collapse printable-page view on smaller screens
@@ -43,7 +44,8 @@ class ResumeIndex extends Component {
         <ResumeBody />
 
         <div className={style(styles.buttonWrapper)}>
-          <Button onClick={() => (window.print())} styles={styles.printButton}>
+          <Button onClick={() => (typeof window !== 'undefined' && window.print())}
+            styles={styles.printButton}>
             Print This Resume
           </Button>
         </div>
