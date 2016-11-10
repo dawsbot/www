@@ -4,14 +4,14 @@ import {style} from 'next/css';
 const styles = {
   cardWrapper: {
     marginTop: '10px',
-    marginBottom: '10px'
+    marginBottom: '14px'
   },
   header: {
     marginBottom: '0px',
     fontSize: '20px'
   },
   jobDescription: {
-    marginTop: '6px'
+    marginTop: '6px',
   },
   anchor: {
     color: 'black'
