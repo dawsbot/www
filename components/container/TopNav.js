@@ -6,9 +6,11 @@ const styles = {
   main: {
     color: 'white',
     backgroundColor: 'black',
+    width: '100%',
     height: '60px',
     display: 'flex',
     alignItems: 'center',
+    justifyContent: 'center',
     '@media print': {
       display: 'none'
     }
@@ -17,14 +19,14 @@ const styles = {
     color: 'white'
   },
   link: {
-    padding: '0 15px',
+    padding: '0 52px',
     textDecoration: 'none',
     ':hover': {
       textDecoration: 'underline'
     }
   },
-  leftPad: {
-    marginRight: '40px'
+  borderRight: {
+    borderRight: '1px solid white'
   }
 };
 
@@ -35,9 +37,8 @@ class TopNav extends Component {
     return (
       <div className={style(styles.main)}>
 
-        <span className={style(styles.leftPad)}/>
         <Link href="/">
-          <a className={merge(styles.link, styles.white)}>
+          <a className={merge(styles.link, styles.white, styles.borderRight)}>
             Home
           </a>
         </Link>
