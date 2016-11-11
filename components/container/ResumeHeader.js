@@ -10,10 +10,11 @@ const styles = {
     width: '100%',
   },
   header: {
-    fontSize: '46px',
-    fontFamily: `'Scratch', sans-serif`,
+    fontSize: '44px',
+    fontFamily: 'sans-serif',
     letterSpacing: '3px',
     lineHeight: '1.16',
+    weight: 100,
     margin: '30px 0px 10px 0px',
     textTransform: 'uppercase',
     // make text not as huge on smaller screens
@@ -22,7 +23,7 @@ const styles = {
     },
     // align heading properly on print
     '@media print': {
-      fontSize: '48px'
+      fontSize: '46px'
     }
   },
   linksContainer: {
