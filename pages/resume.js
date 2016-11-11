@@ -20,7 +20,6 @@ class Resume extends Component {
       <div>
         <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-          <link href="/static/ScratchDetail.ttf" rel="stylesheet"/>
           <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet"/>
           <script src="https://use.fontawesome.com/669d282f9a.js"></script>
         </Head>
