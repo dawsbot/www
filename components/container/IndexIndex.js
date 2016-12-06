@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {style, merge} from 'next/css';
 import PaddedLi from '../presentational/PaddedLi';
+import {GhRepoCard} from 'react-gh-repo-card';
 
 const styles = {
   sectionWrapper: {
@@ -88,6 +89,14 @@ class IndexIndex extends Component {
                   DiveCoding
                 </a>: A product for teaching kids real programming
               </PaddedLi>
+
+              <GhRepoCard
+                fullname={'dawsonbotsford/swim'}/>
+              <GhRepoCard
+                fullname={'dawsonbotsford/o-o'}/>
+              <GhRepoCard
+                fullname={'dawsonbotsford/react-gh-repo-card'}/>
+
               <PaddedLi>
                 <a className={merge(styles.li, styles.white)} href="https://github.com/dawsonbotsford/o-o">
                   o-o
