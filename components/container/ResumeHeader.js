@@ -46,7 +46,7 @@ class ResumeHeader extends Component {
             <SocialIcon
               label="GitHub"
               iconName="github"
-              url="https://github.com/dawsonbotsford"/>
+              url="https://github.com/dawsbot"/>
             <SocialIcon
               label="LinkedIn"
               iconName="linkedin"

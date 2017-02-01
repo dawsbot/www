@@ -89,17 +89,17 @@ class IndexIndex extends Component {
                 </a>: A product for teaching kids real programming
               </PaddedLi>
               <PaddedLi>
-                <a className={merge(styles.li, styles.white)} href="https://github.com/dawsonbotsford/o-o">
+                <a className={merge(styles.li, styles.white)} href="https://github.com/dawsbot/o-o">
                   o-o
                 </a>: A terminal command-line tool for opening url's and files
               </PaddedLi>
               <PaddedLi>
-                <a className={merge(styles.li, styles.white)} href="https://github.com/dawsonbotsford/vimrcBuilder">
+                <a className={merge(styles.li, styles.white)} href="https://github.com/dawsbot/vimrcBuilder">
                   vimrcBuilder
                 </a>: A web app for building your first vimrc instantly
               </PaddedLi>
               <PaddedLi>
-                <a className={merge(styles.li, styles.white)} href="https://github.com/dawsonbotsford/skrub">
+                <a className={merge(styles.li, styles.white)} href="https://github.com/dawsbot/skrub">
                   Skrub
                 </a>: Irreversible file deletion on every Operating System
               </PaddedLi>
@@ -112,7 +112,7 @@ class IndexIndex extends Component {
             <h2>Say Hello On</h2>
             <ul>
               <PaddedLi>
-                <a className={merge(styles.li, styles.black)} href="https://github.com/dawsonbotsford">
+                <a className={merge(styles.li, styles.black)} href="https://github.com/dawsbot">
                   GitHub
                 </a>
               </PaddedLi>
