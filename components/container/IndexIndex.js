@@ -9,10 +9,6 @@ const styles = {
   section: {
     margin: '0 auto',
     maxWidth: '800px',
-    // padding: '90px 26px 60px 26px'
-    // '@media(max-width: 500px)': {
-    //   backgroundColor: 'green'
-    // }
   },
   headshot: {
     width: '170px',
@@ -51,14 +47,12 @@ class IndexIndex extends Component {
           })}>
             <div>
               <span>
-                <h1 className={style(styles.inline)}>Hi, I'm Dawson </h1>
-                <tiny>(Botsford)</tiny>
+                <h1 className={style(styles.inline)}>Hi, I'm Dawson! </h1>
               </span>
               <ul>
                 <PaddedLi className={style(styles.li)}>
                   <span>
-                    Web Engineer
-                    <tiny className={merge(styles.inline, {fontSize: '12px'})}> (@Uber)</tiny>
+                    Web Engineer @<a href="https://driver.xyz">Driver</a>
                   </span>
                 </PaddedLi>
                 <PaddedLi className={style(styles.li)}>
@@ -84,6 +78,16 @@ class IndexIndex extends Component {
             <h2>Things I've Worked on</h2>
             <ul>
               <PaddedLi>
+                <a className={merge(styles.li, styles.white)} href="https://uplift.now.sh">
+                  Uplift
+                </a>: 🙌 A minimal AF happy quote website
+              </PaddedLi>
+              <PaddedLi>
+                <a className={merge(styles.li, styles.white)} href="https://mailto.now.sh">
+                  Mailto
+                </a>: 💌⚡️ HTML mailto's made easy
+              </PaddedLi>
+              <PaddedLi>
                 <a className={merge(styles.li, styles.white)} href="http://divecoding.com">
                   DiveCoding
                 </a>: A product for teaching kids real programming
@@ -96,7 +100,7 @@ class IndexIndex extends Component {
               <PaddedLi>
                 <a className={merge(styles.li, styles.white)} href="https://github.com/dawsbot/vimrcBuilder">
                   vimrcBuilder
-                </a>: A web app for building your first vimrc instantly
+                </a>: A web app for building your first vimrc
               </PaddedLi>
               <PaddedLi>
                 <a className={merge(styles.li, styles.white)} href="https://github.com/dawsbot/skrub">
