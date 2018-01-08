@@ -11,7 +11,7 @@ const styles = {
   },
   header: {
     fontSize: '44px',
-    fontFamily: 'sans-serif',
+    fontFamily: `'Work Sans', sans-serif`,
     letterSpacing: '3px',
     lineHeight: '1.16',
     weight: 100,
