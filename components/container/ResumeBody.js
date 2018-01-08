@@ -51,11 +51,17 @@ class ResumeBody extends Component {
           <section className={merge(styles.bodySection, styles.sectionRight)}>
             {SectionHeading('Experience')}
             <JobPosition
-              jobTitle="Web Engineer"
+              jobTitle="Front-end Web Engineer"
+              companyName="Driver"
+              companyUrl="https://driver.xyz"
+              jobDescription="Owned and delivered flagship web app. Heavy leadership and self-organization."
+            />
+            <JobPosition
+              jobTitle="Full-stack Web Engineer"
               companyName="Uber"
               companyUrl="https://uber.com"
-              jobDescription="Improved and Standardized Uber's
-              web frontend using React and Node.js."
+              jobDescription="PM'd and shipped JavaScript to all of Uber's
+              web frontends using React and Node.js."
             />
             <JobPosition
               jobTitle="Co-founder & Director"
@@ -65,7 +71,7 @@ class ResumeBody extends Component {
               hackathon to > 200 students."
             />
             <JobPosition
-              jobTitle="Web Engineer Intern"
+              jobTitle="Full-Stack Web Engineer Intern"
               companyName="Shape Security"
               companyUrl="https://shapesecurity.com"
               jobDescription="KPCB Fellowship in Silicon Valley
@@ -87,14 +93,14 @@ class ResumeBody extends Component {
               </PaddedLi>
               <UnpaddedUl>
                 <PaddedLi>
-                  React.js <small>(This resume was coded with it)</small>
+                  3 years React.js <small>(This resume was coded with it)</small>
                 </PaddedLi>
                 <PaddedLi>
-                  Node.js
+                  3 years Node.js
                 </PaddedLi>
               </UnpaddedUl>
-              <PaddedLi>HTML</PaddedLi>
-              <PaddedLi>CSS</PaddedLi>
+              <PaddedLi>4 years HTML</PaddedLi>
+              <PaddedLi>4 years CSS</PaddedLi>
             </ul>
           </div>
         </div>
