@@ -109,7 +109,8 @@ class ResumeBody extends Component {
           <section className={merge(styles.bodySection, styles.sectionRight)}>
             {SectionHeading('Education')}
             <h2 className={style(styles.h2)}>B.S. Computer Science</h2>
-            University of Colorado - 2016
+            University of Colorado
+            {/* University of Colorado - 2016 */}
           </section>
           <div className={merge(styles.bodySection, styles.sectionLeft)}>
           </div>
