@@ -60,8 +60,8 @@ class ResumeBody extends Component {
               jobTitle="Full-stack Web Engineer"
               companyName="Uber"
               companyUrl="https://uber.com"
-              jobDescription="PM'd and shipped JavaScript to all of Uber's
-              web frontends using React and Node.js."
+              jobDescription="PM'd and coded JavaScript to all of Uber's
+              web frontends using React & Node.js."
             />
             <JobPosition
               jobTitle="Co-founder & Director"

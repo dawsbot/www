@@ -90,7 +90,7 @@ class IndexIndex extends Component {
               <PaddedLi>
                 <a className={merge(styles.li, styles.white)} href="http://divecoding.com">
                   DiveCoding
-                </a>: A product for teaching kids real programming
+                </a>: Hackathon Organizing as a service
               </PaddedLi>
               <PaddedLi>
                 <a className={merge(styles.li, styles.white)} href="https://github.com/dawsbot/o-o">
