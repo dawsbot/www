@@ -21,13 +21,22 @@ const styles = {
   buttonWrapper: {
     display: 'flex',
     justifyContent: 'center',
-    marginTop: '100px'
+    // only show on desktop
+    '@media(min-width: 769px)': {
+      marginTop: '100px',
+      marginBottom: '100px',
+    },
+    '@media print': {
+      marginTop: '0px',
+    marginBottom: '0px',
+    }
   },
   printButton: {
     margin: 'auto',
     '@media print': {
       display: 'none'
     },
+    // hide from mobile
     '@media(max-width: 769px)': {
       display: 'none'
     }
