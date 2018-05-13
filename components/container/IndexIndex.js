@@ -98,8 +98,8 @@ class IndexIndex extends Component {
                 </a>: A terminal command-line tool for opening url's and files
               </PaddedLi>
               <PaddedLi>
-                <a className={merge(styles.li, styles.white)} href="https://github.com/dawsbot/vimrcBuilder">
-                  vimrcBuilder
+                <a className={merge(styles.li, styles.white)} href="https://vimrc-builder.now.sh">
+                  vimrc Builder
                 </a>: A web app for building your first vimrc
               </PaddedLi>
               <PaddedLi>
