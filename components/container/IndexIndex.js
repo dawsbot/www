@@ -52,7 +52,7 @@ class IndexIndex extends Component {
               <ul>
                 <PaddedLi className={style(styles.li)}>
                   <span>
-                    Web Engineer @<a href="https://driver.xyz">Driver</a>
+                    Engineering team lead @<a href="https://driver.xyz">Driver</a>
                   </span>
                 </PaddedLi>
                 <PaddedLi className={style(styles.li)}>
