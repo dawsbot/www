@@ -13,7 +13,7 @@
     "test": "eslint components pages",
     "watch": "next",
     "build": "next build",
-    "deploy": "npm run build && now",
+    "deploy": "now && now alias set $(pbpaste) dawsbot.com",
     "start": "next start",
     "precommit": "yarn build"
   },
