@@ -51,7 +51,7 @@ class ResumeBody extends Component {
           <section className={merge(styles.bodySection, styles.sectionRight)}>
             {SectionHeading('Experience')}
             <JobPosition
-              jobTitle="Engineering Team Lead"
+              jobTitle="Lead Software Engineer"
               companyName="Driver"
               companyUrl="https://driver.xyz"
               jobDescription="Owned and delivered flagship web app. Heavy leadership, tasking, and coding. React and Redux"
