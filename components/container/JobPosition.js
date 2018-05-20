@@ -3,8 +3,9 @@ import {style} from 'next/css';
 
 const styles = {
   cardWrapper: {
-    marginTop: '10px',
-    marginBottom: '14px'
+    paddingBottom: '4px'
+    // paddingTop: '6px',
+    // marginBottom: '14px'
   },
   header: {
     marginBottom: '0px',
