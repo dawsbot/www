@@ -28,7 +28,7 @@ const styles = {
     },
     '@media print': {
       marginTop: '0px',
-    marginBottom: '0px',
+      marginBottom: '0px',
     }
   },
   printButton: {
