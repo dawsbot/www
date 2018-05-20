@@ -63,35 +63,35 @@ class ResumeBody extends Component {
               jobTitle="Lead Software Engineer"
               companyName="Driver"
               companyUrl="https://driver.xyz"
-              jobDescription={`Owned and delivered flagship web app. Heavy leadership, tasking, and coding. React and Redux → ${yearsSince(2017, 7)} years`}
+              jobDescription={`Owned and delivered flagship web app. Heavy leadership, tasking, and coding. React and Redux -- ${yearsSince(2017, 7)} years`}
             />
             <JobPosition
               jobTitle="Full-stack Web Engineer"
               companyName="Uber"
               companyUrl="https://uber.com"
               jobDescription="PM'd and coded JavaScript to all of Uber's
-              web with React & Node.js. → 1.08 years"
+              web with React & Node.js. -- 1.08 years"
             />
             <JobPosition
               jobTitle="Co-founder & Director"
               companyName="HackCU"
               companyUrl="https://hackcu.org"
               jobDescription="Started and grew this collegiate
-              hackathon to > 200 students → 1.66 years"
+              hackathon to > 200 students -- 1.66 years"
             />
             <JobPosition
               jobTitle="Full-stack Web Engineer Intern"
               companyName="Shape Security"
               companyUrl="https://shapesecurity.com"
               jobDescription="KPCB Engineering Fellow in Silicon Valley
-              (< 3% acceptance) → 0.33 years"
+              (< 3% acceptance) -- 0.33 years"
             />
             <JobPosition
               jobTitle="Software Engineer"
               companyName="NSA"
               companyUrl="https://nsa.gov"
               jobDescription="Held a U.S. Top-Secret Security
-              Clearance 2012 - 2015. Stokes Scholar (< 2% acceptance rate) → 2.75 years"
+              Clearance 2012 - 2015. Stokes Scholar (< 2% acceptance rate) -- 2.75 years"
               />
           </section>
           <section className={merge(styles.bodySection, styles.sectionLeft)}>
