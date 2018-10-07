@@ -45,7 +45,7 @@ const SectionHeading = (displayText) => {
 const yearsSince = (year, month) => {
   const today = new Date();
   const currentYear = today.getFullYear();
-  const currentMonth = today.getMonth();
+  const currentMonth = today.getMonth() + 1;
   const decimalYearsSince = (currentYear - year) + ((currentMonth - month) / 12);
   return Math.floor(decimalYearsSince * 100) / 100;
 };
@@ -59,6 +59,12 @@ class ResumeBody extends Component {
         <div className={style(styles.main)}>
           <section className={merge(styles.bodySection, styles.sectionRight)}>
             {SectionHeading('Experience')}
+            <JobPosition
+              jobTitle="Lead Frontend Engineer"
+              companyName="Karuna Health"
+              companyUrl="https://meetkaruna.com"
+              jobDescription={`Crafting delightful web experiences for the sickest in the U.S. Healthcare system -- ${yearsSince(2018, 9)} years`}
+            />
             <JobPosition
               jobTitle="Lead Software Engineer"
               companyName="Driver"
@@ -80,8 +86,8 @@ class ResumeBody extends Component {
               hackathon to > 200 students -- 1.66 years"
             />
             <JobPosition
-              jobTitle="Full-stack Web Engineer Intern"
-              companyName="Shape Security"
+              jobTitle="Frontend Engineer Intern"
+              companyName="Shape"
               companyUrl="https://shapesecurity.com"
               jobDescription="KPCB Engineering Fellow in Silicon Valley
               (< 3% acceptance) -- 0.33 years"
