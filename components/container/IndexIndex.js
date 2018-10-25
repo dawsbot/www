@@ -26,7 +26,12 @@ const styles = {
   },
   blackBackground: {
     backgroundColor: 'black',
-    color: 'white'
+    color: 'white',
+    transform: 'rotate(-8deg)',
+    margin: '60px -100px',
+  },
+  untilt: {
+    transform: 'rotate(8deg)',
   },
   white: {
     color: 'white'
@@ -74,41 +79,38 @@ class IndexIndex extends Component {
           merge(
             styles.sectionWrapper,
             styles.blackBackground)}>
-          <section className={style(styles.section)}>
-            <h2>Things I've Worked on</h2>
-            <ul>
-              <PaddedLi>
-                <a className={merge(styles.li, styles.white)} href="https://uplift.now.sh">
+          <div className={style(styles.untilt)}>
+            <section className={style(styles.section)}>
+              <h2>Things I've Worked on</h2>
+              <ul>
+                <PaddedLi>
+                  <a className={merge(styles.li, styles.white)} href="https://uplift.now.sh">
                   Uplift
                 </a>: 🙌 A minimal AF happy quote website
               </PaddedLi>
-              <PaddedLi>
-                <a className={merge(styles.li, styles.white)} href="https://mailto.now.sh">
+                <PaddedLi>
+                  <a className={merge(styles.li, styles.white)} href="https://mailto.now.sh">
                   Mailto
                 </a>: 💌⚡️ HTML mailto's made easy
               </PaddedLi>
-              <PaddedLi>
-                <a className={merge(styles.li, styles.white)} href="http://divecoding.com">
-                  DiveCoding
-                </a>: Hackathon Organizing as a service
-              </PaddedLi>
-              <PaddedLi>
-                <a className={merge(styles.li, styles.white)} href="https://github.com/dawsbot/o-o">
+                <PaddedLi>
+                  <a className={merge(styles.li, styles.white)} href="https://github.com/dawsbot/o-o">
                   o-o
                 </a>: A terminal command-line tool for opening url's and files
               </PaddedLi>
-              <PaddedLi>
-                <a className={merge(styles.li, styles.white)} href="https://vimrc-builder.now.sh">
+                <PaddedLi>
+                  <a className={merge(styles.li, styles.white)} href="https://vimrc-builder.now.sh">
                   vimrc Builder
                 </a>: A web app for building your first vimrc
               </PaddedLi>
-              <PaddedLi>
-                <a className={merge(styles.li, styles.white)} href="https://github.com/dawsbot/skrub">
+                <PaddedLi>
+                  <a className={merge(styles.li, styles.white)} href="https://github.com/dawsbot/skrub">
                   Skrub
                 </a>: Irreversible file deletion on every Operating System
               </PaddedLi>
-            </ul>
-          </section>
+              </ul>
+            </section>
+          </div>
         </div>
 
         <div className={style(styles.sectionWrapper)}>
