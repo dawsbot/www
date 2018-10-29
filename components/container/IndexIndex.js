@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import {style, merge} from 'next/css';
+import Typed from 'typed.js';
+
 import PaddedLi from '../presentational/PaddedLi';
 
 const styles = {
@@ -15,63 +17,72 @@ const styles = {
     borderRadius: '3px',
     padding: '4px',
     border: '1px solid black',
-    '@media(min-width: 600px)': {
-      position: 'absolute',
-      right: '0px',
-      top: '0px',
-    }
-  },
-  inline: {
-    display: 'inline'
   },
   blackBackground: {
     backgroundColor: 'black',
     color: 'white',
     transform: 'rotate(-8deg)',
     margin: '60px -100px',
+    paddingLeft: '126px',
+    paddingRight: '126px',
   },
   untilt: {
     transform: 'rotate(8deg)',
   },
-  white: {
-    color: 'white'
+  liWorkedOn: {
+    color: 'white',
+    borderBottom: '1px solid white',
   },
   black: {
     color: 'black'
+  },
+  introHeader: {
+    lineHeight: '36px'
   }
 };
 
 class IndexIndex extends Component {
   static displayName: 'IndexIndex'
+
+  componentDidMount() {
+    // You can pass other options here, such as typing speed, back speed, etc.
+    const options = {
+    	strings: [
+        'a Freelancer',
+        'a Nomad',
+        'a Developer',
+        'a ⛷',
+        'an Engineer'
+      ],
+      typeSpeed: 50,
+      backSpeed: 35,
+      backDelay: 1400,
+      loop: true
+    };
+    // this.el refers to the <span> in the render() method
+    this.typed = new Typed(this.el, options);
+  }
+
+  componentWillUnmount() {
+  	// Make sure to destroy Typed instance on unmounting
+    // to prevent memory leaks
+    this.typed.destroy();
+  }
+
   render() {
     return (
       <div>
         <div className={style(styles.sectionWrapper)}>
-          <section className={merge(styles.section, {
-            position: 'relative'
-          })}>
-            <div>
-              <span>
-                <h1 className={style(styles.inline)}>Hi, I'm Dawson! </h1>
-              </span>
-              <ul>
-                <PaddedLi className={style(styles.li)}>
-                  <span>
-                    Lead Frontend Engineer at <a href="https://meetkaruna.com">Karuna Health</a>
-                  </span>
-                </PaddedLi>
-                <PaddedLi className={style(styles.li)}>
-                  Open-Source Obsessed
-                </PaddedLi>
-                <PaddedLi className={style(styles.li)}>
-                  JavaScript Lover
-                </PaddedLi>
-              </ul>
-              <br/>
-            </div>
+          <section className={style(styles.section)}>
+            <h1 className={style(styles.introHeader)}>Hi, I'm Dawson!</h1>
             <img className={style(styles.headshot)}
               src="https://avatars0.githubusercontent.com/u/3408480?v=3&s=460"
-              alt="my face"></img>
+              alt="my face">
+            </img>
+            <h1>I'm <span
+            style={{ fontFamily: 'monospace' }}
+            ref={(el) => { this.el = el; }}
+          /> who ❤️'s the web</h1>
           </section>
         </div>
 
@@ -84,27 +95,27 @@ class IndexIndex extends Component {
               <h2>Things I've Worked on</h2>
               <ul>
                 <PaddedLi>
-                  <a className={merge(styles.li, styles.white)} href="https://uplift.now.sh">
+                  <a className={style(styles.liWorkedOn)} href="https://uplift.now.sh">
                   Uplift
-                </a>: 🙌 A minimal AF happy quote website
+                </a>: 🙌 A minimal happy quote website
               </PaddedLi>
                 <PaddedLi>
-                  <a className={merge(styles.li, styles.white)} href="https://mailto.now.sh">
+                  <a className={style(styles.liWorkedOn)} href="https://mailto.now.sh">
                   Mailto
                 </a>: 💌⚡️ HTML mailto's made easy
               </PaddedLi>
                 <PaddedLi>
-                  <a className={merge(styles.li, styles.white)} href="https://github.com/dawsbot/o-o">
+                  <a className={style(styles.liWorkedOn)} href="https://github.com/dawsbot/o-o">
                   o-o
                 </a>: A terminal command-line tool for opening url's and files
               </PaddedLi>
                 <PaddedLi>
-                  <a className={merge(styles.li, styles.white)} href="https://vimrc-builder.now.sh">
+                  <a className={style(styles.liWorkedOn)} href="https://vimrc-builder.now.sh">
                   vimrc Builder
                 </a>: A web app for building your first vimrc
               </PaddedLi>
                 <PaddedLi>
-                  <a className={merge(styles.li, styles.white)} href="https://github.com/dawsbot/skrub">
+                  <a className={style(styles.liWorkedOn)} href="https://github.com/dawsbot/skrub">
                   Skrub
                 </a>: Irreversible file deletion on every Operating System
               </PaddedLi>
