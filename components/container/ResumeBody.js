@@ -42,16 +42,45 @@ const SectionHeading = (displayText) => {
 };
 
 // helper fn for calculating years since a date
-const yearsSince = (year, month) => {
+const timeSince = (year, month) => {
   const today = new Date();
-  const currentYear = today.getFullYear();
-  const currentMonth = today.getMonth() + 1;
-  const decimalYearsSince = (currentYear - year) + ((currentMonth - month) / 12);
-  return Math.floor(decimalYearsSince * 100) / 100;
+  // MM DD YYYY
+  const then = new Date(`${month} 1 ${year}`)
+
+  const oneDay = 86400;
+  const oneYear = oneDay * 365.25;
+
+  let secondsDiff = Math.floor((today - then) / 1000);
+
+  const years = Math.floor(secondsDiff / oneYear);
+  secondsDiff -= years * oneYear;
+
+  const days = Math.floor(secondsDiff / oneDay);
+  secondsDiff -= days * oneDay;
+
+  // const decimaltimeSince = (currentYear - year) + ((currentMonth - month) / 12);
+  // const yearDiff = today.getFullYear() - then.getFullYear()
+  // const dayDiff = today.getDay() - then.getDay()
+
+  // const dayEpoch = 60 * 60 * 24 * 365.25;
+  // const yearEpoch = 60 * 60 * 24 * 365.25;
+
+  // const epochDiff = today.getTime() - then.getTime();
+  return `${years} years, ${days} days, ${secondsDiff} seconds`;
 };
 
 class ResumeBody extends Component {
   static displayName = 'ResumeBody'
+  state = {
+    now: new Date().getTime()
+  }
+
+  componentDidMount() {
+    this.interval = setInterval(() => this.setState({ now: new Date().getTime() }), 1000);
+  }
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
 
   render() {
     return (
@@ -60,16 +89,22 @@ class ResumeBody extends Component {
           <section className={merge(styles.bodySection, styles.sectionRight)}>
             {SectionHeading('Experience')}
             <JobPosition
+              jobTitle="Freelance Web Engineer"
+              companyName="Me"
+              companyUrl=""
+              jobDescription={`Crafting delightful web experiences. Send me a message! -- ${timeSince(2018, 10)}`}
+            />
+            {/* <JobPosition
               jobTitle="Lead Frontend Engineer"
               companyName="Karuna Health"
               companyUrl="https://meetkaruna.com"
-              jobDescription={`Crafting delightful web experiences for the sickest in the U.S. Healthcare system -- ${yearsSince(2018, 9)} years`}
-            />
+              jobDescription={`Crafting delightful web experiences for the sickest in the U.S. Healthcare system -- ${timeSince(2018, 9)}`}
+            /> */}
             <JobPosition
               jobTitle="Lead Software Engineer"
               companyName="Driver"
               companyUrl="https://driver.xyz"
-              jobDescription={`Owned and delivered flagship web app. Heavy leadership, tasking, and coding. React and Redux -- ${yearsSince(2017, 7)} years`}
+              jobDescription={`Owned and delivered flagship web app. Heavy leadership, tasking, and coding. React and Redux -- 1.08 years`}
             />
             <JobPosition
               jobTitle="Full-stack Web Engineer"
@@ -109,18 +144,17 @@ class ResumeBody extends Component {
               </PaddedLi>
               <UnpaddedUl>
                 <PaddedLi>
-                  {yearsSince(2015, 5)} years React.js <small>(This resume was coded with it)</small>
+                  {timeSince(2015, 5)} React.js <small>(This resume was coded with it)</small>
                 </PaddedLi>
                 <PaddedLi>
-                  {yearsSince(2014, 9)} years Node.js
+                  {timeSince(2014, 9)} Node.js
                 </PaddedLi>
                 <PaddedLi>
-                  {yearsSince(2014, 8)} years generic JavaScript
+                  {timeSince(2014, 8)} generic JavaScript
                 </PaddedLi>
               </UnpaddedUl>
-              <PaddedLi>{yearsSince(2014, 8)} years HTML</PaddedLi>
-              <PaddedLi>{yearsSince(2014, 8)} years CSS</PaddedLi>
-              <PaddedLi>1 year engineering management</PaddedLi>
+              <PaddedLi>{timeSince(2014, 8)} HTML</PaddedLi>
+              <PaddedLi>{timeSince(2014, 8)} CSS</PaddedLi>
             </ul>
             <div className={style(styles.main)}>
               {SectionHeading('Education')}
