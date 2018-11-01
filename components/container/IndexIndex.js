@@ -42,7 +42,24 @@ const styles = {
     color: 'black'
   },
   introHeader: {
-    lineHeight: '36px'
+    lineHeight: '36px',
+  },
+  loveHeader: {
+    lineHeight: '36px',
+    height: '60px',
+    marginBottom: '40px'
+  },
+  available: {
+    color: 'rgb(125, 241, 131)',
+    fontWeight: 'bold',
+    textDecoration: 'underline'
+  },
+  bioDescription: {
+    border: '1px solid grey',
+    borderRadius: '3px',
+    padding: '20px 30px',
+    backgroundColor: 'black',
+    color: 'white',
   }
 };
 
@@ -84,10 +101,10 @@ class IndexIndex extends Component {
               src="https://avatars0.githubusercontent.com/u/3408480?v=3&s=460"
               alt="my face">
             </img>
-            <h1>I'm <span
-            style={{ fontFamily: 'monospace' }}
+            <h1 className={style(styles.loveHeader)}>I'm <span
             ref={(el) => { this.el = el; }}
           /> who ❤️'s the web</h1>
+            <p className={style(styles.bioDescription)}>React.js and Node.js are my specialties, but all of the web is beautiful! I'm a freelance engineer and I'm currently <span className={style(styles.available)}>available</span> for hire.</p>
           </section>
         </div>
 
@@ -139,13 +156,13 @@ class IndexIndex extends Component {
                 </a>
               </PaddedLi>
               <PaddedLi>
-                <a className={merge(styles.li, styles.black)} href="https://twitter.com/dawsonbotsford">
-                  Twitter
+                <a className={merge(styles.li, styles.black)} href="https://linkedin.com/in/dawsonbotsford">
+                  LinkedIn
                 </a>
               </PaddedLi>
               <PaddedLi>
-                <a className={merge(styles.li, styles.black)} href="https://linkedin.com/in/dawsonbotsford">
-                  LinkedIn
+                <a className={merge(styles.li, styles.black)} href="https://twitter.com/dawsonbotsford">
+                  Twitter
                 </a>
               </PaddedLi>
             </ul>
