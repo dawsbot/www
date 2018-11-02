@@ -56,10 +56,42 @@ const styles = {
   },
   bioDescription: {
     border: '1px solid grey',
-    borderRadius: '3px',
+    borderRadius: '4px',
+    boxShadow: 'inset 0 1px 0 rgba(255,255,255,.6), 0 22px 70px 4px rgba(0,0,0,0.56), 0 0 0 1px rgba(0, 0, 0, 0.3)',
     padding: '20px 30px',
     backgroundColor: 'black',
     color: 'white',
+  },
+  formContainer: {
+    border: '2px solid white',
+    backgroundColor: 'white',
+    color: 'black',
+    borderRadius: '4px',
+    padding: '40px'
+  },
+  input: {
+    width: '100%',
+    boxSizing: 'border-box',
+    border: '1px solid black',
+    height: '42px',
+    marginTop: '8px',
+    marginBottom: '20px',
+    borderRadius: '4px',
+    paddingLeft: '20px',
+    fontSize: '17px'
+  },
+  submitButton: {
+    fontSize: '17px',
+    height: '46px',
+    fontWeight: 'bold',
+    cursor: 'pointer',
+    backgroundColor: 'black',
+    color: 'white'
+  },
+  textArea: {
+    height: '120px',
+    paddingTop: '14px',
+    paddingBottom: '14px',
   }
 };
 
@@ -167,6 +199,39 @@ class IndexIndex extends Component {
               </PaddedLi>
             </ul>
           </section>
+        </div>
+
+        <div className={
+          merge(
+            styles.sectionWrapper,
+            styles.blackBackground)}>
+          <div className={style(styles.untilt)}>
+            <section className={style(styles.section)}>
+              <h2>Say Hello!</h2>
+
+              <form className={style(styles.formContainer)} action="https://formspree.io/dawsonbotsford@gmail.com" method="POST">
+
+                <label htmlFor="name">Name
+                  <input className={style(styles.input)} type="text" name="name" placeholder="Jane"/>
+                </label>
+
+                <label htmlFor="email">Email
+                  <input className={style(styles.input)}  type="email" name="_replyto"/>
+                </label>
+
+
+                <label htmlFor="subject">Subject
+                  <textarea className={merge(styles.input, styles.textArea)} name="subject" />
+                </label>
+
+                {/* catch the bots */}
+                <input className={style(styles.input)} type="text" name="_gotcha" style={{display:'none'}} />
+
+                <input className={merge(styles.input, styles.submitButton)} type="submit" value="SEND"/>
+              </form>
+
+            </section>
+          </div>
         </div>
 
       </div>
