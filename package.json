@@ -7,7 +7,8 @@
   "dependencies": {
     "husky": "^0.14.3",
     "just-omit": "^1.0.1",
-    "next": "^1.0.2"
+    "next": "^1.0.2",
+    "typed.js": "^2.0.9"
   },
   "scripts": {
     "test": "eslint components pages",
