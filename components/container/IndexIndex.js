@@ -52,7 +52,10 @@ const styles = {
   available: {
     color: 'rgb(125, 241, 131)',
     fontWeight: 'bold',
-    textDecoration: 'underline'
+  },
+  unavailable: {
+    color: '#E8B00C',
+    fontWeight: 'bold',
   },
   bioDescription: {
     border: '1px solid grey',
@@ -92,6 +95,11 @@ const styles = {
     height: '120px',
     paddingTop: '14px',
     paddingBottom: '14px',
+  },
+  vendorLink: {
+    textDecoration: 'underline',
+    fontWeight: 'bold',
+    color: '#E8B00C',
   }
 };
 
@@ -136,7 +144,7 @@ class IndexIndex extends Component {
             <h1 className={style(styles.loveHeader)}>I'm <span
             ref={(el) => { this.el = el; }}
           /> who ❤️'s the web</h1>
-            <p className={style(styles.bioDescription)}>React.js and Node.js are my specialties, but all of the web is beautiful! I'm a freelance engineer and I'm currently <span className={style(styles.available)}>available</span> for hire.</p>
+            <p className={style(styles.bioDescription)}>React.js and Node.js are my specialties, but all of the web is beautiful! I'm a freelance engineer and am currently <span className={style(styles.unavailable)}>unavailable for hire </span>(crafting beautiful flight UI's for <a href="https://aero.com" className={style(styles.vendorLink)}>Aero</a>)</p>
           </section>
         </div>
 
