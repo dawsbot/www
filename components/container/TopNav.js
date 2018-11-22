@@ -44,8 +44,14 @@ class TopNav extends Component {
         </Link>
 
         <Link href="/resume">
-          <a className={merge(styles.link, styles.white)}>
+          <a className={merge(styles.link, styles.white, styles.borderRight)}>
             Resume
+          </a>
+        </Link>
+
+        <Link href="/bot">
+          <a className={merge(styles.link, styles.white)}>
+            Gravatar Bot
           </a>
         </Link>
 
