@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "description": "My homepage",
   "author": "Dawson Botsford",
+  "versions": {
+    "node": "10.7.0"
+  },
   "license": "MIT",
   "dependencies": {
     "gravatar": "^1.7.0",
