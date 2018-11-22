@@ -82,11 +82,12 @@ class BotIndex extends Component {
   static displayName: 'BotIndex'
 
   state = {
-    gravatarUrl: ''
+    gravatarUrl: 'start typing...'
   }
+
   handleInput = (e) => {
     this.setState({
-      gravatarUrl: gravatar.url(e.target.value),
+      gravatarUrl: `https:${gravatar.url(e.target.value)}`,
     });
   }
 
@@ -94,8 +95,12 @@ class BotIndex extends Component {
     return (
       <div>
         <div className={style(styles.sectionWrapper)}>
-          <section className={style(styles.section)}> <h2>Preview and copy your Gravatar image!</h2> <p>
-              Every email address has a Gravatar image. But they are hard to figure out.
+          <section className={style(styles.section)}> <h2>Hi, I'm DawsBot!<br/><br/>Use me to preview and copy your <a href="https://en.gravatar.com/support/what-is-gravatar/">Gravatar image</a></h2> <p>
+              Every email address has a Gravatar image. It's like a profile picture for you on the whole internet. Many sites use a gravatar as your default profile picture.
+
+<br/>
+<br/>
+              If you want your gravatar url directly, it was <a href="https://en.gravatar.com/site/implement/images/">difficult to figure out.</a> But not anymore!
 
               <br/>
               <br/>
@@ -113,11 +118,13 @@ class BotIndex extends Component {
             <section className={style(styles.section)}>
               <form className={style(styles.formContainer)}>
                 <label htmlFor="email">Email Address (never saved or sold)
-                  <input className={style(styles.input)}  type="email" name="_replyto" onInput={this.handleInput}/>
+                  <input className={style(styles.input)}  type="email" name="_replyto" onChange={this.handleInput}/>
                 </label>
 
-                <div>{`https${this.state.gravatarUrl}`}</div>
-                <img src={this.state.gravatarUrl} role="presentation"/>
+                <div style={{fontWeight: 'bold'}}>{`${this.state.gravatarUrl}`}</div>
+                <br/>
+                <br/>
+                <img src={`${this.state.gravatarUrl}?s=200`} role="presentation"/>
 
               </form>
             </section>
