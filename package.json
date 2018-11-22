@@ -5,6 +5,7 @@
   "author": "Dawson Botsford",
   "license": "MIT",
   "dependencies": {
+    "gravatar": "^1.7.0",
     "husky": "^0.14.3",
     "just-omit": "^1.0.1",
     "next": "^1.0.2",
