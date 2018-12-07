@@ -14,7 +14,7 @@ const styles = {
 };
 
 class SocialIcon extends Component {
-  static displayName: 'SocialIcon'
+  static displayName: 'SocialIcon';
 
   static propTypes = {
     iconName: React.PropTypes.string,
@@ -27,15 +27,16 @@ class SocialIcon extends Component {
   };
 
   render() {
-    const Icon = this.props.iconName ?
-        (<i style={styles.icon} className={`fa fa-${this.props.iconName}`}
-          aria-hidden="true"></i>) : null;
+    const Icon = this.props.iconName ? (
+      <i
+        style={styles.icon}
+        className={`fa fa-${this.props.iconName}`}
+        aria-hidden="true"
+      />
+    ) : null;
     return (
       <div style={styles.container}>
-        <a
-          href={this.props.url}
-          style={styles.anchor}
-          >
+        <a href={this.props.url} style={styles.anchor}>
           {Icon}
           {this.props.label}
         </a>

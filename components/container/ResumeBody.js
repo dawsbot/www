@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {style, merge} from 'next/css';
+import { style, merge } from 'next/css';
 
 import JobPosition from './JobPosition';
 import PaddedLi from '../presentational/PaddedLi';
@@ -37,7 +37,7 @@ const styles = {
   }
 };
 
-const SectionHeading = (displayText) => {
+const SectionHeading = displayText => {
   return <h2 className={style(styles.sectionHeading)}> {displayText} </h2>;
 };
 
@@ -45,7 +45,7 @@ const SectionHeading = (displayText) => {
 const timeSince = (year, month) => {
   const today = new Date();
   // MM DD YYYY
-  const then = new Date(`${month} 1 ${year}`)
+  const then = new Date(`${month} 1 ${year}`);
 
   const oneDay = 86400;
   const oneYear = oneDay * 365.25;
@@ -70,13 +70,16 @@ const timeSince = (year, month) => {
 };
 
 class ResumeBody extends Component {
-  static displayName = 'ResumeBody'
+  static displayName = 'ResumeBody';
   state = {
     now: new Date().getTime()
-  }
+  };
 
   componentDidMount() {
-    this.interval = setInterval(() => this.setState({ now: new Date().getTime() }), 1000);
+    this.interval = setInterval(
+      () => this.setState({ now: new Date().getTime() }),
+      1000
+    );
   }
   componentWillUnmount() {
     clearInterval(this.interval);
@@ -92,7 +95,10 @@ class ResumeBody extends Component {
               jobTitle="Freelance Web Engineer"
               companyName="Me"
               companyUrl=""
-              jobDescription={`Crafting delightful web experiences. Send me a message! -- ${timeSince(2018, 10)}`}
+              jobDescription={`Crafting delightful web experiences. Send me a message! -- ${timeSince(
+                2018,
+                10
+              )}`}
             />
             {/* <JobPosition
               jobTitle="Lead Frontend Engineer"
@@ -133,25 +139,20 @@ class ResumeBody extends Component {
               companyUrl="https://nsa.gov"
               jobDescription="Held a U.S. Top-Secret Security
               Clearance 2012 - 2015. Stokes Scholar (< 2% acceptance rate) -- 2.75 years"
-              />
+            />
           </section>
           <section className={merge(styles.bodySection, styles.sectionLeft)}>
             {/* <section className={merge(styles.bodySection, styles.sectionLeft)}> */}
             {SectionHeading('Skills')}
-            <ul style={{paddingLeft: '32px'}}>
-              <PaddedLi>
-                JavaScript
-              </PaddedLi>
+            <ul style={{ paddingLeft: '32px' }}>
+              <PaddedLi>JavaScript</PaddedLi>
               <UnpaddedUl>
                 <PaddedLi>
-                  {timeSince(2015, 5)} React.js <small>(This resume was coded with it)</small>
+                  {timeSince(2015, 5)} React.js{' '}
+                  <small>(This resume was coded with it)</small>
                 </PaddedLi>
-                <PaddedLi>
-                  {timeSince(2014, 9)} Node.js
-                </PaddedLi>
-                <PaddedLi>
-                  {timeSince(2014, 8)} generic JavaScript
-                </PaddedLi>
+                <PaddedLi>{timeSince(2014, 9)} Node.js</PaddedLi>
+                <PaddedLi>{timeSince(2014, 8)} generic JavaScript</PaddedLi>
               </UnpaddedUl>
               <PaddedLi>{timeSince(2014, 8)} HTML</PaddedLi>
               <PaddedLi>{timeSince(2014, 8)} CSS</PaddedLi>
@@ -159,13 +160,11 @@ class ResumeBody extends Component {
             <div className={style(styles.main)}>
               {SectionHeading('Education')}
               <h2 className={style(styles.h2)}>B.S. Computer Science</h2>
-            University of Colorado
-              <div className={merge(styles.bodySection, styles.sectionLeft)}>
-              </div>
+              University of Colorado
+              <div className={merge(styles.bodySection, styles.sectionLeft)} />
             </div>
           </section>
         </div>
-
       </div>
     );
   }
