@@ -1,37 +1,37 @@
-import React, { Component } from "react";
-import { style, merge } from "next/css";
-import Link from "next/link";
+import React, { Component } from 'react';
+import { style, merge } from 'next/css';
+import Link from 'next/link';
 
 const styles = {
   main: {
-    color: "white",
-    backgroundColor: "black",
-    width: "100%",
-    height: "60px",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    "@media print": {
-      display: "none"
+    color: 'white',
+    backgroundColor: 'black',
+    width: '100%',
+    height: '60px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    '@media print': {
+      display: 'none'
     }
   },
   white: {
-    color: "white"
+    color: 'white'
   },
   link: {
-    padding: "0 52px",
-    textDecoration: "none",
-    ":hover": {
-      textDecoration: "underline"
+    padding: '0 52px',
+    textDecoration: 'none',
+    ':hover': {
+      textDecoration: 'underline'
     }
   },
   borderRight: {
-    borderRight: "1px solid white"
+    borderRight: '1px solid white'
   }
 };
 
 class TopNav extends Component {
-  static displayName: "TopNav";
+  static displayName: 'TopNav';
 
   render() {
     return (
