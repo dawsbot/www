@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ResumeBody from './ResumeBody';
 import ResumeHeader from './ResumeHeader';
-import {style, merge} from 'next/css';
+import { style, merge } from 'next/css';
 import Button from '../presentational/Button';
 
 /* eslint-disable no-undef */
@@ -10,7 +10,7 @@ const styles = {
     // collapse printable-page view on smaller screens
     '@media(min-width: 670px)': {
       height: '842px',
-      width: '670px',
+      width: '670px'
     }
   },
   sectionWrapper: {
@@ -24,11 +24,11 @@ const styles = {
     // only show on desktop
     '@media(min-width: 769px)': {
       marginTop: '100px',
-      marginBottom: '100px',
+      marginBottom: '100px'
     },
     '@media print': {
       marginTop: '0px',
-      marginBottom: '0px',
+      marginBottom: '0px'
     }
   },
   printButton: {
@@ -44,7 +44,7 @@ const styles = {
 };
 
 class ResumeIndex extends Component {
-  static displayName: 'ResumeIndex'
+  static displayName: 'ResumeIndex';
 
   render() {
     return (
@@ -53,8 +53,10 @@ class ResumeIndex extends Component {
         <ResumeBody />
 
         <div className={style(styles.buttonWrapper)}>
-          <Button onClick={() => (typeof window !== 'undefined' && window.print())}
-            styles={styles.printButton}>
+          <Button
+            onClick={() => typeof window !== 'undefined' && window.print()}
+            styles={styles.printButton}
+          >
             Print This Resume
           </Button>
         </div>

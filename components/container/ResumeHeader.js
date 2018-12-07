@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {style} from 'next/css';
+import { style } from 'next/css';
 import SocialIcon from '../presentational/SocialIcon';
 
 const styles = {
@@ -7,7 +7,7 @@ const styles = {
     display: 'inline-flex',
     flexWrap: 'wrap',
     justifyContent: 'space-between',
-    width: '100%',
+    width: '100%'
   },
   header: {
     fontSize: '44px',
@@ -35,26 +35,33 @@ const styles = {
 // const SocialIcon = () => (<div>SocialIcon</div>);
 
 class ResumeHeader extends Component {
-  displayName: 'ResumeHeader'
+  displayName: 'ResumeHeader';
 
   render() {
     return (
       <div>
         <div className={style(styles.main)}>
-          <h1 className={style(styles.header)}>Dawson<br/>Botsford</h1>
+          <h1 className={style(styles.header)}>
+            Dawson
+            <br />
+            Botsford
+          </h1>
           <section className={style(styles.linksContainer)}>
             <SocialIcon
               label="GitHub"
               iconName="github"
-              url="https://github.com/dawsbot"/>
+              url="https://github.com/dawsbot"
+            />
             <SocialIcon
               label="LinkedIn"
               iconName="linkedin"
-              url="https://linkedin.com/in/dawsonbotsford"/>
+              url="https://linkedin.com/in/dawsonbotsford"
+            />
             <SocialIcon
               label="Twitter"
               iconName="twitter"
-              url="https://twitter.com/dawsonbotsford"/>
+              url="https://twitter.com/dawsonbotsford"
+            />
             <div>DawsonBotsford@gmail.com</div>
           </section>
         </div>

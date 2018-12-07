@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {merge} from 'next/css';
+import { merge } from 'next/css';
 import omit from 'just-omit';
 
 const styles = {
@@ -16,11 +16,11 @@ const styles = {
 };
 
 class Button extends Component {
-  static displayName: 'Button'
+  static displayName: 'Button';
 
   static propTypes = {
     styles: React.PropTypes.object
-  }
+  };
 
   render() {
     const props = omit(this.props, ['styles']);

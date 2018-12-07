@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import style from 'next/css';
 
 const styles = {
@@ -8,12 +8,12 @@ const styles = {
 };
 
 class PaddedLi extends Component {
-  static displayName = 'PaddedLi'
+  static displayName = 'PaddedLi';
   static propTypes = {
     children: React.PropTypes.node
-  }
+  };
   render() {
-    return (<li className={style(styles.li)}>{this.props.children}</li>);
+    return <li className={style(styles.li)}>{this.props.children}</li>;
   }
 }
 
