@@ -9,7 +9,7 @@
   "license": "MIT",
   "dependencies": {
     "gravatar": "^1.7.0",
-    "husky": "^0.14.3",
+    "husky": "^1.2.0",
     "just-omit": "^1.0.1",
     "next": "^1.0.2",
     "typed.js": "^2.0.9"
@@ -19,13 +19,25 @@
     "watch": "next",
     "build": "next build",
     "deploy": "now && now alias set $(pbpaste) dawsbot.com",
-    "start": "next start",
-    "precommit": "yarn build"
+    "start": "next start"
   },
   "devDependencies": {
     "babel-eslint": "^7.1.0",
     "eslint": "^3.9.1",
     "eslint-plugin-jsx-a11y": "^2.2.3",
-    "eslint-plugin-react": "^6.5.0"
+    "eslint-plugin-react": "^6.5.0",
+    "lint-staged": "^8.1.0",
+    "prettier": "^1.15.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "{components,pages}/**/*.{js,jsx,css}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }

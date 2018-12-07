@@ -1,44 +1,44 @@
-import React, {Component} from 'react';
-import {style} from 'next/css';
+import React, { Component } from "react";
+import { style } from "next/css";
 
 const styles = {
   cardWrapper: {
-    paddingBottom: '4px'
+    paddingBottom: "4px"
     // paddingTop: '6px',
     // marginBottom: '14px'
   },
   header: {
-    marginBottom: '0px',
-    fontSize: '20px'
+    marginBottom: "0px",
+    fontSize: "20px"
   },
   jobDescription: {
-    marginTop: '6px',
+    marginTop: "6px"
   },
   anchor: {
-    color: 'black'
+    color: "black"
   }
 };
 
 class JobPosition extends Component {
-  displayName: 'JobPosition'
+  displayName: "JobPosition";
 
   render() {
-    const {companyUrl, companyName, jobDescription, jobTitle} = this.props;
+    const { companyUrl, companyName, jobDescription, jobTitle } = this.props;
 
     const company = companyUrl ? (
-      <a
-        href={companyUrl}
-        className={style(styles.anchor)}>
+      <a href={companyUrl} className={style(styles.anchor)}>
         @{companyName}
-      </a>) :
-      `@${companyName}`;
+      </a>
+    ) : (
+      `@${companyName}`
+    );
     return (
       <div className={style(styles.cardWrapper)}>
-        <h2 className={style(styles.header)}>{jobTitle} {company}</h2>
+        <h2 className={style(styles.header)}>
+          {jobTitle} {company}
+        </h2>
 
-        <p className={style(styles.jobDescription)}>
-          {jobDescription}
-        </p>
+        <p className={style(styles.jobDescription)}>{jobDescription}</p>
       </div>
     );
   }
