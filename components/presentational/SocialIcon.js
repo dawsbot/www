@@ -1,20 +1,20 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 // import {style} from 'next/css';
 
 const styles = {
   container: {
-    marginBottom: "3px"
+    marginBottom: '3px'
   },
   anchor: {
-    color: "black"
+    color: 'black'
   },
   icon: {
-    paddingRight: "6px"
+    paddingRight: '6px'
   }
 };
 
 class SocialIcon extends Component {
-  static displayName: "SocialIcon";
+  static displayName: 'SocialIcon';
 
   static propTypes = {
     iconName: React.PropTypes.string,

@@ -1,117 +1,117 @@
-import React, { Component } from "react";
-import { style, merge } from "next/css";
-import Typed from "typed.js";
+import React, { Component } from 'react';
+import { style, merge } from 'next/css';
+import Typed from 'typed.js';
 
-import PaddedLi from "../presentational/PaddedLi";
+import PaddedLi from '../presentational/PaddedLi';
 
 const styles = {
   sectionWrapper: {
-    padding: "110px 26px 100px 26px"
+    padding: '110px 26px 100px 26px'
   },
   section: {
-    margin: "0 auto",
-    maxWidth: "800px"
+    margin: '0 auto',
+    maxWidth: '800px'
   },
   headshot: {
-    width: "170px",
-    borderRadius: "3px",
-    padding: "4px",
-    border: "1px solid black"
+    width: '170px',
+    borderRadius: '3px',
+    padding: '4px',
+    border: '1px solid black'
   },
   blackBackground: {
-    backgroundColor: "black",
+    backgroundColor: 'black',
     boxShadow:
-      "inset 0 1px 0 rgba(255,255,255,.6), 0 22px 70px 4px rgba(0,0,0,0.56), 0 0 0 1px rgba(0, 0, 0, 0.3)",
-    color: "white",
-    width: "100vw",
-    boxSizing: "border-box",
-    transform: "skewY(8deg)",
-    marginTop: "80px",
-    paddingTop: "80px",
-    paddingBottom: "180px",
-    paddingLeft: "26px",
-    paddingRight: "26px"
+      'inset 0 1px 0 rgba(255,255,255,.6), 0 22px 70px 4px rgba(0,0,0,0.56), 0 0 0 1px rgba(0, 0, 0, 0.3)',
+    color: 'white',
+    width: '100vw',
+    boxSizing: 'border-box',
+    transform: 'skewY(8deg)',
+    marginTop: '80px',
+    paddingTop: '80px',
+    paddingBottom: '180px',
+    paddingLeft: '26px',
+    paddingRight: '26px'
   },
   untilt: {
-    transform: "skewY(-8deg)"
+    transform: 'skewY(-8deg)'
   },
   liWorkedOn: {
-    color: "white",
-    borderBottom: "1px solid white"
+    color: 'white',
+    borderBottom: '1px solid white'
   },
   black: {
-    color: "black"
+    color: 'black'
   },
   introHeader: {
-    lineHeight: "36px"
+    lineHeight: '36px'
   },
   loveHeader: {
-    lineHeight: "36px",
-    height: "60px",
-    marginBottom: "40px"
+    lineHeight: '36px',
+    height: '60px',
+    marginBottom: '40px'
   },
   available: {
-    color: "rgb(125, 241, 131)",
-    fontWeight: "bold"
+    color: 'rgb(125, 241, 131)',
+    fontWeight: 'bold'
   },
   unavailable: {
-    color: "#E8B00C",
-    fontWeight: "bold"
+    color: '#E8B00C',
+    fontWeight: 'bold'
   },
   bioDescription: {
-    border: "1px solid grey",
-    borderRadius: "4px",
+    border: '1px solid grey',
+    borderRadius: '4px',
     boxShadow:
-      "inset 0 1px 0 rgba(255,255,255,.6), 0 22px 70px 4px rgba(0,0,0,0.56), 0 0 0 1px rgba(0, 0, 0, 0.3)",
-    padding: "20px 30px",
-    backgroundColor: "black",
-    color: "white"
+      'inset 0 1px 0 rgba(255,255,255,.6), 0 22px 70px 4px rgba(0,0,0,0.56), 0 0 0 1px rgba(0, 0, 0, 0.3)',
+    padding: '20px 30px',
+    backgroundColor: 'black',
+    color: 'white'
   },
   formContainer: {
-    border: "2px solid white",
-    backgroundColor: "white",
-    color: "black",
-    borderRadius: "4px",
-    padding: "40px"
+    border: '2px solid white',
+    backgroundColor: 'white',
+    color: 'black',
+    borderRadius: '4px',
+    padding: '40px'
   },
   input: {
-    width: "100%",
-    boxSizing: "border-box",
-    border: "1px solid black",
-    height: "42px",
-    marginTop: "8px",
-    marginBottom: "20px",
-    borderRadius: "4px",
-    paddingLeft: "20px",
-    fontSize: "17px"
+    width: '100%',
+    boxSizing: 'border-box',
+    border: '1px solid black',
+    height: '42px',
+    marginTop: '8px',
+    marginBottom: '20px',
+    borderRadius: '4px',
+    paddingLeft: '20px',
+    fontSize: '17px'
   },
   submitButton: {
-    fontSize: "17px",
-    height: "46px",
-    fontWeight: "bold",
-    cursor: "pointer",
-    backgroundColor: "black",
-    color: "white"
+    fontSize: '17px',
+    height: '46px',
+    fontWeight: 'bold',
+    cursor: 'pointer',
+    backgroundColor: 'black',
+    color: 'white'
   },
   textArea: {
-    height: "120px",
-    paddingTop: "14px",
-    paddingBottom: "14px"
+    height: '120px',
+    paddingTop: '14px',
+    paddingBottom: '14px'
   },
   vendorLink: {
-    textDecoration: "underline",
-    fontWeight: "bold",
-    color: "#E8B00C"
+    textDecoration: 'underline',
+    fontWeight: 'bold',
+    color: '#E8B00C'
   }
 };
 
 class IndexIndex extends Component {
-  static displayName: "IndexIndex";
+  static displayName: 'IndexIndex';
 
   componentDidMount() {
     // You can pass other options here, such as typing speed, back speed, etc.
     const options = {
-      strings: ["a Freelancer", "a Nomad", "a Developer", "a ⛷", "an Engineer"],
+      strings: ['a Freelancer', 'a Nomad', 'a Developer', 'a ⛷', 'an Engineer'],
       typeSpeed: 50,
       backSpeed: 35,
       backDelay: 1400,
@@ -139,31 +139,31 @@ class IndexIndex extends Component {
               alt="my face"
             />
             <h1 className={style(styles.loveHeader)}>
-              I'm{" "}
+              I'm{' '}
               <span
                 ref={el => {
                   this.el = el;
                 }}
-              />{" "}
+              />{' '}
               who ❤️'s the web
             </h1>
             <p className={style(styles.bioDescription)}>
               React.js and Node.js are my specialties, but all of the web is
-              beautiful! I'm a freelance software engineer{" "}
+              beautiful! I'm a freelance software engineer{' '}
               <span className={style(styles.unavailable)}>
-                unavailable for hire{" "}
+                unavailable for hire{' '}
               </span>
-              (crafting beautiful web UI's for{" "}
+              (crafting beautiful web UI's for{' '}
               <a
                 href="https://www.gitprime.com/"
                 className={style(styles.vendorLink)}
               >
                 GitPrime
-              </a>{" "}
-              Reach out again on{" "}
+              </a>{' '}
+              Reach out again on{' '}
               <span className={style(styles.unavailable)}>
                 January 4th, 2019
-              </span>{" "}
+              </span>{' '}
               if you would like to work together)
             </p>
           </section>
@@ -298,7 +298,7 @@ class IndexIndex extends Component {
                   className={style(styles.input)}
                   type="text"
                   name="_gotcha"
-                  style={{ display: "none" }}
+                  style={{ display: 'none' }}
                 />
 
                 <input

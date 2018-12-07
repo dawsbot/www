@@ -1,39 +1,39 @@
-import React, { Component } from "react";
-import { style, merge } from "next/css";
+import React, { Component } from 'react';
+import { style, merge } from 'next/css';
 
-import JobPosition from "./JobPosition";
-import PaddedLi from "../presentational/PaddedLi";
-import UnpaddedUl from "../presentational/UnpaddedUl";
+import JobPosition from './JobPosition';
+import PaddedLi from '../presentational/PaddedLi';
+import UnpaddedUl from '../presentational/UnpaddedUl';
 
 const styles = {
   main: {
-    display: "flex",
-    content: "center",
-    flexWrap: "wrap"
+    display: 'flex',
+    content: 'center',
+    flexWrap: 'wrap'
   },
   sectionHeading: {
-    borderBottom: "3px solid lightgray",
-    width: "100%",
+    borderBottom: '3px solid lightgray',
+    width: '100%',
     fontFamily: `'Scratch', sans-serif`,
-    textTransform: "uppercase",
-    fontSize: "24px",
-    letterSpacing: "3px",
-    padding: "0px 0px 4px 0px"
+    textTransform: 'uppercase',
+    fontSize: '24px',
+    letterSpacing: '3px',
+    padding: '0px 0px 4px 0px'
   },
   bodySection: {
-    margin: "16px"
+    margin: '16px'
   },
   sectionLeft: {
-    flex: "11",
-    textAlign: "left"
+    flex: '11',
+    textAlign: 'left'
   },
   sectionRight: {
-    flex: "18",
-    textAlign: "right"
+    flex: '18',
+    textAlign: 'right'
   },
   h2: {
-    marginBottom: "0px",
-    fontSize: "20px"
+    marginBottom: '0px',
+    fontSize: '20px'
   }
 };
 
@@ -70,7 +70,7 @@ const timeSince = (year, month) => {
 };
 
 class ResumeBody extends Component {
-  static displayName = "ResumeBody";
+  static displayName = 'ResumeBody';
   state = {
     now: new Date().getTime()
   };
@@ -90,7 +90,7 @@ class ResumeBody extends Component {
       <div>
         <div className={style(styles.main)}>
           <section className={merge(styles.bodySection, styles.sectionRight)}>
-            {SectionHeading("Experience")}
+            {SectionHeading('Experience')}
             <JobPosition
               jobTitle="Freelance Web Engineer"
               companyName="Me"
@@ -143,12 +143,12 @@ class ResumeBody extends Component {
           </section>
           <section className={merge(styles.bodySection, styles.sectionLeft)}>
             {/* <section className={merge(styles.bodySection, styles.sectionLeft)}> */}
-            {SectionHeading("Skills")}
-            <ul style={{ paddingLeft: "32px" }}>
+            {SectionHeading('Skills')}
+            <ul style={{ paddingLeft: '32px' }}>
               <PaddedLi>JavaScript</PaddedLi>
               <UnpaddedUl>
                 <PaddedLi>
-                  {timeSince(2015, 5)} React.js{" "}
+                  {timeSince(2015, 5)} React.js{' '}
                   <small>(This resume was coded with it)</small>
                 </PaddedLi>
                 <PaddedLi>{timeSince(2014, 9)} Node.js</PaddedLi>
@@ -158,7 +158,7 @@ class ResumeBody extends Component {
               <PaddedLi>{timeSince(2014, 8)} CSS</PaddedLi>
             </ul>
             <div className={style(styles.main)}>
-              {SectionHeading("Education")}
+              {SectionHeading('Education')}
               <h2 className={style(styles.h2)}>B.S. Computer Science</h2>
               University of Colorado
               <div className={merge(styles.bodySection, styles.sectionLeft)} />

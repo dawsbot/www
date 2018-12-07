@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import Head from "next/head";
+import React, { Component } from 'react';
+import Head from 'next/head';
 
-import TopNav from "../components/container/TopNav";
-import IndexIndex from "../components/container/IndexIndex";
-import { insertRule } from "next/css";
+import TopNav from '../components/container/TopNav';
+import IndexIndex from '../components/container/IndexIndex';
+import { insertRule } from 'next/css';
 
 insertRule(`body {
   font-family: 'Work Sans', sans-serif;
@@ -14,7 +14,7 @@ insertRule(`body {
 }`);
 
 class Index extends Component {
-  static displayName: "Index";
+  static displayName: 'Index';
 
   render() {
     return (

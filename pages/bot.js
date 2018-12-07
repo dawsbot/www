@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import Head from "next/head";
+import React, { Component } from 'react';
+import Head from 'next/head';
 
-import TopNav from "../components/container/TopNav";
-import BotIndex from "../components/container/BotIndex";
-import { insertRule } from "next/css";
+import TopNav from '../components/container/TopNav';
+import BotIndex from '../components/container/BotIndex';
+import { insertRule } from 'next/css';
 
 insertRule(`body {
   font-family: 'Work Sans', sans-serif;
@@ -14,7 +14,7 @@ insertRule(`body {
 }`);
 
 class Bot extends Component {
-  static displayName: "Bot";
+  static displayName: 'Bot';
 
   render() {
     return (

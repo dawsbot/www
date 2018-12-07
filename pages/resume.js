@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import Head from "next/head";
-import { insertRule } from "next/css";
-import ResumeIndex from "../components/container/ResumeIndex";
-import TopNav from "../components/container/TopNav";
+import React, { Component } from 'react';
+import Head from 'next/head';
+import { insertRule } from 'next/css';
+import ResumeIndex from '../components/container/ResumeIndex';
+import TopNav from '../components/container/TopNav';
 
 insertRule(`body {
   font-family: 'Work Sans', sans-serif;
@@ -13,7 +13,7 @@ insertRule(`body {
 }`);
 
 class Resume extends Component {
-  static displayName: "Resume";
+  static displayName: 'Resume';
 
   render() {
     return (
