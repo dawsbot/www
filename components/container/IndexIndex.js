@@ -162,7 +162,7 @@ class IndexIndex extends Component {
               </a>{' '}
               Reach out again on{' '}
               <span className={style(styles.unavailable)}>
-                January 4th, 2019
+                January 12th, 2019
               </span>{' '}
               if you would like to work together)
             </p>
