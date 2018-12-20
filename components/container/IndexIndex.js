@@ -65,7 +65,8 @@ const styles = {
       'inset 0 1px 0 rgba(255,255,255,.6), 0 22px 70px 4px rgba(0,0,0,0.56), 0 0 0 1px rgba(0, 0, 0, 0.3)',
     padding: '20px 30px',
     backgroundColor: 'black',
-    color: 'white'
+    color: 'white',
+    lineHeight: 1.4
   },
   formContainer: {
     border: '2px solid white',
@@ -159,12 +160,14 @@ class IndexIndex extends Component {
                 className={style(styles.vendorLink)}
               >
                 GitPrime
-              </a>{' '}
-              Reach out again on{' '}
+              </a>
+              {'). '}
+              Reach out now via the form at the bottom.
+              <br />
+              <br />I am currently booked until{' '}
               <span className={style(styles.unavailable)}>
-                January 12th, 2019
+                Monday, January 21st, 2019
               </span>{' '}
-              if you would like to work together)
             </p>
           </section>
         </div>
