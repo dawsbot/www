@@ -152,22 +152,32 @@ class IndexIndex extends Component {
               React.js and Node.js are my specialties, but all of the web is
               beautiful! I'm a freelance software engineer{' '}
               <span className={style(styles.unavailable)}>
-                unavailable for hire{' '}
+                unavailable for hire until{' '}
+                <span className={style(styles.unavailable)}>
+                  Monday, March 4th, 2019.
+                </span>
               </span>
-              (crafting beautiful web UI's for{' '}
+              <br />
+              <br />
+              Sorry about that, I am busy becoming a certified yoga instructor
+              at the world-renowned{' '}
               <a
-                href="https://www.gitprime.com/"
+                href="https://www.instagram.com/theyogabarn/?hl=en"
                 className={style(styles.vendorLink)}
               >
-                GitPrime
+                Yoga Barn
+              </a>{' '}
+              and training to thrive as a blockchain engineer with{' '}
+              <a
+                href="https://solidity.readthedocs.io/en/v0.4.24/"
+                className={style(styles.vendorLink)}
+              >
+                Solidity
               </a>
-              {'). '}
-              Reach out now via the form at the bottom.
+              {'. '}
               <br />
-              <br />I am currently booked until{' '}
-              <span className={style(styles.unavailable)}>
-                Monday, January 21st, 2019
-              </span>{' '}
+              <br />
+              Reach out now via the form at the bottom to be first in line.
             </p>
           </section>
         </div>
