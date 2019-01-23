@@ -154,7 +154,7 @@ class IndexIndex extends Component {
               <span className={style(styles.unavailable)}>
                 unavailable for hire until{' '}
                 <span className={style(styles.unavailable)}>
-                  Monday, March 4th, 2019.
+                  Monday, March 11th, 2019.
                 </span>
               </span>
               <br />
