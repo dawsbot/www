@@ -62,7 +62,7 @@ class ResumeHeader extends Component {
               iconName="twitter"
               url="https://twitter.com/dawsonbotsford"
             />
-            <div>DawsonBotsford@gmail.com</div>
+            <div>burner.337c170a@tryninja.io</div>
           </section>
         </div>
       </div>
