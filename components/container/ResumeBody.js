@@ -66,7 +66,10 @@ const timeSince = (year, month) => {
   // const yearEpoch = 60 * 60 * 24 * 365.25;
 
   // const epochDiff = today.getTime() - then.getTime();
-  return `${years} years, ${days} days, ${secondsDiff} seconds`;
+  if (years > 0) {
+    return `${years} years, ${days} days, ${secondsDiff} seconds`;
+  }
+  return `${days} days, ${secondsDiff} seconds`;
 };
 
 class ResumeBody extends Component {
@@ -129,7 +132,7 @@ class ResumeBody extends Component {
             />
             <JobPosition
               jobTitle="Software Engineer"
-              companyName="Department of Defense"
+              companyName="DoD"
               companyUrl="https://www.defense.gov/"
               jobDescription="Held a U.S. Top-Secret Security
               Clearance 2012 - 2015. Stokes Scholar (< 2% acceptance rate) -- 2.75 years"
