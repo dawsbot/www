@@ -26,9 +26,12 @@ class JobPosition extends Component {
     const { companyUrl, companyName, jobDescription, jobTitle } = this.props;
 
     const company = companyUrl ? (
-      <a href={companyUrl} className={style(styles.anchor)}>
-        @{companyName}
-      </a>
+      <span>
+        @
+        <a href={companyUrl} className={style(styles.anchor)}>
+          {companyName}
+        </a>
+      </span>
     ) : (
       `@${companyName}`
     );

@@ -66,7 +66,10 @@ const timeSince = (year, month) => {
   // const yearEpoch = 60 * 60 * 24 * 365.25;
 
   // const epochDiff = today.getTime() - then.getTime();
-  return `${years} years, ${days} days, ${secondsDiff} seconds`;
+  if (years > 0) {
+    return `${years} years, ${days} days, ${secondsDiff} seconds`;
+  }
+  return `${days} days, ${secondsDiff} seconds`;
 };
 
 class ResumeBody extends Component {
@@ -92,20 +95,14 @@ class ResumeBody extends Component {
           <section className={merge(styles.bodySection, styles.sectionRight)}>
             {SectionHeading('Experience')}
             <JobPosition
-              jobTitle="Freelance Web Engineer"
-              companyName="Me"
-              companyUrl=""
-              jobDescription={`Crafting delightful web experiences. Send me a message! -- ${timeSince(
+              jobTitle="Owning Manager and Software Engineer"
+              companyName="Dark Triangle"
+              companyUrl="https://darktriangle.tech"
+              jobDescription={`A dev shop focused on crafting delightful software -- ${timeSince(
                 2018,
                 10
               )}`}
             />
-            {/* <JobPosition
-              jobTitle="Lead Frontend Engineer"
-              companyName="Karuna Health"
-              companyUrl="https://meetkaruna.com"
-              jobDescription={`Crafting delightful web experiences for the sickest in the U.S. Healthcare system -- ${timeSince(2018, 9)}`}
-            /> */}
             <JobPosition
               jobTitle="Lead Software Engineer"
               companyName="Driver"
@@ -135,8 +132,8 @@ class ResumeBody extends Component {
             />
             <JobPosition
               jobTitle="Software Engineer"
-              companyName="NSA"
-              companyUrl="https://nsa.gov"
+              companyName="DoD"
+              companyUrl="https://www.defense.gov/"
               jobDescription="Held a U.S. Top-Secret Security
               Clearance 2012 - 2015. Stokes Scholar (< 2% acceptance rate) -- 2.75 years"
             />
