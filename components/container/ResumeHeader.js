@@ -62,7 +62,12 @@ class ResumeHeader extends Component {
               iconName="twitter"
               url="https://twitter.com/dawsonbotsford"
             />
-            <div>DawsonBotsford@gmail.com</div>
+            <a
+              href="mailto:&#100;&#097;&#119;&#115;&#111;&#110;&#098;&#111;&#116;&#115;&#102;&#111;&#114;&#100;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;"
+              style={{ color: 'black' }}
+            >
+              Email Me
+            </a>
           </section>
         </div>
       </div>

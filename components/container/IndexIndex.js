@@ -295,6 +295,7 @@ class IndexIndex extends Component {
                     className={style(styles.input)}
                     type="email"
                     name="_replyto"
+                    placeholder="jane@gmail.com"
                   />
                 </label>
 
@@ -303,6 +304,7 @@ class IndexIndex extends Component {
                   <textarea
                     className={merge(styles.input, styles.textArea)}
                     name="subject"
+                    placeholder="Can we get your thoughts on our software project? We're trying to do _"
                   />
                 </label>
 
