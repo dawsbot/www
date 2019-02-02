@@ -185,7 +185,7 @@ class IndexIndex extends Component {
         <div className={merge(styles.sectionWrapper, styles.blackBackground)}>
           <div className={style(styles.untilt)}>
             <section className={style(styles.section)}>
-              <h2>Things I've Worked on</h2>
+              <h2 id="worked-on">Things I've Worked on</h2>
               <ul>
                 <PaddedLi>
                   <a
