@@ -144,15 +144,16 @@ class ResumeBody extends Component {
             <ul style={{ paddingLeft: '32px' }}>
               <PaddedLi>JavaScript</PaddedLi>
               <UnpaddedUl>
+                <PaddedLi>Generic JavaScript {timeSince(2014, 8)}</PaddedLi>
                 <PaddedLi>
-                  {timeSince(2015, 5)} React.js{' '}
+                  React.js {timeSince(2015, 5)}
                   <small>(This resume was coded with it)</small>
                 </PaddedLi>
-                <PaddedLi>{timeSince(2014, 9)} Node.js</PaddedLi>
-                <PaddedLi>{timeSince(2014, 8)} generic JavaScript</PaddedLi>
+                <PaddedLi>Node.js {timeSince(2014, 9)}</PaddedLi>
               </UnpaddedUl>
-              <PaddedLi>{timeSince(2014, 8)} HTML</PaddedLi>
-              <PaddedLi>{timeSince(2014, 8)} CSS</PaddedLi>
+              <PaddedLi>HTML {timeSince(2014, 8)}</PaddedLi>
+              <PaddedLi>CSS {timeSince(2014, 8)}</PaddedLi>
+              <PaddedLi>Ethereum and Solidity {timeSince(2018, 12)}</PaddedLi>
             </ul>
             <div className={style(styles.main)}>
               {SectionHeading('Education')}
