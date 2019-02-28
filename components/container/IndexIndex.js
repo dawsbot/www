@@ -112,7 +112,13 @@ class IndexIndex extends Component {
   componentDidMount() {
     // You can pass other options here, such as typing speed, back speed, etc.
     const options = {
-      strings: ['a Freelancer', 'a Nomad', 'a Developer', 'a ⛷', 'an Engineer'],
+      strings: [
+        'a Freelancer',
+        'an Artist',
+        'a Coder',
+        'a Yogi',
+        'an Engineer'
+      ],
       typeSpeed: 50,
       backSpeed: 35,
       backDelay: 1400,
@@ -151,33 +157,17 @@ class IndexIndex extends Component {
             <p className={style(styles.bioDescription)}>
               React.js and Node.js are my specialties, but all of the web is
               beautiful! I'm a freelance software engineer{' '}
-              <span className={style(styles.unavailable)}>
-                unavailable for hire until{' '}
-                <span className={style(styles.unavailable)}>
+              <span className={style(styles.available)}>
+                available for hire.
+                {/* <span className={style(styles.available)}>
                   Monday, March 11th, 2019.
-                </span>
+                </span> */}
               </span>
               <br />
-              <br />
-              Sorry about that, I am busy becoming a certified yoga instructor
-              at the world-renowned{' '}
-              <a
-                href="https://www.instagram.com/theyogabarn/?hl=en"
-                className={style(styles.vendorLink)}
-              >
-                Yoga Barn
-              </a>{' '}
-              and training to thrive as a blockchain engineer with{' '}
-              <a
-                href="https://solidity.readthedocs.io/en/v0.4.24/"
-                className={style(styles.vendorLink)}
-              >
-                Solidity
+              <br />I want to hear what you are building. Reach out now at the{' '}
+              <a href="#email-form" style={{ color: 'white' }}>
+                bottom of this page!
               </a>
-              {'. '}
-              <br />
-              <br />
-              Reach out now via the form at the bottom to be first in line.
             </p>
           </section>
         </div>
@@ -194,7 +184,17 @@ class IndexIndex extends Component {
                   >
                     Uplift
                   </a>
-                  : 🙌 A minimal happy quote website
+                  : 🙌 A website for happy quotes
+                </PaddedLi>
+                <br />
+                <PaddedLi>
+                  <a
+                    className={style(styles.liWorkedOn)}
+                    href="https://vimrc-builder.now.sh"
+                  >
+                    vimrc Builder
+                  </a>
+                  : A web app for software devs to build a vimrc file
                 </PaddedLi>
                 <PaddedLi>
                   <a
@@ -203,8 +203,9 @@ class IndexIndex extends Component {
                   >
                     Mailto
                   </a>
-                  : 💌⚡️ HTML mailto's made easy
+                  : 💌⚡️ A web app for software devs to create email mailto's
                 </PaddedLi>
+                <br />
                 <PaddedLi>
                   <a
                     className={style(styles.liWorkedOn)}
@@ -213,15 +214,6 @@ class IndexIndex extends Component {
                     o-o
                   </a>
                   : A terminal command-line tool for opening url's and files
-                </PaddedLi>
-                <PaddedLi>
-                  <a
-                    className={style(styles.liWorkedOn)}
-                    href="https://vimrc-builder.now.sh"
-                  >
-                    vimrc Builder
-                  </a>
-                  : A web app for building your first vimrc
                 </PaddedLi>
                 <PaddedLi>
                   <a
@@ -271,7 +263,7 @@ class IndexIndex extends Component {
 
         <div className={merge(styles.sectionWrapper, styles.blackBackground)}>
           <div className={style(styles.untilt)}>
-            <section className={style(styles.section)}>
+            <section className={style(styles.section)} id="email-form">
               <h2>Say Hello!</h2>
 
               <form
@@ -295,7 +287,7 @@ class IndexIndex extends Component {
                     className={style(styles.input)}
                     type="email"
                     name="_replyto"
-                    placeholder="jane@gmail.com"
+                    placeholder="Jane@gmail.com"
                   />
                 </label>
 
