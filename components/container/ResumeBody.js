@@ -153,7 +153,12 @@ class ResumeBody extends Component {
               </UnpaddedUl>
               <PaddedLi>HTML {timeSince(2014, 8)}</PaddedLi>
               <PaddedLi>CSS {timeSince(2014, 8)}</PaddedLi>
-              <PaddedLi>Ethereum and Solidity {timeSince(2018, 12)}</PaddedLi>
+              <PaddedLi>
+                <a href="../../static/eth-cert.jpg" style={{ color: 'black' }}>
+                  Ethereum and Solidity
+                </a>{' '}
+                {timeSince(2018, 12)}
+              </PaddedLi>
             </ul>
             <div className={style(styles.main)}>
               {SectionHeading('Education')}
