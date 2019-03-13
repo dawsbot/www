@@ -153,11 +153,18 @@ class ResumeBody extends Component {
               </UnpaddedUl>
               <PaddedLi>HTML {timeSince(2014, 8)}</PaddedLi>
               <PaddedLi>CSS {timeSince(2014, 8)}</PaddedLi>
+              <br />
               <PaddedLi>
                 <a href="../../static/eth-cert.jpg" style={{ color: 'black' }}>
                   Ethereum and Solidity
                 </a>{' '}
                 {timeSince(2018, 12)}
+              </PaddedLi>
+              <PaddedLi>
+                <a href="../../static/YTT-cert.pdf" style={{ color: 'black' }}>
+                  200 Hour Yoga Teacher Certified
+                </a>{' '}
+                {timeSince(2019, 2)}
               </PaddedLi>
             </ul>
             <div className={style(styles.main)}>
