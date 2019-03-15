@@ -169,6 +169,17 @@ class IndexIndex extends Component {
                 bottom of this page!
               </a>
             </p>
+
+            <iframe
+              src="https://player.vimeo.com/video/324015038"
+              width="100%"
+              height="360"
+              frameBorder="0"
+              webkitallowfullscreen
+              mozallowfullscreen
+              allowFullscreen
+              style={{ marginTop: '80' }}
+            />
           </section>
         </div>
 
