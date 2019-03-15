@@ -13,7 +13,6 @@ const styles = {
     maxWidth: '800px'
   },
   headshot: {
-    width: '170px',
     borderRadius: '3px',
     padding: '4px',
     border: '1px solid black'
@@ -142,7 +141,7 @@ class IndexIndex extends Component {
             <h1 className={style(styles.introHeader)}>Hi, I'm Dawson!</h1>
             <img
               className={style(styles.headshot)}
-              src="https://avatars0.githubusercontent.com/u/3408480?v=3&s=460"
+              src="../../static/my-face.jpg"
               alt="my face"
             />
             <h1 className={style(styles.loveHeader)}>
@@ -175,10 +174,7 @@ class IndexIndex extends Component {
               width="100%"
               height="360"
               frameBorder="0"
-              webkitallowfullscreen
-              mozallowfullscreen
-              allowFullscreen
-              style={{ marginTop: '80' }}
+              style={{ marginTop: '80px' }}
             />
           </section>
         </div>

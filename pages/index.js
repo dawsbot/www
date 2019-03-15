@@ -31,7 +31,12 @@ class Index extends Component {
           <meta name="author" content="Dawson Botsford" />
           <meta
             name="description"
-            content="Personal website of Dawson Botsford. Web engineer and entrepreneur"
+            content="Portfolio of Dawson Botsford. A Web developer, React consultant, and Node.js consultant improving web performance everywhere."
+          />
+
+          <meta
+            name="keywords"
+            content="consultant,software,coding,React.js,web,Node.js,JavaScript,Web Performance"
           />
 
           <link rel="shortcut icon" href="/static/favicon.ico" />
