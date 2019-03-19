@@ -105,6 +105,9 @@ const styles = {
     textDecoration: 'underline',
     fontWeight: 'bold',
     color: '#E8B00C'
+  },
+  mediaImg: {
+    maxWidth: '260px'
   }
 };
 
@@ -342,32 +345,38 @@ class IndexIndex extends Component {
         <div className={style(styles.sectionWrapper)}>
           <section className={style(styles.section)}>
             <h2>Say Hello On</h2>
-            <ul>
-              <PaddedLi>
-                <a
-                  className={merge(styles.li, styles.black)}
-                  href="https://github.com/dawsbot"
-                >
-                  GitHub
-                </a>
-              </PaddedLi>
-              <PaddedLi>
-                <a
-                  className={merge(styles.li, styles.black)}
-                  href="https://linkedin.com/in/dawsonbotsford"
-                >
-                  LinkedIn
-                </a>
-              </PaddedLi>
-              <PaddedLi>
-                <a
-                  className={merge(styles.li, styles.black)}
-                  href="https://twitter.com/dawsonbotsford"
-                >
-                  Twitter
-                </a>
-              </PaddedLi>
-            </ul>
+            <div>
+              <a
+                className={merge(styles.li, styles.black)}
+                href="https://github.com/dawsbot"
+              >
+                <img
+                  src="../../static/github-huge.png"
+                  alt="my github account"
+                  className={style(styles.mediaImg)}
+                />
+              </a>
+              <a
+                className={merge(styles.li, styles.black)}
+                href="https://linkedin.com/in/dawsonbotsford"
+              >
+                <img
+                  src="../../static/linkedin-huge.png"
+                  alt="my github account"
+                  className={style(styles.mediaImg)}
+                />
+              </a>
+              <a
+                className={merge(styles.li, styles.black)}
+                href="https://twitter.com/dawsonbotsford"
+              >
+                <img
+                  src="../../static/twitter-huge.png"
+                  alt="my github account"
+                  className={style(styles.mediaImg)}
+                />
+              </a>
+            </div>
           </section>
         </div>
 
