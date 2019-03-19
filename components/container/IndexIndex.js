@@ -344,7 +344,7 @@ class IndexIndex extends Component {
 
         <div className={style(styles.sectionWrapper)}>
           <section className={style(styles.section)}>
-            <h2>Say Hello On</h2>
+            <h2>You Can Add Me On:</h2>
             <div>
               <a
                 className={merge(styles.li, styles.black)}
@@ -383,7 +383,7 @@ class IndexIndex extends Component {
         <div className={merge(styles.sectionWrapper, styles.blackBackground)}>
           <div className={style(styles.untilt)}>
             <section className={style(styles.section)} id="email-form">
-              <h2>Say Hello!</h2>
+              <h2>Let's Talk!</h2>
 
               <form
                 className={style(styles.formContainer)}
@@ -430,7 +430,7 @@ class IndexIndex extends Component {
                 <input
                   className={merge(styles.input, styles.submitButton)}
                   type="submit"
-                  value="SEND"
+                  value="Send Me This Message"
                 />
               </form>
             </section>
