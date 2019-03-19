@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { style, merge } from 'next/css';
 import Typed from 'typed.js';
 
+import Tag from '../presentational/Tag';
+import TagGroup from '../presentational/TagGroup';
+
 import PaddedLi from '../presentational/PaddedLi';
 
 const styles = {
@@ -158,12 +161,11 @@ class IndexIndex extends Component {
               beautiful! I'm a freelance software engineer{' '}
               <span className={style(styles.available)}>
                 available for hire.
-                {/* <span className={style(styles.available)}>
-                  Monday, March 11th, 2019.
-                </span> */}
               </span>
               <br />
-              <br />I want to hear what you are building. Reach out now at the{' '}
+              <br />
+              Let's work together to make your site fast and beautiful. Reach
+              out now at the{' '}
               <a href="#email-form" style={{ color: 'white' }}>
                 bottom of this page!
               </a>
@@ -182,7 +184,77 @@ class IndexIndex extends Component {
         <div className={merge(styles.sectionWrapper, styles.blackBackground)}>
           <div className={style(styles.untilt)}>
             <section className={style(styles.section)}>
-              <h2 id="worked-on">Things I've Worked on</h2>
+              <h2 id="worked-on">Professional Creations</h2>
+              <ul>
+                <PaddedLi>
+                  <a
+                    className={style(styles.liWorkedOn)}
+                    href="https://driver.xyz"
+                  >
+                    Driver Company Website
+                  </a>
+                  <span>
+                    : A full application for marketing and signup. I lead the
+                    frontend team from day one till near-launch.
+                  </span>
+                  <br />
+                  <TagGroup>
+                    <Tag>React.js</Tag>
+                    <Tag>JavaScript</Tag>
+                    <Tag>FlowType</Tag>
+                    <Tag>Create React App</Tag>
+                    <Tag>Express.js</Tag>
+                    <Tag>WebPack</Tag>
+                    <Tag>Prettier</Tag>
+                    <Tag>ESLint</Tag>
+                    <Tag>Multi-Language</Tag>
+                    <Tag>Stripe Payment Integration</Tag>
+                    <Tag>WeChat Auth Integration</Tag>
+                  </TagGroup>
+                </PaddedLi>
+                <PaddedLi>
+                  <a
+                    className={style(styles.liWorkedOn)}
+                    href="https://gitprime.com"
+                  >
+                    GitPrime Company Website
+                  </a>
+                  : In late 2018, GitPrime wanted to re-invent their web
+                  presence. I worked in a team of four developers to build out
+                  their new web presence
+                  <br />
+                  <TagGroup>
+                    <Tag>React.js</Tag>
+                    <Tag>Gatsby.js</Tag>
+                    <Tag>JavaScript</Tag>
+                    <Tag>Prettier</Tag>
+                    <Tag>ESLint</Tag>
+                  </TagGroup>
+                </PaddedLi>
+                <PaddedLi>
+                  <a
+                    className={style(styles.liWorkedOn)}
+                    href="https://aero.com"
+                  >
+                    Aero Company Website
+                  </a>
+                  : In late 2018, Aero wanted to update their web presence. I
+                  embedded with their engineers on-site in San Francisco to
+                  update their new web presence
+                  <br />
+                  <TagGroup>
+                    <Tag>React.js</Tag>
+                    <Tag>Gatsby.js</Tag>
+                    <Tag>JavaScript</Tag>
+                    <Tag>TypeScript</Tag>
+                    <Tag>Prettier</Tag>
+                    <Tag>TSLint</Tag>
+                  </TagGroup>
+                </PaddedLi>
+              </ul>
+              <br />
+              <br />
+              <h2 id="worked-on">Passion Creations</h2>
               <ul>
                 <PaddedLi>
                   <a
@@ -192,6 +264,11 @@ class IndexIndex extends Component {
                     Uplift
                   </a>
                   : 🙌 A website for happy quotes
+                  <br />
+                  <TagGroup>
+                    <Tag>JavaScript</Tag>
+                    <Tag>LightWeight</Tag>
+                  </TagGroup>
                 </PaddedLi>
                 <br />
                 <PaddedLi>
@@ -202,6 +279,14 @@ class IndexIndex extends Component {
                     vimrc Builder
                   </a>
                   : A web app for software devs to build a vimrc file
+                  <br />
+                  <TagGroup>
+                    <Tag>React.js</Tag>
+                    <Tag>Create React App</Tag>
+                    <Tag>JavaScript</Tag>
+                    <Tag>FlowType</Tag>
+                    <Tag>Prettier.js</Tag>
+                  </TagGroup>
                 </PaddedLi>
                 <PaddedLi>
                   <a
@@ -211,6 +296,14 @@ class IndexIndex extends Component {
                     Mailto
                   </a>
                   : 💌⚡️ A web app for software devs to create email mailto's
+                  <br />
+                  <TagGroup>
+                    <Tag>React.js</Tag>
+                    <Tag>Next.js</Tag>
+                    <Tag>JavaScript</Tag>
+                    <Tag>Prettier.js</Tag>
+                    <Tag>ESLint</Tag>
+                  </TagGroup>
                 </PaddedLi>
                 <br />
                 <PaddedLi>
@@ -221,6 +314,11 @@ class IndexIndex extends Component {
                     o-o
                   </a>
                   : A terminal command-line tool for opening url's and files
+                  <br />
+                  <TagGroup>
+                    <Tag>JavaScript</Tag>
+                    <Tag>Node.js</Tag>
+                  </TagGroup>
                 </PaddedLi>
                 <PaddedLi>
                   <a
@@ -230,6 +328,11 @@ class IndexIndex extends Component {
                     Skrub
                   </a>
                   : Irreversible file deletion on every Operating System
+                  <br />
+                  <TagGroup>
+                    <Tag>JavaScript</Tag>
+                    <Tag>Node.js</Tag>
+                  </TagGroup>
                 </PaddedLi>
               </ul>
             </section>
