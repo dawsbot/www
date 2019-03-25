@@ -218,25 +218,6 @@ class IndexIndex extends Component {
                 <PaddedLi>
                   <a
                     className={style(styles.liWorkedOn)}
-                    href="https://gitprime.com"
-                  >
-                    GitPrime Company Website
-                  </a>
-                  : In late 2018, GitPrime wanted to re-invent their web
-                  presence. I worked in a team of four developers to build out
-                  their new web presence
-                  <br />
-                  <TagGroup>
-                    <Tag>React.js</Tag>
-                    <Tag>Gatsby.js</Tag>
-                    <Tag>JavaScript</Tag>
-                    <Tag>Prettier</Tag>
-                    <Tag>ESLint</Tag>
-                  </TagGroup>
-                </PaddedLi>
-                <PaddedLi>
-                  <a
-                    className={style(styles.liWorkedOn)}
                     href="https://aero.com"
                   >
                     Aero Company Website
