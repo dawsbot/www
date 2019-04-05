@@ -11,12 +11,15 @@
     "gravatar": "^1.7.0",
     "husky": "^1.2.0",
     "just-omit": "^1.0.1",
+    "logrocket": "^0.6.20",
+    "logrocket-react": "^0.0.5",
+    "nanoid": "^2.0.1",
     "next": "^1.0.2",
     "typed.js": "^2.0.9"
   },
   "scripts": {
     "test": "eslint components pages",
-    "watch": "next",
+    "watch": "NODE_ENV=local next",
     "build": "next build",
     "deploy": "npx now && npx now alias set $(pbpaste) dawsbot.com",
     "start": "next start"

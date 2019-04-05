@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import Head from 'next/head';
+import { insertRule } from 'next/css';
+import LogRocket from 'logrocket';
+import setupLogRocketReact from 'logrocket-react';
 
 import TopNav from '../components/container/TopNav';
 import IndexIndex from '../components/container/IndexIndex';
-import { insertRule } from 'next/css';
 
 insertRule(`body {
   font-family: 'Work Sans', sans-serif;
@@ -15,6 +17,18 @@ insertRule(`body {
 
 class Index extends Component {
   static displayName: 'Index';
+
+  componentDidMount() {
+    // you can import these packages anywhere
+
+    // only initialize when in the browser
+    // eslint-disable-next-line no-undef
+    if (process.browser) {
+      LogRocket.init('ubu2ji/www');
+      // plugins should also only be initialized when in the browser
+      setupLogRocketReact(LogRocket);
+    }
+  }
 
   render() {
     return (

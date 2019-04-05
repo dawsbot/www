@@ -8,6 +8,18 @@ import TagGroup from '../presentational/TagGroup';
 import PaddedLi from '../presentational/PaddedLi';
 
 const styles = {
+  introTextContainer: {
+    textAlign: 'center'
+  },
+  mega: {
+    fontSize: '50px'
+  },
+  introWithPicture: {
+    '@media(min-width: 670px)': {
+      display: 'flex',
+      alignItems: 'center'
+    }
+  },
   sectionWrapper: {
     padding: '110px 26px 100px 26px'
   },
@@ -18,7 +30,10 @@ const styles = {
   headshot: {
     borderRadius: '3px',
     padding: '4px',
-    border: '1px solid black'
+    border: '1px solid black',
+    '@media(min-width: 670px)': {
+      marginLeft: '140px'
+    }
   },
   blackBackground: {
     backgroundColor: 'black',
@@ -144,12 +159,17 @@ class IndexIndex extends Component {
       <div>
         <div className={style(styles.sectionWrapper)}>
           <section className={style(styles.section)}>
-            <h1 className={style(styles.introHeader)}>Hi, I'm Dawson!</h1>
-            <img
-              className={style(styles.headshot)}
-              src="../../static/my-face.jpg"
-              alt="my face"
-            />
+            <div className={style(styles.introWithPicture)}>
+              <div className={style(styles.introTextContainer)}>
+                <h1 className={style(styles.introHeader)}>Hi, I'm Dawson!</h1>
+                <h1 className={style(styles.mega)}>👋</h1>
+              </div>
+              <img
+                className={style(styles.headshot)}
+                src="../../static/my-face.jpg"
+                alt="my face"
+              />
+            </div>
             <h1 className={style(styles.loveHeader)}>
               I'm{' '}
               <span
