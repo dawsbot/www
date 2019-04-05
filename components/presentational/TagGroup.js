@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import style from 'next/css';
+import nanoid from 'nanoid';
+
 import Tag from './Tag';
 
 const styles = {
@@ -31,7 +33,7 @@ class TagGroup extends Component {
       if (!this.state.expanded) {
         if (index === this.defaultDisplayCount) {
           return (
-            <span style={{ cursor: 'pointer' }}>
+            <span style={{ cursor: 'pointer' }} key={nanoid()}>
               <Tag key={index} onClick={this.expand} role="button">
                 Click here to see more
               </Tag>
