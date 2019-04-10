@@ -222,7 +222,7 @@ class IndexIndex extends Component {
                   </span>
                   <br />
                   <TagGroup>
-                    <Tag>React.js</Tag>
+                    <Tag>⚛️ React.js</Tag>
                     <Tag>JavaScript</Tag>
                     <Tag>FlowType</Tag>
                     <Tag>Create React App</Tag>
@@ -247,7 +247,7 @@ class IndexIndex extends Component {
                   update their new web presence
                   <br />
                   <TagGroup>
-                    <Tag>React.js</Tag>
+                    <Tag>⚛️ React.js</Tag>
                     <Tag>Gatsby.js</Tag>
                     <Tag>JavaScript</Tag>
                     <Tag>TypeScript</Tag>
@@ -278,6 +278,25 @@ class IndexIndex extends Component {
                 <PaddedLi>
                   <a
                     className={style(styles.liWorkedOn)}
+                    href="https://github.com/teamsempo/StableVoucher"
+                  >
+                    Stable Voucher 🏅 Hackathon Winner 🏅
+                  </a>
+                  : A crypto site for humanitarian aid
+                  <br />
+                  <TagGroup>
+                    <Tag>⚛️ React.js</Tag>
+                    <Tag>💅 UI/UX optimized</Tag>
+                    <Tag>JavaScript</Tag>
+                    <Tag>Ethereum</Tag>
+                    <Tag>Solidity</Tag>
+                    <Tag>Create React App</Tag>
+                  </TagGroup>
+                </PaddedLi>
+                <br />
+                <PaddedLi>
+                  <a
+                    className={style(styles.liWorkedOn)}
                     href="https://vimrc-builder.now.sh"
                   >
                     vimrc Builder
@@ -285,7 +304,8 @@ class IndexIndex extends Component {
                   : A web app for software devs to build a vimrc file
                   <br />
                   <TagGroup>
-                    <Tag>React.js</Tag>
+                    <Tag>⚛️ React.js</Tag>
+                    <Tag>💅 UI/UX optimized</Tag>
                     <Tag>Create React App</Tag>
                     <Tag>JavaScript</Tag>
                     <Tag>FlowType</Tag>
@@ -302,7 +322,7 @@ class IndexIndex extends Component {
                   : 💌⚡️ A web app for software devs to create email mailto's
                   <br />
                   <TagGroup>
-                    <Tag>React.js</Tag>
+                    <Tag>⚛️ React.js</Tag>
                     <Tag>Next.js</Tag>
                     <Tag>JavaScript</Tag>
                     <Tag>Prettier.js</Tag>
@@ -317,11 +337,13 @@ class IndexIndex extends Component {
                   >
                     o-o
                   </a>
-                  : A terminal command-line tool for opening url's and files
+                  : A terminal tool for opening url's and files
                   <br />
                   <TagGroup>
                     <Tag>JavaScript</Tag>
                     <Tag>Node.js</Tag>
+                    <Tag>Dev Tool</Tag>
+                    <Tag>Terminal Only</Tag>
                   </TagGroup>
                 </PaddedLi>
                 <PaddedLi>
@@ -336,6 +358,7 @@ class IndexIndex extends Component {
                   <TagGroup>
                     <Tag>JavaScript</Tag>
                     <Tag>Node.js</Tag>
+                    <Tag>Dev Tool</Tag>
                   </TagGroup>
                 </PaddedLi>
               </ul>
@@ -345,7 +368,7 @@ class IndexIndex extends Component {
 
         <div className={style(styles.sectionWrapper)}>
           <section className={style(styles.section)}>
-            <h2>You Can Add Me On:</h2>
+            <h2>See more at:</h2>
             <div>
               <a
                 className={merge(styles.li, styles.black)}
