@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
-import ResumeBody from './ResumeBody';
 import ResumeHeader from './ResumeHeader';
 import { style, merge } from 'next/css';
+import dynamic from 'next/dynamic';
 import Button from '../presentational/Button';
+
+const ResumeBodyWithNoSSR = dynamic(() => import('./ResumeBody'), {
+  ssr: false
+});
 
 /* eslint-disable no-undef */
 const styles = {
@@ -50,7 +54,7 @@ class ResumeIndex extends Component {
     return (
       <div className={merge(styles.sectionWrapper, styles.page)}>
         <ResumeHeader />
-        <ResumeBody />
+        <ResumeBodyWithNoSSR />
 
         <div className={style(styles.buttonWrapper)}>
           <Button
