@@ -333,22 +333,6 @@ class IndexIndex extends Component {
                 <PaddedLi>
                   <a
                     className={style(styles.liWorkedOn)}
-                    href="https://github.com/dawsbot/o-o"
-                  >
-                    o-o
-                  </a>
-                  : A terminal tool for opening url's and files
-                  <br />
-                  <TagGroup>
-                    <Tag>JavaScript</Tag>
-                    <Tag>Node.js</Tag>
-                    <Tag>Dev Tool</Tag>
-                    <Tag>Terminal Only</Tag>
-                  </TagGroup>
-                </PaddedLi>
-                <PaddedLi>
-                  <a
-                    className={style(styles.liWorkedOn)}
                     href="https://github.com/dawsbot/skrub"
                   >
                     Skrub
