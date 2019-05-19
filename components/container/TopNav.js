@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { style, merge } from 'next/css';
+import { css } from 'glamor';
 import Link from 'next/link';
 
 const styles = {
@@ -31,19 +31,15 @@ const styles = {
 };
 
 class TopNav extends Component {
-  static displayName: 'TopNav';
-
   render() {
     return (
-      <div className={style(styles.main)}>
+      <div className={css(styles.main)}>
         <Link href="/">
-          <a className={merge(styles.link, styles.white, styles.borderRight)}>
-            Home
-          </a>
+          <a {...css(styles.link, styles.white, styles.borderRight)}>Home</a>
         </Link>
 
         <Link href="/resume">
-          <a className={merge(styles.link, styles.white)}>Resume</a>
+          <a {...css(styles.link, styles.white)}>Resume</a>
         </Link>
       </div>
     );

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import style from 'next/css';
 import nanoid from 'nanoid';
 
 import Tag from './Tag';
@@ -12,14 +11,9 @@ const styles = {
 };
 
 class TagGroup extends Component {
-  static displayName = 'TagGroup';
   defaultDisplayCount = 2;
   state = {
     expanded: false
-  };
-
-  static propTypes = {
-    children: React.PropTypes.node
   };
 
   expand = () => {
@@ -46,7 +40,7 @@ class TagGroup extends Component {
       return tag;
     });
 
-    return <span className={style(styles.group)}>{tags}</span>;
+    return <span className={styles.group}>{tags}</span>;
   }
 }
 

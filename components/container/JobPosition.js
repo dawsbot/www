@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { style } from 'next/css';
+import { css } from 'glamor';
 
 const styles = {
   cardWrapper: {
@@ -20,15 +20,13 @@ const styles = {
 };
 
 class JobPosition extends Component {
-  displayName: 'JobPosition';
-
   render() {
     const { companyUrl, companyName, jobDescription, jobTitle } = this.props;
 
     const company = companyUrl ? (
       <span>
         @
-        <a href={companyUrl} className={style(styles.anchor)}>
+        <a href={companyUrl} className={css(styles.anchor)}>
           {companyName}
         </a>
       </span>
@@ -36,12 +34,12 @@ class JobPosition extends Component {
       `@${companyName}`
     );
     return (
-      <div className={style(styles.cardWrapper)}>
-        <h2 className={style(styles.header)}>
+      <div className={css(styles.cardWrapper)}>
+        <h2 className={css(styles.header)}>
           {jobTitle} {company}
         </h2>
 
-        <p className={style(styles.jobDescription)}>{jobDescription}</p>
+        <p className={css(styles.jobDescription)}>{jobDescription}</p>
       </div>
     );
   }

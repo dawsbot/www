@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { style, merge } from 'next/css';
+import { css } from 'glamor';
 import Typed from 'typed.js';
 
 import Tag from '../presentational/Tag';
@@ -127,8 +127,6 @@ const styles = {
 };
 
 class IndexIndex extends Component {
-  static displayName: 'IndexIndex';
-
   componentDidMount() {
     // You can pass other options here, such as typing speed, back speed, etc.
     const options = {
@@ -157,20 +155,20 @@ class IndexIndex extends Component {
   render() {
     return (
       <div>
-        <div className={style(styles.sectionWrapper)}>
-          <section className={style(styles.section)}>
-            <div className={style(styles.introWithPicture)}>
-              <div className={style(styles.introTextContainer)}>
-                <h1 className={style(styles.introHeader)}>Hi, I'm Dawson!</h1>
-                <h1 className={style(styles.mega)}>👋</h1>
+        <div className={css(styles.sectionWrapper)}>
+          <section className={css(styles.section)}>
+            <div className={css(styles.introWithPicture)}>
+              <div className={css(styles.introTextContainer)}>
+                <h1 className={css(styles.introHeader)}>Hi, I'm Dawson!</h1>
+                <h1 className={css(styles.mega)}>👋</h1>
               </div>
               <img
-                className={style(styles.headshot)}
+                className={css(styles.headshot)}
                 src="../../static/my-face.jpg"
                 alt="my face"
               />
             </div>
-            <h1 className={style(styles.loveHeader)}>
+            <h1 className={css(styles.loveHeader)}>
               I'm{' '}
               <span
                 ref={el => {
@@ -179,12 +177,10 @@ class IndexIndex extends Component {
               />{' '}
               who ❤️'s the web
             </h1>
-            <p className={style(styles.bioDescription)}>
+            <p className={css(styles.bioDescription)}>
               React.js and Node.js are my specialties, but all of the web is
               beautiful! I'm a freelance software engineer{' '}
-              <span className={style(styles.available)}>
-                available for hire.
-              </span>
+              <span className={css(styles.available)}>available for hire.</span>
               <br />
               <br />
               Let's work together to make your site fast and beautiful. Reach
@@ -204,14 +200,14 @@ class IndexIndex extends Component {
           </section>
         </div>
 
-        <div className={merge(styles.sectionWrapper, styles.blackBackground)}>
-          <div className={style(styles.untilt)}>
-            <section className={style(styles.section)}>
+        <div {...css(styles.sectionWrapper, styles.blackBackground)}>
+          <div className={css(styles.untilt)}>
+            <section className={css(styles.section)}>
               <h2 id="worked-on">Professional Creations</h2>
               <ul>
                 <PaddedLi>
                   <a
-                    className={style(styles.liWorkedOn)}
+                    className={css(styles.liWorkedOn)}
                     href="https://driver.xyz"
                   >
                     Driver Company Website
@@ -236,10 +232,7 @@ class IndexIndex extends Component {
                   </TagGroup>
                 </PaddedLi>
                 <PaddedLi>
-                  <a
-                    className={style(styles.liWorkedOn)}
-                    href="https://aero.com"
-                  >
+                  <a className={css(styles.liWorkedOn)} href="https://aero.com">
                     Aero Company Website
                   </a>
                   : In late 2018, Aero wanted to update their web presence. I
@@ -262,7 +255,7 @@ class IndexIndex extends Component {
               <ul>
                 <PaddedLi>
                   <a
-                    className={style(styles.liWorkedOn)}
+                    className={css(styles.liWorkedOn)}
                     href="https://uplift.now.sh"
                   >
                     Uplift
@@ -277,7 +270,7 @@ class IndexIndex extends Component {
                 <br />
                 <PaddedLi>
                   <a
-                    className={style(styles.liWorkedOn)}
+                    className={css(styles.liWorkedOn)}
                     href="https://github.com/teamsempo/StableVoucher"
                   >
                     Stable Voucher 🏅 Hackathon Winner 🏅
@@ -296,7 +289,7 @@ class IndexIndex extends Component {
                 <br />
                 <PaddedLi>
                   <a
-                    className={style(styles.liWorkedOn)}
+                    className={css(styles.liWorkedOn)}
                     href="https://vimrc-builder.now.sh"
                   >
                     vimrc Builder
@@ -314,7 +307,7 @@ class IndexIndex extends Component {
                 </PaddedLi>
                 <PaddedLi>
                   <a
-                    className={style(styles.liWorkedOn)}
+                    className={css(styles.liWorkedOn)}
                     href="https://mailto.now.sh"
                   >
                     Mailto
@@ -332,7 +325,7 @@ class IndexIndex extends Component {
                 <br />
                 <PaddedLi>
                   <a
-                    className={style(styles.liWorkedOn)}
+                    className={css(styles.liWorkedOn)}
                     href="https://github.com/dawsbot/skrub"
                   >
                     Skrub
@@ -350,58 +343,58 @@ class IndexIndex extends Component {
           </div>
         </div>
 
-        <div className={style(styles.sectionWrapper)}>
-          <section className={style(styles.section)}>
+        <div className={css(styles.sectionWrapper)}>
+          <section className={css(styles.section)}>
             <h2>See more at:</h2>
             <div>
               <a
-                className={merge(styles.li, styles.black)}
+                {...css(styles.li, styles.black)}
                 href="https://github.com/dawsbot"
               >
                 <img
                   src="../../static/github-huge.png"
                   alt="my github account"
-                  className={style(styles.mediaImg)}
+                  className={css(styles.mediaImg)}
                 />
               </a>
               <a
-                className={merge(styles.li, styles.black)}
+                {...css(styles.li, styles.black)}
                 href="https://linkedin.com/in/dawsonbotsford"
               >
                 <img
                   src="../../static/linkedin-huge.png"
                   alt="my github account"
-                  className={style(styles.mediaImg)}
+                  className={css(styles.mediaImg)}
                 />
               </a>
               <a
-                className={merge(styles.li, styles.black)}
+                {...css(styles.li, styles.black)}
                 href="https://twitter.com/dawsonbotsford"
               >
                 <img
                   src="../../static/twitter-huge.png"
                   alt="my github account"
-                  className={style(styles.mediaImg)}
+                  className={css(styles.mediaImg)}
                 />
               </a>
             </div>
           </section>
         </div>
 
-        <div className={merge(styles.sectionWrapper, styles.blackBackground)}>
-          <div className={style(styles.untilt)}>
-            <section className={style(styles.section)} id="email-form">
+        <div {...css(styles.sectionWrapper, styles.blackBackground)}>
+          <div className={css(styles.untilt)}>
+            <section className={css(styles.section)} id="email-form">
               <h2>Let's Talk!</h2>
 
               <form
-                className={style(styles.formContainer)}
+                className={css(styles.formContainer)}
                 action="https://formspree.io/db-travel@tryninja.io"
                 method="POST"
               >
                 <label htmlFor="name">
                   Name
                   <input
-                    className={style(styles.input)}
+                    className={css(styles.input)}
                     type="text"
                     name="name"
                     placeholder="Jane"
@@ -411,7 +404,7 @@ class IndexIndex extends Component {
                 <label htmlFor="email">
                   Email
                   <input
-                    className={style(styles.input)}
+                    className={css(styles.input)}
                     type="email"
                     name="_replyto"
                     placeholder="Jane@gmail.com"
@@ -421,7 +414,7 @@ class IndexIndex extends Component {
                 <label htmlFor="subject">
                   Subject
                   <textarea
-                    className={merge(styles.input, styles.textArea)}
+                    {...css(styles.input, styles.textArea)}
                     name="subject"
                     placeholder="Can we get your thoughts on our software project? We're trying to do _"
                   />
@@ -429,14 +422,14 @@ class IndexIndex extends Component {
 
                 {/* catch the bots */}
                 <input
-                  className={style(styles.input)}
+                  className={css(styles.input)}
                   type="text"
                   name="_gotcha"
                   style={{ display: 'none' }}
                 />
 
                 <input
-                  className={merge(styles.input, styles.submitButton)}
+                  {...css(styles.input, styles.submitButton)}
                   type="submit"
                   value="Send Me This Message"
                 />

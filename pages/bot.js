@@ -3,22 +3,21 @@ import Head from 'next/head';
 
 import TopNav from '../components/container/TopNav';
 import BotIndex from '../components/container/BotIndex';
-import { insertRule } from 'next/css';
 
-insertRule(`body {
-  font-family: 'Work Sans', sans-serif;
-  font-size: 1.1em;
-  width: 100%;
-  margin: 0px;
-  line-height: 120%;
-}`);
+// insertRule(`body {
+//   font-family: 'Work Sans', sans-serif;
+//   font-size: 1.1em;
+//   width: 100%;
+//   margin: 0px;
+//   line-height: 120%;
+// }`);
 
 class Bot extends Component {
   render() {
     return (
       <div>
         <Head>
-          <title>Dawson Botsford</title>
+          <title>Dawson | Engineer</title>
           <meta charSet="utf-8" />
 
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />

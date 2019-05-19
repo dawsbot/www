@@ -8,21 +8,24 @@
   },
   "license": "MIT",
   "dependencies": {
+    "fontfaceobserver": "^2.1.0",
+    "glamor": "^2.20.40",
     "gravatar": "^1.7.0",
     "husky": "^1.2.0",
-    "inline-style-prefixer": "^5.1.0",
     "just-omit": "^1.0.1",
-    "logrocket": "^0.6.20",
-    "logrocket-react": "^0.0.5",
+    "logrocket": "^0.6.21",
+    "logrocket-react": "^3.0.0",
     "nanoid": "^2.0.1",
-    "next": "^1.0.2",
+    "next": "8.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "typed.js": "^2.0.9"
   },
   "scripts": {
     "test": "eslint components pages",
-    "watch": "NODE_ENV=local next",
     "build": "next build",
-    "deploy": "npx now && npx now alias set $(pbpaste) dawsbot.com",
+    "now-build": "next build",
+    "dev": "next",
     "start": "next start"
   },
   "devDependencies": {

@@ -1,19 +1,28 @@
 import React, { Component } from 'react';
 import Head from 'next/head';
-import { insertRule } from 'next/css';
 import LogRocket from 'logrocket';
 import setupLogRocketReact from 'logrocket-react';
 
 import TopNav from '../components/container/TopNav';
 import IndexIndex from '../components/container/IndexIndex';
 
-insertRule(`body {
-  font-family: 'Work Sans', sans-serif;
-  font-size: 1.1em;
-  width: 100%;
-  margin: 0px;
-  line-height: 120%;
-}`);
+import { rehydrate } from 'glamor';
+
+// Adds server generated styles to glamor cache.
+// Has to run before any `css()` calls
+// '__NEXT_DATA__.ids' is set in '_document.js'
+if (typeof window !== 'undefined') {
+  // eslint-disable-next-line
+  rehydrate(window.__NEXT_DATA__.ids);
+}
+
+// insertRule(`body {
+//   font-family: 'Work Sans', sans-serif;
+//   font-size: 1.1em;
+//   width: 100%;
+//   margin: 0px;
+//   line-height: 120%;
+// }`);
 
 class Index extends Component {
   componentDidMount() {
@@ -90,11 +99,6 @@ class Index extends Component {
           {/* <!-- Meta Tags Generated via http://heymeta.com --> */}
 
           <link rel="shortcut icon" href="/static/favicon.ico" />
-
-          <link
-            href="https://fonts.googleapis.com/css?family=Work+Sans"
-            rel="stylesheet"
-          />
         </Head>
         <TopNav />
         <IndexIndex />

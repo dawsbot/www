@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import {style} from 'next/css';
 
 const styles = {
   container: {
@@ -14,16 +13,10 @@ const styles = {
 };
 
 class SocialIcon extends Component {
-  static displayName: 'SocialIcon';
-
   static propTypes = {
     iconName: React.PropTypes.string,
     url: React.PropTypes.string,
     label: React.PropTypes.string.isRequired
-  };
-
-  static defaultProps = {
-    // testString: 'middle'
   };
 
   render() {

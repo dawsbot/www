@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { style, merge } from 'next/css';
+import { css } from 'glamor';
 
 import JobPosition from './JobPosition';
 import PaddedLi from '../presentational/PaddedLi';
@@ -38,7 +38,7 @@ const styles = {
 };
 
 const SectionHeading = displayText => {
-  return <h2 className={style(styles.sectionHeading)}> {displayText} </h2>;
+  return <h2 className={css(styles.sectionHeading)}> {displayText} </h2>;
 };
 
 // helper fn for calculating years since a date
@@ -73,7 +73,6 @@ const timeSince = (year, month) => {
 };
 
 class ResumeBody extends Component {
-  static displayName = 'ResumeBody';
   state = {
     now: new Date().getTime()
   };
@@ -91,8 +90,8 @@ class ResumeBody extends Component {
   render() {
     return (
       <div>
-        <div className={style(styles.main)}>
-          <section className={merge(styles.bodySection, styles.sectionRight)}>
+        <div className={css(styles.main)}>
+          <section {...css(styles.bodySection, styles.sectionRight)}>
             {SectionHeading('Experience')}
             <JobPosition
               jobTitle="Owning Manager and Software Engineer"
@@ -138,8 +137,8 @@ class ResumeBody extends Component {
               Clearance 2012 - 2015. Stokes Scholar (< 2% acceptance rate) -- 2.75 years"
             />
           </section>
-          <section className={merge(styles.bodySection, styles.sectionLeft)}>
-            {/* <section className={merge(styles.bodySection, styles.sectionLeft)}> */}
+          <section {...css(styles.bodySection, styles.sectionLeft)}>
+            {/* <section {...css(styles.bodySection, styles.sectionLeft)}> */}
             {SectionHeading('Skills')}
             <ul style={{ paddingLeft: '32px' }}>
               <PaddedLi>JavaScript</PaddedLi>
@@ -167,11 +166,11 @@ class ResumeBody extends Component {
                 {timeSince(2019, 2)}
               </PaddedLi>
             </ul>
-            <div className={style(styles.main)}>
+            <div className={css(styles.main)}>
               {SectionHeading('Education')}
-              <h2 className={style(styles.h2)}>B.S. Computer Science</h2>
+              <h2 className={css(styles.h2)}>B.S. Computer Science</h2>
               University of Colorado
-              <div className={merge(styles.bodySection, styles.sectionLeft)} />
+              <div {...css(styles.bodySection, styles.sectionLeft)} />
             </div>
           </section>
         </div>
