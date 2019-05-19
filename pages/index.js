@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import Head from 'next/head';
 import LogRocket from 'logrocket';
 import setupLogRocketReact from 'logrocket-react';
+import { rehydrate } from 'glamor';
 
+import Fonts from '../components/presentational/Fonts';
 import TopNav from '../components/container/TopNav';
 import IndexIndex from '../components/container/IndexIndex';
-
-import { rehydrate } from 'glamor';
 
 // Adds server generated styles to glamor cache.
 // Has to run before any `css()` calls
@@ -34,6 +34,7 @@ class Index extends Component {
       LogRocket.init('ubu2ji/www');
       // plugins should also only be initialized when in the browser
       setupLogRocketReact(LogRocket);
+      Fonts();
     }
   }
 
@@ -102,6 +103,11 @@ class Index extends Component {
         </Head>
         <TopNav />
         <IndexIndex />
+        <style jsx global>{`
+          body {
+            font-family: 'Work Sans', sans-serif;
+          }
+        `}</style>
       </div>
     );
   }

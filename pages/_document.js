@@ -31,10 +31,6 @@ export default class MyDocument extends Document {
               line-height: 120%;
             }`}
           </style>
-          <link
-            href="https://fonts.googleapis.com/css?family=Work+Sans"
-            rel="stylesheet"
-          />
         </Head>
         <body>
           <Main />
