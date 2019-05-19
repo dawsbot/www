@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { css } from 'glamor';
 
 const styles = {
   ul: {
@@ -8,7 +9,11 @@ const styles = {
 
 class UnpaddedUl extends Component {
   render() {
-    return <ul styles={styles.ul}>{this.props.children}</ul>;
+    return (
+      <ul {...css(styles.ul)} className="cheers">
+        {this.props.children}
+      </ul>
+    );
   }
 }
 

@@ -1,6 +1,10 @@
 import React from 'react';
 import Document, { Head, Main, NextScript } from 'next/document';
 import { renderStatic } from 'glamor/server';
+import LogRocket from 'logrocket';
+import setupLogRocketReact from 'logrocket-react';
+
+import Fonts from '../components/presentational/Fonts';
 
 export default class MyDocument extends Document {
   static async getInitialProps({ renderPage }) {
@@ -17,19 +21,22 @@ export default class MyDocument extends Document {
     }
   }
 
+  componentDidMount() {
+    Fonts();
+    if (process.browser) {
+      LogRocket.init('ubu2ji/www');
+      // plugins should also only be initialized when in the browser
+      setupLogRocketReact(LogRocket);
+    }
+  }
+
   render() {
     return (
       <html lang="en">
         <Head>
           <style dangerouslySetInnerHTML={{ __html: this.props.css }} />
-          <style>
-            {`body {
-              font-family: 'Work Sans', sans-serif;
-              font-size: 1.1em;
-              width: 100%;
-              margin: 0px;
-              line-height: 120%;
-            }`}
+          <style jsx global>
+            {``}
           </style>
         </Head>
         <body>

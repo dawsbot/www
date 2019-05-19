@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 const styles = {
   container: {
@@ -14,9 +15,9 @@ const styles = {
 
 class SocialIcon extends Component {
   static propTypes = {
-    iconName: React.PropTypes.string,
-    url: React.PropTypes.string,
-    label: React.PropTypes.string.isRequired
+    iconName: PropTypes.string,
+    url: PropTypes.string,
+    label: PropTypes.string.isRequired
   };
 
   render() {

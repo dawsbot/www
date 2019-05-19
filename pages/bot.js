@@ -4,14 +4,6 @@ import Head from 'next/head';
 import TopNav from '../components/container/TopNav';
 import BotIndex from '../components/container/BotIndex';
 
-// insertRule(`body {
-//   font-family: 'Work Sans', sans-serif;
-//   font-size: 1.1em;
-//   width: 100%;
-//   margin: 0px;
-//   line-height: 120%;
-// }`);
-
 class Bot extends Component {
   render() {
     return (
@@ -32,14 +24,18 @@ class Bot extends Component {
           />
 
           <link rel="shortcut icon" href="/static/favicon.ico" />
-
-          <link
-            href="https://fonts.googleapis.com/css?family=Work+Sans"
-            rel="stylesheet"
-          />
         </Head>
         <TopNav />
         <BotIndex />
+        <style jsx global>{`
+          body {
+            font-family: 'Work Sans', sans-serif;
+            font-size: 1.1em;
+            width: 100%;
+            margin: 0px;
+            line-height: 120%;
+          }
+        `}</style>
       </div>
     );
   }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { css } from 'glamor';
 import omit from 'just-omit';
+import PropTypes from 'prop-types';
 
 const styles = {
   main: {
@@ -17,7 +18,7 @@ const styles = {
 
 class Button extends Component {
   static propTypes = {
-    styles: React.PropTypes.object
+    styles: PropTypes.object
   };
 
   render() {

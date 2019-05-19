@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import Head from 'next/head';
-import LogRocket from 'logrocket';
-import setupLogRocketReact from 'logrocket-react';
 import { rehydrate } from 'glamor';
 
-import Fonts from '../components/presentational/Fonts';
 import TopNav from '../components/container/TopNav';
 import IndexIndex from '../components/container/IndexIndex';
 
@@ -16,28 +13,7 @@ if (typeof window !== 'undefined') {
   rehydrate(window.__NEXT_DATA__.ids);
 }
 
-// insertRule(`body {
-//   font-family: 'Work Sans', sans-serif;
-//   font-size: 1.1em;
-//   width: 100%;
-//   margin: 0px;
-//   line-height: 120%;
-// }`);
-
 class Index extends Component {
-  componentDidMount() {
-    // you can import these packages anywhere
-
-    // only initialize when in the browser
-    // eslint-disable-next-line no-undef
-    if (process.browser) {
-      LogRocket.init('ubu2ji/www');
-      // plugins should also only be initialized when in the browser
-      setupLogRocketReact(LogRocket);
-      Fonts();
-    }
-  }
-
   render() {
     return (
       <div>
@@ -106,6 +82,10 @@ class Index extends Component {
         <style jsx global>{`
           body {
             font-family: 'Work Sans', sans-serif;
+            font-size: 1.1em;
+            width: 100%;
+            margin: 0px;
+            line-height: 120%;
           }
         `}</style>
       </div>

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { css } from 'glamor';
 
@@ -46,10 +47,10 @@ class JobPosition extends Component {
 }
 
 JobPosition.propTypes = {
-  companyName: React.PropTypes.string.isRequired,
-  companyUrl: React.PropTypes.string,
-  jobTitle: React.PropTypes.string.isRequired,
-  jobDescription: React.PropTypes.string.isRequired
+  companyName: PropTypes.string.isRequired,
+  companyUrl: PropTypes.string,
+  jobTitle: PropTypes.string.isRequired,
+  jobDescription: PropTypes.string.isRequired
 };
 
 export default JobPosition;

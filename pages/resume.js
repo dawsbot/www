@@ -24,6 +24,15 @@ class Resume extends Component {
         </Head>
         <TopNav />
         <ResumeIndex />
+        <style jsx global>{`
+          body {
+            font-family: 'Work Sans', sans-serif;
+            font-size: 1.1em;
+            width: 100%;
+            margin: 0px;
+            line-height: 120%;
+          }
+        `}</style>
       </div>
     );
   }

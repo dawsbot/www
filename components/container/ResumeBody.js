@@ -58,14 +58,6 @@ const timeSince = (year, month) => {
   const days = Math.floor(secondsDiff / oneDay);
   secondsDiff -= days * oneDay;
 
-  // const decimaltimeSince = (currentYear - year) + ((currentMonth - month) / 12);
-  // const yearDiff = today.getFullYear() - then.getFullYear()
-  // const dayDiff = today.getDay() - then.getDay()
-
-  // const dayEpoch = 60 * 60 * 24 * 365.25;
-  // const yearEpoch = 60 * 60 * 24 * 365.25;
-
-  // const epochDiff = today.getTime() - then.getTime();
   if (years > 0) {
     return `${years} years, ${days} days, ${secondsDiff} seconds`;
   }
@@ -94,7 +86,7 @@ class ResumeBody extends Component {
           <section {...css(styles.bodySection, styles.sectionRight)}>
             {SectionHeading('Experience')}
             <JobPosition
-              jobTitle="Owning Manager and Software Engineer"
+              jobTitle="Owner and Software Consultant"
               companyName="Dark Triangle"
               companyUrl="https://darktriangle.tech"
               jobDescription={`A dev shop focused on crafting delightful software -- ${timeSince(
@@ -133,17 +125,16 @@ class ResumeBody extends Component {
               jobTitle="Software Engineer"
               companyName="DoD"
               companyUrl="https://www.defense.gov/"
-              jobDescription="Held a U.S. Top-Secret Security
+              jobDescription="U.S. Security
               Clearance 2012 - 2015. Stokes Scholar (< 2% acceptance rate) -- 2.75 years"
             />
           </section>
           <section {...css(styles.bodySection, styles.sectionLeft)}>
-            {/* <section {...css(styles.bodySection, styles.sectionLeft)}> */}
             {SectionHeading('Skills')}
-            <ul style={{ paddingLeft: '32px' }}>
+            <ul style={{ paddingLeft: '22px' }}>
               <PaddedLi>JavaScript</PaddedLi>
               <UnpaddedUl>
-                <PaddedLi>Generic JavaScript {timeSince(2014, 8)}</PaddedLi>
+                <PaddedLi>JavaScript {timeSince(2014, 8)}</PaddedLi>
                 <PaddedLi>
                   React.js {timeSince(2015, 5)}
                   <small>(This resume was coded with it)</small>
@@ -154,16 +145,15 @@ class ResumeBody extends Component {
               <PaddedLi>CSS {timeSince(2014, 8)}</PaddedLi>
               <br />
               <PaddedLi>
+                <a href="../../static/YTT-cert.pdf" style={{ color: 'black' }}>
+                  Certified Power Yoga Teacher - 200 hr training
+                </a>
+              </PaddedLi>
+              <PaddedLi>
                 <a href="../../static/eth-cert.jpg" style={{ color: 'black' }}>
                   Ethereum and Solidity
                 </a>{' '}
                 {timeSince(2018, 12)}
-              </PaddedLi>
-              <PaddedLi>
-                <a href="../../static/YTT-cert.pdf" style={{ color: 'black' }}>
-                  200 Hour Yoga Teacher Certified
-                </a>{' '}
-                {timeSince(2019, 2)}
               </PaddedLi>
             </ul>
             <div className={css(styles.main)}>
