@@ -1,5 +1,5 @@
 import React from 'react';
-import { style } from 'next/css';
+import { css } from 'glamor';
 
 const styles = {
   tag: {
@@ -13,7 +13,7 @@ const styles = {
 };
 
 const Tag = ({ children, ...rest }) => (
-  <div className={style(styles.tag)} {...rest}>
+  <div className={css(styles.tag)} {...rest}>
     {children}
   </div>
 );

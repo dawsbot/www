@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { style } from 'next/css';
+import { css } from 'glamor';
 import SocialIcon from '../presentational/SocialIcon';
 
 const styles = {
@@ -35,18 +35,16 @@ const styles = {
 // const SocialIcon = () => (<div>SocialIcon</div>);
 
 class ResumeHeader extends Component {
-  displayName: 'ResumeHeader';
-
   render() {
     return (
       <div>
-        <div className={style(styles.main)}>
-          <h1 className={style(styles.header)}>
+        <div className={css(styles.main)}>
+          <h1 className={css(styles.header)}>
             Dawson
             <br />
             Botsford
           </h1>
-          <section className={style(styles.linksContainer)}>
+          <section className={css(styles.linksContainer)}>
             <SocialIcon
               label="GitHub"
               iconName="github"

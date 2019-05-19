@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import style from 'next/css';
+import { css } from 'glamor';
 
 const styles = {
   ul: {
@@ -8,12 +8,12 @@ const styles = {
 };
 
 class UnpaddedUl extends Component {
-  static displayName = 'UnpaddedUl';
-  static propTypes = {
-    children: React.PropTypes.node
-  };
   render() {
-    return <ul className={style(styles.ul)}>{this.props.children}</ul>;
+    return (
+      <ul {...css(styles.ul)} className="cheers">
+        {this.props.children}
+      </ul>
+    );
   }
 }
 
