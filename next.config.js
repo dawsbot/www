@@ -1,8 +1,9 @@
-const webpack = require('webpack')
+const webpack = require('webpack');
 
 module.exports = {
+  target: 'serverless',
   webpack: (config, { buildId, dev, isServer, defaultLoaders }) => {
-    const { plugins } = config
+    const { plugins } = config;
     return {
       ...config,
       plugins: [
@@ -11,6 +12,6 @@ module.exports = {
           Glamor: 'glamor/react'
         })
       ]
-    }
+    };
   }
-}
+};
