@@ -16,8 +16,6 @@ insertRule(`body {
 }`);
 
 class Index extends Component {
-  static displayName: 'Index';
-
   componentDidMount() {
     // you can import these packages anywhere
 

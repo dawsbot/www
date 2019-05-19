@@ -10,6 +10,7 @@
   "dependencies": {
     "gravatar": "^1.7.0",
     "husky": "^1.2.0",
+    "inline-style-prefixer": "^5.1.0",
     "just-omit": "^1.0.1",
     "logrocket": "^0.6.20",
     "logrocket-react": "^0.0.5",

@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { style, merge } from 'next/css';
 
 const gravatar = require('gravatar');
 
-const styles = {
+const styles = prefix({
   sectionWrapper: {
     padding: '110px 26px 100px 26px'
   },
@@ -77,11 +76,9 @@ const styles = {
     fontWeight: 'bold',
     color: '#E8B00C'
   }
-};
+});
 
 class BotIndex extends Component {
-  static displayName: 'BotIndex';
-
   state = {
     gravatarUrl: 'start typing...'
   };
@@ -95,8 +92,8 @@ class BotIndex extends Component {
   render() {
     return (
       <div>
-        <div className={style(styles.sectionWrapper)}>
-          <section className={style(styles.section)}>
+        <div className={styles.sectionWrapper}>
+          <section className={styles.section}>
             {' '}
             <h2>
               Hi, I'm DawsBot!
@@ -125,14 +122,16 @@ class BotIndex extends Component {
           </section>
         </div>
 
-        <div className={merge(styles.sectionWrapper, styles.blackBackground)}>
-          <div className={style(styles.untilt)}>
-            <section className={style(styles.section)}>
-              <form className={style(styles.formContainer)}>
+        <div
+          className={{ ...styles.sectionWrapper, ...styles.blackBackground }}
+        >
+          <div className={styles.untilt}>
+            <section className={styles.section}>
+              <form className={styles.formContainer}>
                 <label htmlFor="email">
                   Email Address (never saved or sold)
                   <input
-                    className={style(styles.input)}
+                    className={styles.input}
                     type="email"
                     name="_replyto"
                     onChange={this.handleInput}

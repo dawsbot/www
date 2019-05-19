@@ -13,8 +13,6 @@ insertRule(`body {
 }`);
 
 class Resume extends Component {
-  static displayName: 'Resume';
-
   render() {
     return (
       <div>

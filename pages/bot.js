@@ -14,8 +14,6 @@ insertRule(`body {
 }`);
 
 class Bot extends Component {
-  static displayName: 'Bot';
-
   render() {
     return (
       <div>
