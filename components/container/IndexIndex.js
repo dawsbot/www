@@ -395,7 +395,7 @@ class IndexIndex extends Component {
 
               <form
                 className={style(styles.formContainer)}
-                action="https://formspree.io/dawsonbotsford@gmail.com"
+                action="https://formspree.io/db-travel@tryninja.io"
                 method="POST"
               >
                 <label htmlFor="name">
