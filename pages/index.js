@@ -1,35 +1,19 @@
 import React, { Component } from 'react';
 import Head from 'next/head';
-import { insertRule } from 'next/css';
-import LogRocket from 'logrocket';
-import setupLogRocketReact from 'logrocket-react';
+import { rehydrate } from 'glamor';
 
 import TopNav from '../components/container/TopNav';
 import IndexIndex from '../components/container/IndexIndex';
 
-insertRule(`body {
-  font-family: 'Work Sans', sans-serif;
-  font-size: 1.1em;
-  width: 100%;
-  margin: 0px;
-  line-height: 120%;
-}`);
+// Adds server generated styles to glamor cache.
+// Has to run before any `css()` calls
+// '__NEXT_DATA__.ids' is set in '_document.js'
+if (typeof window !== 'undefined') {
+  // eslint-disable-next-line
+  rehydrate(window.__NEXT_DATA__.ids);
+}
 
 class Index extends Component {
-  static displayName: 'Index';
-
-  componentDidMount() {
-    // you can import these packages anywhere
-
-    // only initialize when in the browser
-    // eslint-disable-next-line no-undef
-    if (process.browser) {
-      LogRocket.init('ubu2ji/www');
-      // plugins should also only be initialized when in the browser
-      setupLogRocketReact(LogRocket);
-    }
-  }
-
   render() {
     return (
       <div>
@@ -92,14 +76,18 @@ class Index extends Component {
           {/* <!-- Meta Tags Generated via http://heymeta.com --> */}
 
           <link rel="shortcut icon" href="/static/favicon.ico" />
-
-          <link
-            href="https://fonts.googleapis.com/css?family=Work+Sans"
-            rel="stylesheet"
-          />
         </Head>
         <TopNav />
         <IndexIndex />
+        <style jsx global>{`
+          body {
+            font-family: 'Work Sans', sans-serif;
+            font-size: 1.1em;
+            width: 100%;
+            margin: 0px;
+            line-height: 120%;
+          }
+        `}</style>
       </div>
     );
   }

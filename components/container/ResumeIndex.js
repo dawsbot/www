@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ResumeBody from './ResumeBody';
 import ResumeHeader from './ResumeHeader';
-import { style, merge } from 'next/css';
+import { css } from 'glamor';
 import Button from '../presentational/Button';
 
 /* eslint-disable no-undef */
@@ -44,15 +44,13 @@ const styles = {
 };
 
 class ResumeIndex extends Component {
-  static displayName: 'ResumeIndex';
-
   render() {
     return (
-      <div className={merge(styles.sectionWrapper, styles.page)}>
+      <div {...css(styles.sectionWrapper, styles.page)}>
         <ResumeHeader />
         <ResumeBody />
 
-        <div className={style(styles.buttonWrapper)}>
+        <div className={css(styles.buttonWrapper)}>
           <Button
             onClick={() => typeof window !== 'undefined' && window.print()}
             styles={styles.printButton}

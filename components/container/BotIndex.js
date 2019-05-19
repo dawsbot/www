@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { style, merge } from 'next/css';
+import { css } from 'glamor';
 
 const gravatar = require('gravatar');
 
@@ -80,8 +80,6 @@ const styles = {
 };
 
 class BotIndex extends Component {
-  static displayName: 'BotIndex';
-
   state = {
     gravatarUrl: 'start typing...'
   };
@@ -95,8 +93,8 @@ class BotIndex extends Component {
   render() {
     return (
       <div>
-        <div className={style(styles.sectionWrapper)}>
-          <section className={style(styles.section)}>
+        <div {...css(styles.sectionWrapper)}>
+          <section {...css(styles.section)}>
             {' '}
             <h2>
               Hi, I'm DawsBot!
@@ -125,14 +123,14 @@ class BotIndex extends Component {
           </section>
         </div>
 
-        <div className={merge(styles.sectionWrapper, styles.blackBackground)}>
-          <div className={style(styles.untilt)}>
-            <section className={style(styles.section)}>
-              <form className={style(styles.formContainer)}>
+        <div {...css(styles.sectionWrapper, styles.blackBackground)}>
+          <div {...css(styles.untilt)}>
+            <section {...css(styles.section)}>
+              <form {...css(styles.formContainer)}>
                 <label htmlFor="email">
                   Email Address (never saved or sold)
                   <input
-                    className={style(styles.input)}
+                    {...css(styles.input)}
                     type="email"
                     name="_replyto"
                     onChange={this.handleInput}

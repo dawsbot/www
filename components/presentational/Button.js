@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { merge } from 'next/css';
+import { css } from 'glamor';
 import omit from 'just-omit';
+import PropTypes from 'prop-types';
 
 const styles = {
   main: {
@@ -16,16 +17,14 @@ const styles = {
 };
 
 class Button extends Component {
-  static displayName: 'Button';
-
   static propTypes = {
-    styles: React.PropTypes.object
+    styles: PropTypes.object
   };
 
   render() {
     const props = omit(this.props, ['styles']);
     return (
-      <button {...props} className={merge(styles.main, this.props.styles)}>
+      <button {...props} {...css(styles.main, this.props.styles)}>
         {this.props.children}
       </button>
     );
