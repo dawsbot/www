@@ -45,7 +45,7 @@ const SectionHeading = displayText => {
 const timeSince = (year, month) => {
   const today = new Date();
   // MM DD YYYY
-  const then = new Date(`${month} 1 ${year}`);
+  const then = new Date(year, month, 1);
 
   const oneDay = 86400;
   const oneYear = oneDay * 365.25;
