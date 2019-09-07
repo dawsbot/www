@@ -89,7 +89,7 @@ class ResumeBody extends Component {
               jobTitle="Owner and Software Consultant"
               companyName="Dark Triangle"
               companyUrl="https://darktriangle.tech"
-              jobDescription={`A dev shop focused on crafting delightful software -- ${timeSince(
+              jobDescription={`I'm a travelling senior React.js developer. Joining into teams with hard PR's, code reviews, and best practices -- ${timeSince(
                 2018,
                 10
               )}`}
