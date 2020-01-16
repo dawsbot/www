@@ -88,7 +88,7 @@ class ResumeBody extends Component {
             <JobPosition
               jobTitle="Owner and Software Consultant"
               companyName="Dark Triangle"
-              companyUrl="https://darktriangle.tech"
+              companyUrl="https://darktriangle.now.sh/"
               jobDescription={`I'm a travelling senior React.js developer. Joining into teams with hard PR's, code reviews, and best practices -- ${timeSince(
                 2018,
                 10
