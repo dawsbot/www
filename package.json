@@ -19,6 +19,7 @@
     "next": "8.1.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "styled-components": "^5.1.0",
     "typed.js": "^2.0.9"
   },
   "scripts": {

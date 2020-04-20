@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import { css } from 'glamor';
 import Typed from 'typed.js';
 
+import ProjectCard from '../presentational/ProjectCard';
 import Tag from '../presentational/Tag';
 import TagGroup from '../presentational/TagGroup';
 
 import PaddedLi from '../presentational/PaddedLi';
-
 const styles = {
   introTextContainer: {
     textAlign: 'center'
@@ -53,8 +53,7 @@ const styles = {
     transform: 'skewY(-8deg)'
   },
   liWorkedOn: {
-    color: 'white',
-    borderBottom: '1px solid white'
+    color: 'white'
   },
   black: {
     color: 'black'
@@ -203,81 +202,70 @@ class IndexIndex extends Component {
         <div {...css(styles.sectionWrapper, styles.blackBackground)}>
           <div className={css(styles.untilt)}>
             <section className={css(styles.section)}>
-              <h2 id="worked-on">Professional Creations</h2>
-              <ul>
-                <PaddedLi>
-                  <a
-                    className={css(styles.liWorkedOn)}
-                    href="https://driver.xyz"
-                  >
-                    Driver Company Website
-                  </a>
-                  <span>
-                    : A full application for marketing and signup. I lead the
-                    frontend team from day one till near-launch.
-                  </span>
-                  <br />
-                  <TagGroup>
-                    <Tag>⚛️ React.js</Tag>
-                    <Tag>JavaScript</Tag>
-                    <Tag>FlowType</Tag>
-                    <Tag>Create React App</Tag>
-                    <Tag>Express.js</Tag>
-                    <Tag>WebPack</Tag>
-                    <Tag>Prettier</Tag>
-                    <Tag>ESLint</Tag>
-                    <Tag>Multi-Language</Tag>
-                    <Tag>Stripe Payment Integration</Tag>
-                    <Tag>WeChat Auth Integration</Tag>
-                  </TagGroup>
-                </PaddedLi>
-                <PaddedLi>
-                  <a className={css(styles.liWorkedOn)} href="https://aero.com">
-                    Aero Company Website
-                  </a>
-                  : In late 2018, Aero wanted to update their web presence. I
-                  embedded with their engineers on-site in San Francisco to
-                  update their new web presence
-                  <br />
-                  <TagGroup>
-                    <Tag>⚛️ React.js</Tag>
-                    <Tag>Gatsby.js</Tag>
-                    <Tag>JavaScript</Tag>
-                    <Tag>TypeScript</Tag>
-                    <Tag>Prettier</Tag>
-                    <Tag>TSLint</Tag>
-                  </TagGroup>
-                </PaddedLi>
-              </ul>
-              <br />
-              <br />
+              {/* <h2 id="worked-on">Professional Creations</h2> */}
+              {/* <ul> */}
+              {/*   <PaddedLi> */}
+              {/*     <a */}
+              {/*       className={css(styles.liWorkedOn)} */}
+              {/*       href="https://driver.xyz" */}
+              {/*     > */}
+              {/*       Driver Company Website */}
+              {/*     </a> */}
+              {/*     <span> */}
+              {/*       : A full application for marketing and signup. I lead the */}
+              {/*       frontend team from day one till near-launch. */}
+              {/*     </span> */}
+              {/*     <br /> */}
+              {/*     <TagGroup> */}
+              {/*       <Tag>⚛️ React.js</Tag> */}
+              {/*       <Tag>JavaScript</Tag> */}
+              {/*       <Tag>FlowType</Tag> */}
+              {/*       <Tag>Create React App</Tag> */}
+              {/*       <Tag>Express.js</Tag> */}
+              {/*       <Tag>WebPack</Tag> */}
+              {/*       <Tag>Prettier</Tag> */}
+              {/*       <Tag>ESLint</Tag> */}
+              {/*       <Tag>Multi-Language</Tag> */}
+              {/*       <Tag>Stripe Payment Integration</Tag> */}
+              {/*       <Tag>WeChat Auth Integration</Tag> */}
+              {/*     </TagGroup> */}
+              {/*   </PaddedLi> */}
+              {/*   <PaddedLi> */}
+              {/*     <a className={css(styles.liWorkedOn)} href="https://aero.com"> */}
+              {/*       Aero Company Website */}
+              {/*     </a> */}
+              {/*     : In late 2018, Aero wanted to update their web presence. I */}
+              {/*     embedded with their engineers on-site in San Francisco to */}
+              {/*     update their new web presence */}
+              {/*     <br /> */}
+              {/*     <TagGroup> */}
+              {/*       <Tag>⚛️ React.js</Tag> */}
+              {/*       <Tag>Gatsby.js</Tag> */}
+              {/*       <Tag>JavaScript</Tag> */}
+              {/*       <Tag>TypeScript</Tag> */}
+              {/*       <Tag>Prettier</Tag> */}
+              {/*       <Tag>TSLint</Tag> */}
+              {/*     </TagGroup> */}
+              {/*   </PaddedLi> */}
+              {/* </ul> */}
+              {/* <br /> */}
+              {/* <br /> */}
               <h2 id="worked-on">Passion Creations</h2>
+              <ProjectCard
+                title="Uplift"
+                href="https://uplift.now.sh"
+                description="A website for happy quotes"
+              />
+              {/* <Tag>JavaScript</Tag>
+                    <Tag>LightWeight</Tag> */}
+              <ProjectCard
+                href="https://github.com/teamsempo/StableVoucher"
+                title="
+Stable Voucher 🏅 Hackathon Winner 🏅"
+                description=": A crypto site for humanitarian aid"
+              />
               <ul>
-                <PaddedLi>
-                  <a
-                    className={css(styles.liWorkedOn)}
-                    href="https://uplift.now.sh"
-                  >
-                    Uplift
-                  </a>
-                  : 🙌 A website for happy quotes
-                  <br />
-                  <TagGroup>
-                    <Tag>JavaScript</Tag>
-                    <Tag>LightWeight</Tag>
-                  </TagGroup>
-                </PaddedLi>
-                <br />
-                <PaddedLi>
-                  <a
-                    className={css(styles.liWorkedOn)}
-                    href="https://github.com/teamsempo/StableVoucher"
-                  >
-                    Stable Voucher 🏅 Hackathon Winner 🏅
-                  </a>
-                  : A crypto site for humanitarian aid
-                  <br />
-                  <TagGroup>
+                {/* <TagGroup>
                     <Tag>⚛️ React.js</Tag>
                     <Tag>💅 UI/UX optimized</Tag>
                     <Tag>JavaScript</Tag>
@@ -286,7 +274,7 @@ class IndexIndex extends Component {
                     <Tag>Create React App</Tag>
                   </TagGroup>
                 </PaddedLi>
-                <br />
+                <br /> */}
                 <PaddedLi>
                   <a
                     className={css(styles.liWorkedOn)}
@@ -353,7 +341,7 @@ class IndexIndex extends Component {
               >
                 <img
                   src="../../static/github-huge.png"
-                  alt="my github account"
+                  alt="GitHub logo"
                   className={css(styles.mediaImg)}
                 />
               </a>
@@ -363,7 +351,7 @@ class IndexIndex extends Component {
               >
                 <img
                   src="../../static/linkedin-huge.png"
-                  alt="my github account"
+                  alt="LinkedIn logo"
                   className={css(styles.mediaImg)}
                 />
               </a>
@@ -373,7 +361,7 @@ class IndexIndex extends Component {
               >
                 <img
                   src="../../static/twitter-huge.png"
-                  alt="my github account"
+                  alt="Twitter logo"
                   className={css(styles.mediaImg)}
                 />
               </a>
