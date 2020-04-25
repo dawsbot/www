@@ -1,6 +1,10 @@
 'use strict';
 module.exports = {
   parser: 'babel-eslint',
+  env: {
+    amd: true,
+    browser: true
+  },
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
@@ -15,12 +19,7 @@ module.exports = {
   },
   rules: {
     'react/jsx-indent': [2, 2],
-    'react/prop-types': [
-      2,
-      {
-        ignore: ['children']
-      }
-    ],
+    'react/prop-types': 'off',
     'prefer-const': 2,
     'no-var': 2,
     semi: [2, 'always'],

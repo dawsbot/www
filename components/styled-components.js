@@ -35,10 +35,10 @@ const Card = styled.div`
 `;
 
 const usesImages = {
-  js: require('../media/icons8-javascript.svg'),
-  node: require('../media/icons8-nodejs.svg'),
+  javascript: require('../media/icons8-javascript.svg'),
+  nodejs: require('../media/icons8-nodejs.svg'),
   ethereum: require('../media/icons8-ethereum.svg'),
-  react: require('../media/icons8-react-native.svg')
+  reactjs: require('../media/icons8-react-native.svg')
 };
 export const ProjectCard = ({ title, href, description, uses = [] }) => (
   <a href={href} style={{ textDecoration: 'none' }} target="_blank">
@@ -49,7 +49,11 @@ export const ProjectCard = ({ title, href, description, uses = [] }) => (
           .sort()
           .reverse()
           .map(technology => (
-            <img src={usesImages[technology]} />
+            <img
+              key={title + technology}
+              src={usesImages[technology]}
+              alt={`Logo for ${technology}`}
+            />
           ))}
       </div>
     </Card>

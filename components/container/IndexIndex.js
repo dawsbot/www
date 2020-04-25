@@ -3,10 +3,6 @@ import { css } from 'glamor';
 import Typed from 'typed.js';
 
 import { ProjectCard, ProjectsGridContainer } from '../styled-components';
-import Tag from '../presentational/Tag';
-import TagGroup from '../presentational/TagGroup';
-
-import PaddedLi from '../presentational/PaddedLi';
 const styles = {
   introTextContainer: {
     textAlign: 'center'
@@ -276,31 +272,31 @@ class IndexIndex extends Component {
                   title="Uplift"
                   href="https://uplift.now.sh"
                   description="A website for happy quotes"
-                  uses={['js']}
+                  uses={['javascript']}
                 />
                 <ProjectCard
                   href="https://mailto.now.sh"
                   title="Mailto"
                   description="⚡️ A web app for software devs to create email mailto's"
-                  uses={['js', 'react']}
+                  uses={['javascript', 'reactjs']}
                 />
                 <ProjectCard
                   href="https://vimrc-builder.now.sh"
                   title="vimrc Builder"
                   description="A web app for software devs to build a vimrc file"
-                  uses={['js', 'react']}
+                  uses={['javascript', 'reactjs']}
                 />
                 <ProjectCard
                   href="https://github.com/teamsempo/StableVoucher"
                   title="🏅 Stable Voucher 🏅"
                   description="A web-app for distibuting humanitarian aid with crypocurrency. (Hackathon winner)"
-                  uses={['ethereum', 'js', 'react']}
+                  uses={['ethereum', 'javascript', 'reactjs']}
                 />
                 <ProjectCard
                   href="https://github.com/dawsbot/skrub"
                   title="Skrub"
                   description="Irreversible file deletion on every Operating System"
-                  uses={['js', 'node']}
+                  uses={['javascript', 'nodejs']}
                 />
               </ProjectsGridContainer>
             </section>
