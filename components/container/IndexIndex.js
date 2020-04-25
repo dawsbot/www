@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { css } from 'glamor';
 import Typed from 'typed.js';
 
-import ProjectCard from '../presentational/ProjectCard';
+import { ProjectCard, ProjectsGridContainer } from '../styled-components';
 import Tag from '../presentational/Tag';
 import TagGroup from '../presentational/TagGroup';
 
@@ -25,7 +25,7 @@ const styles = {
   },
   section: {
     margin: '0 auto',
-    maxWidth: '800px'
+    maxWidth: '1000px'
   },
   headshot: {
     borderRadius: '3px',
@@ -37,8 +37,7 @@ const styles = {
   },
   blackBackground: {
     backgroundColor: 'black',
-    boxShadow:
-      'inset 0 1px 0 rgba(255,255,255,.6), 0 22px 70px 4px rgba(0,0,0,0.56), 0 0 0 1px rgba(0, 0, 0, 0.3)',
+    boxShadow: '0px 4px 14px 0px rgba(71,71,71,1)',
     color: 'white',
     width: '100vw',
     boxSizing: 'border-box',
@@ -77,8 +76,7 @@ const styles = {
   bioDescription: {
     border: '1px solid grey',
     borderRadius: '4px',
-    boxShadow:
-      'inset 0 1px 0 rgba(255,255,255,.6), 0 22px 70px 4px rgba(0,0,0,0.56), 0 0 0 1px rgba(0, 0, 0, 0.3)',
+    boxShadow: '0px 4px 14px 0px rgba(71,71,71,1)',
     padding: '20px 30px',
     backgroundColor: 'black',
     color: 'white',
@@ -177,8 +175,38 @@ class IndexIndex extends Component {
               who ❤️'s the web
             </h1>
             <p className={css(styles.bioDescription)}>
-              React.js and Node.js are my specialties, but all of the web is
-              beautiful! I'm a freelance software engineer{' '}
+              React.js and Node.js are my specialties!
+              <div
+                style={{
+                  display: 'flex',
+                  margin: '40px',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center'
+                }}
+              >
+                <img
+                  src={require('../../media/icons8-react-native.svg')}
+                  style={{ height: 100, marginRight: '50px' }}
+                />
+                <span
+                  style={{
+                    backgroundColor: 'white',
+                    borderRadius: '50%',
+                    width: 150,
+                    height: 150,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center'
+                  }}
+                >
+                  <img
+                    src={require('../../media/icons8-nodejs.svg')}
+                    style={{ height: 100 }}
+                  />
+                </span>
+              </div>
+              I'm a freelance software engineer{' '}
               <span className={css(styles.available)}>available for hire.</span>
               <br />
               <br />
@@ -188,14 +216,6 @@ class IndexIndex extends Component {
                 bottom of this page!
               </a>
             </p>
-
-            <iframe
-              src="https://player.vimeo.com/video/324015038"
-              width="100%"
-              height="360"
-              frameBorder="0"
-              style={{ marginTop: '80px' }}
-            />
           </section>
         </div>
 
@@ -250,83 +270,39 @@ class IndexIndex extends Component {
               {/* </ul> */}
               {/* <br /> */}
               {/* <br /> */}
-              <h2 id="worked-on">Passion Creations</h2>
-              <ProjectCard
-                title="Uplift"
-                href="https://uplift.now.sh"
-                description="A website for happy quotes"
-              />
-              {/* <Tag>JavaScript</Tag>
-                    <Tag>LightWeight</Tag> */}
-              <ProjectCard
-                href="https://github.com/teamsempo/StableVoucher"
-                title="
-Stable Voucher 🏅 Hackathon Winner 🏅"
-                description=": A crypto site for humanitarian aid"
-              />
-              <ul>
-                {/* <TagGroup>
-                    <Tag>⚛️ React.js</Tag>
-                    <Tag>💅 UI/UX optimized</Tag>
-                    <Tag>JavaScript</Tag>
-                    <Tag>Ethereum</Tag>
-                    <Tag>Solidity</Tag>
-                    <Tag>Create React App</Tag>
-                  </TagGroup>
-                </PaddedLi>
-                <br /> */}
-                <PaddedLi>
-                  <a
-                    className={css(styles.liWorkedOn)}
-                    href="https://vimrc-builder.now.sh"
-                  >
-                    vimrc Builder
-                  </a>
-                  : A web app for software devs to build a vimrc file
-                  <br />
-                  <TagGroup>
-                    <Tag>⚛️ React.js</Tag>
-                    <Tag>💅 UI/UX optimized</Tag>
-                    <Tag>Create React App</Tag>
-                    <Tag>JavaScript</Tag>
-                    <Tag>FlowType</Tag>
-                    <Tag>Prettier.js</Tag>
-                  </TagGroup>
-                </PaddedLi>
-                <PaddedLi>
-                  <a
-                    className={css(styles.liWorkedOn)}
-                    href="https://mailto.now.sh"
-                  >
-                    Mailto
-                  </a>
-                  : 💌⚡️ A web app for software devs to create email mailto's
-                  <br />
-                  <TagGroup>
-                    <Tag>⚛️ React.js</Tag>
-                    <Tag>Next.js</Tag>
-                    <Tag>JavaScript</Tag>
-                    <Tag>Prettier.js</Tag>
-                    <Tag>ESLint</Tag>
-                  </TagGroup>
-                </PaddedLi>
-                <br />
-                <PaddedLi>
-                  <a
-                    className={css(styles.liWorkedOn)}
-                    href="https://github.com/dawsbot/skrub"
-                  >
-                    Skrub
-                  </a>
-                  : Irreversible file deletion on every Operating System
-                  <br />
-                  <TagGroup>
-                    <Tag>JavaScript</Tag>
-                    <Tag>Node.js</Tag>
-                    <Tag>Dev Tool</Tag>
-                  </TagGroup>
-                </PaddedLi>
-              </ul>
+              <h2>Some of my creations:</h2>
+              <ProjectsGridContainer>
+                <ProjectCard
+                  title="Uplift"
+                  href="https://uplift.now.sh"
+                  description="A website for happy quotes"
+                  uses={['js']}
+                />
+                <ProjectCard
+                  href="https://mailto.now.sh"
+                  title="Mailto"
+                  description="⚡️ A web app for software devs to create email mailto's"
+                  uses={['js', 'react']}
+                />
+                <ProjectCard
+                  href="https://vimrc-builder.now.sh"
+                  title="vimrc Builder"
+                  description="A web app for software devs to build a vimrc file"
+                  uses={['js', 'react']}
+                />
+                <ProjectCard
+                  href="https://github.com/teamsempo/StableVoucher"
+                  title="🏅 Stable Voucher 🏅"
+                  description="A web-app for distibuting humanitarian aid with crypocurrency. (Hackathon winner)"
+                  uses={['ethereum', 'js', 'react']}
+                />
+                <ProjectCard
+                  href="https://github.com/dawsbot/skrub"
+                  title="Skrub"
+                  description="Irreversible file deletion on every Operating System"
+                  uses={['js', 'node']}
+                />
+              </ProjectsGridContainer>
             </section>
           </div>
         </div>
