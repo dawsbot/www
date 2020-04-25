@@ -153,7 +153,11 @@ class IndexIndex extends Component {
             <div className={css(styles.introWithPicture)}>
               <div className={css(styles.introTextContainer)}>
                 <h1 className={css(styles.introHeader)}>Hi, I'm Dawson!</h1>
-                <h1 className={css(styles.mega)}>👋</h1>
+                <h1 className={css(styles.mega)}>
+                  <span role="img" aria-label="hand wave">
+                    👋
+                  </span>
+                </h1>
               </div>
               <img
                 className={css(styles.headshot)}
@@ -176,7 +180,6 @@ class IndexIndex extends Component {
                 style={{
                   display: 'flex',
                   margin: '40px',
-                  display: 'flex',
                   justifyContent: 'center',
                   alignItems: 'center'
                 }}
@@ -184,6 +187,7 @@ class IndexIndex extends Component {
                 <img
                   src={require('../../media/icons8-react-native.svg')}
                   style={{ height: 100, marginRight: '50px' }}
+                  alt="logo for react"
                 />
                 <span
                   style={{
@@ -199,6 +203,7 @@ class IndexIndex extends Component {
                   <img
                     src={require('../../media/icons8-nodejs.svg')}
                     style={{ height: 100 }}
+                    alt="logo for nodejs"
                   />
                 </span>
               </div>
@@ -393,6 +398,9 @@ class IndexIndex extends Component {
                   type="submit"
                   value="Send Me This Message"
                 />
+                <p>
+                  icons from <a href="https://icons8.com/">icons8</a>
+                </p>
               </form>
             </section>
           </div>

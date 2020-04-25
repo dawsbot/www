@@ -41,7 +41,12 @@ const usesImages = {
   reactjs: require('../media/icons8-react-native.svg')
 };
 export const ProjectCard = ({ title, href, description, uses = [] }) => (
-  <a href={href} style={{ textDecoration: 'none' }} target="_blank">
+  <a
+    href={href}
+    style={{ textDecoration: 'none' }}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
     <Card>
       <div>
         <h3 style={{ fontSize: '22px' }}>{title}</h3> <p>$_ {description}</p>

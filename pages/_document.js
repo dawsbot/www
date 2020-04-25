@@ -51,9 +51,9 @@ export default class MyDocument extends Document {
 
   componentDidMount() {
     Fonts();
-    if (process.browser) {
+    // client-side only
+    if (typeof window !== 'undefined') {
       LogRocket.init('ubu2ji/www');
-      // plugins should also only be initialized when in the browser
       setupLogRocketReact(LogRocket);
     }
   }

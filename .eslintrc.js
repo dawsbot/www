@@ -18,6 +18,7 @@ module.exports = {
     }
   },
   rules: {
+    'react/no-unescaped-entities': 'off',
     'react/jsx-indent': [2, 2],
     'react/prop-types': 'off',
     'prefer-const': 2,
