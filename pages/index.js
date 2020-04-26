@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { rehydrate } from 'glamor';
 
 import TopNav from '../components/container/TopNav';
-import IndexIndex from '../components/container/IndexIndex';
+import IndexIndex from '../components/Index/IndexIndex';
 
 // Adds server generated styles to glamor cache.
 // Has to run before any `css()` calls

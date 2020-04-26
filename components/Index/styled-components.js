@@ -35,10 +35,10 @@ const Card = styled.div`
 `;
 
 const usesImages = {
-  javascript: require('../media/icons8-javascript.svg'),
-  nodejs: require('../media/icons8-nodejs.svg'),
-  ethereum: require('../media/icons8-ethereum.svg'),
-  reactjs: require('../media/icons8-react-native.svg')
+  javascript: require('../../media/icons8-javascript.svg'),
+  nodejs: require('../../media/icons8-nodejs.svg'),
+  ethereum: require('../../media/icons8-ethereum.svg'),
+  reactjs: require('../../media/icons8-react-native.svg')
 };
 export const ProjectCard = ({ title, href, description, uses = [] }) => (
   <a

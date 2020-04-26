@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import { css } from 'glamor';
 import Typed from 'typed.js';
 
-import { ProjectCard, ProjectsGridContainer } from '../styled-components';
+import { ProjectCard, ProjectsGridContainer } from './styled-components';
 const styles = {
   introTextContainer: {
     textAlign: 'center'
@@ -76,7 +76,13 @@ const styles = {
     padding: '20px 30px',
     backgroundColor: 'black',
     color: 'white',
-    lineHeight: 1.4
+    lineHeight: 1.4,
+    display: 'flex',
+    margin: '40px',
+    padding: '40px',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'column'
   },
   formContainer: {
     border: '2px solid white',
@@ -174,30 +180,39 @@ class IndexIndex extends Component {
               />{' '}
               who ❤️'s the web
             </h1>
-            <p className={css(styles.bioDescription)}>
-              React.js and Node.js are my specialties!
-              <div
-                style={{
-                  display: 'flex',
-                  margin: '40px',
-                  justifyContent: 'center',
-                  alignItems: 'center'
-                }}
-              >
-                <img
-                  src={require('../../media/icons8-react-native.svg')}
-                  style={{ height: 100, marginRight: '50px' }}
-                  alt="logo for react"
-                />
+            <div className={css(styles.bioDescription)}>
+              <h3 style={{ marginBottom: '40px' }}>I build with</h3>
+              <div style={{ display: 'flex' }}>
                 <span
                   style={{
                     backgroundColor: 'white',
                     borderRadius: '50%',
-                    width: 150,
-                    height: 150,
+                    width: 180,
+                    height: 180,
                     display: 'flex',
                     alignItems: 'center',
-                    justifyContent: 'center'
+                    justifyContent: 'center',
+                    flexDirection: 'column',
+                    marginRight: '40px'
+                  }}
+                >
+                  <img
+                    src={require('../../media/icons8-react-native.svg')}
+                    style={{ height: 100 }}
+                    alt="logo for react"
+                  />
+                  <div style={{ color: 'black' }}>React</div>
+                </span>
+                <span
+                  style={{
+                    backgroundColor: 'white',
+                    borderRadius: '50%',
+                    width: 180,
+                    height: 180,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    flexDirection: 'column'
                   }}
                 >
                   <img
@@ -205,9 +220,12 @@ class IndexIndex extends Component {
                     style={{ height: 100 }}
                     alt="logo for nodejs"
                   />
+                  <div style={{ color: 'black' }}>Node.js</div>
                 </span>
               </div>
-              I'm a freelance software engineer{' '}
+              <span style={{ marginTop: '40px' }}>
+                I'm a freelance software engineer
+              </span>
               <span className={css(styles.available)}>available for hire.</span>
               <br />
               <br />
@@ -216,7 +234,8 @@ class IndexIndex extends Component {
               <a href="#email-form" style={{ color: 'white' }}>
                 bottom of this page!
               </a>
-            </p>
+            </div>
+            {/* </div> */}
           </section>
         </div>
 
