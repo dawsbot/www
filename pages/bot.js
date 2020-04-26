@@ -9,7 +9,7 @@ class Bot extends Component {
     return (
       <div>
         <Head>
-          <title>Gravatar Tool - Dawson Botsford</title>
+          <title>Gravatar Tool: Dawson Botsford</title>
         </Head>
         <TopNav />
         <BotIndex />

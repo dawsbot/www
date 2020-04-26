@@ -8,7 +8,7 @@ class Resume extends Component {
     return (
       <div>
         <Head>
-          <title>Resume - Dawson Botsford</title>
+          <title>Resume of Work: Dawson Botsford</title>
           <script src="https://use.fontawesome.com/669d282f9a.js" />
         </Head>
         <TopNav />
