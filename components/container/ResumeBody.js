@@ -50,18 +50,10 @@ const timeSince = (year, month) => {
   const oneDay = 86400;
   const oneYear = oneDay * 365.25;
 
-  let secondsDiff = Math.floor((today - then) / 1000);
-
-  const years = Math.floor(secondsDiff / oneYear);
-  secondsDiff -= years * oneYear;
-
-  const days = Math.floor(secondsDiff / oneDay);
-  secondsDiff -= days * oneDay;
-
-  if (years > 0) {
-    return `${years} years, ${days} days, ${secondsDiff} seconds`;
-  }
-  return `${days} days, ${secondsDiff} seconds`;
+  let secondsDiff = (today - then) / 1000;
+  const years = secondsDiff / oneYear;
+  const yr = years.toFixed(8);
+  return <code style={{ fontSize: 16 }}>{yr} yrs</code>;
 };
 
 class ResumeBody extends Component {
@@ -72,7 +64,7 @@ class ResumeBody extends Component {
   componentDidMount() {
     this.interval = setInterval(
       () => this.setState({ now: new Date().getTime() }),
-      1000
+      100
     );
   }
   componentWillUnmount() {
@@ -86,47 +78,45 @@ class ResumeBody extends Component {
           <section {...css(styles.bodySection, styles.sectionRight)}>
             {SectionHeading('Experience')}
             <JobPosition
-              jobTitle="Owner and Software Consultant"
+              jobTitle={`Founder & Engineer`}
               companyName="Dark Triangle"
               companyUrl="https://darktriangle.now.sh/"
-              jobDescription={`I'm a travelling senior React.js developer. Joining into teams with hard PR's, code reviews, and best practices -- ${timeSince(
-                2018,
-                10
-              )}`}
+              jobDescription="Consulting with startups who want world-class web apps."
+              TimeSince={timeSince(2018, 10)}
             />
             <JobPosition
               jobTitle="Lead Software Engineer"
               companyName="Driver"
               companyUrl="https://driver.xyz"
-              jobDescription={`Owned and delivered flagship web app. Heavy leadership, tasking, and coding. React and Redux -- 1.08 years`}
+              jobDescription={`Owned and delivered flagship web app. Heavy leadership, tasking, and coding. React and Redux - 1.08 yrs`}
             />
             <JobPosition
               jobTitle="Full-stack Web Engineer"
               companyName="Uber"
               companyUrl="https://uber.com"
               jobDescription="PM'd and coded JavaScript to all of Uber's
-              web with React & Node.js. -- 1.08 years"
+              web with React & Node.js. - 1.08 yrs"
             />
             <JobPosition
               jobTitle="Co-founder & Director"
               companyName="HackCU"
               companyUrl="https://hackcu.org"
               jobDescription="Started and grew this collegiate
-              hackathon to > 200 students -- 1.66 years"
+              hackathon to > 200 students - 1.66 yrs"
             />
             <JobPosition
               jobTitle="Frontend Engineer Intern"
               companyName="Shape"
               companyUrl="https://shapesecurity.com"
               jobDescription="KPCB Engineering Fellow in Silicon Valley
-              (< 3% acceptance) -- 0.33 years"
+              (< 3% acceptance) - 0.33 yrs"
             />
             <JobPosition
               jobTitle="Software Engineer"
               companyName="DoD"
               companyUrl="https://www.defense.gov/"
               jobDescription="U.S. Security
-              Clearance 2012 - 2015. Stokes Scholar (< 2% acceptance rate) -- 2.75 years"
+              Clearance 2012 - 2015. Stokes Scholar (< 2% acceptance rate) - 2.75 yrs"
             />
           </section>
           <section {...css(styles.bodySection, styles.sectionLeft)}>
@@ -137,7 +127,7 @@ class ResumeBody extends Component {
                 <PaddedLi>JavaScript {timeSince(2014, 8)}</PaddedLi>
                 <PaddedLi>
                   React.js {timeSince(2015, 5)}
-                  <small>(This resume was coded with it)</small>
+                  <small> (I made this page with React)</small>
                 </PaddedLi>
                 <PaddedLi>Node.js {timeSince(2014, 9)}</PaddedLi>
               </UnpaddedUl>
