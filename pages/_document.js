@@ -1,5 +1,7 @@
 import React from 'react';
 import Document, { Head, Main, NextScript } from 'next/document';
+
+import { ServerStyleSheet } from 'styled-components';
 import { renderStatic } from 'glamor/server';
 import LogRocket from 'logrocket';
 import setupLogRocketReact from 'logrocket-react';
@@ -7,10 +9,36 @@ import setupLogRocketReact from 'logrocket-react';
 import Fonts from '../components/presentational/Fonts';
 
 export default class MyDocument extends Document {
-  static async getInitialProps({ renderPage }) {
-    const page = renderPage();
+  // static async getInitialProps({ renderPage }) {
+  // }
+
+  static async getInitialProps(ctx) {
+    const sheet = new ServerStyleSheet();
+    const page = ctx.renderPage();
+    const originalRenderPage = ctx.renderPage;
     const styles = renderStatic(() => page.html || page.errorHtml);
-    return { ...page, ...styles };
+    // return { ...page, ...styles };
+
+    try {
+      ctx.renderPage = () =>
+        originalRenderPage({
+          enhanceApp: App => props => sheet.collectStyles(<App {...props} />)
+        });
+
+      const initialProps = await Document.getInitialProps(ctx);
+      return {
+        ...initialProps,
+        ...styles,
+        styles: (
+          <>
+            {initialProps.styles}
+            {sheet.getStyleElement()}
+          </>
+        )
+      };
+    } finally {
+      sheet.seal();
+    }
   }
 
   constructor(props) {
@@ -23,9 +51,9 @@ export default class MyDocument extends Document {
 
   componentDidMount() {
     Fonts();
-    if (process.browser) {
+    // client-side only
+    if (typeof window !== 'undefined') {
       LogRocket.init('ubu2ji/www');
-      // plugins should also only be initialized when in the browser
       setupLogRocketReact(LogRocket);
     }
   }
@@ -35,9 +63,6 @@ export default class MyDocument extends Document {
       <html lang="en">
         <Head>
           <style dangerouslySetInnerHTML={{ __html: this.props.css }} />
-          <style jsx global>
-            {``}
-          </style>
         </Head>
         <body>
           <Main />

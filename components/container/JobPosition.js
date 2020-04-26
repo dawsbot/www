@@ -5,8 +5,6 @@ import { css } from 'glamor';
 const styles = {
   cardWrapper: {
     paddingBottom: '4px'
-    // paddingTop: '6px',
-    // marginBottom: '14px'
   },
   header: {
     marginBottom: '0px',
@@ -22,7 +20,13 @@ const styles = {
 
 class JobPosition extends Component {
   render() {
-    const { companyUrl, companyName, jobDescription, jobTitle } = this.props;
+    const {
+      companyUrl,
+      companyName,
+      jobDescription,
+      jobTitle,
+      TimeSince
+    } = this.props;
 
     const company = companyUrl ? (
       <span>
@@ -40,7 +44,11 @@ class JobPosition extends Component {
           {jobTitle} {company}
         </h2>
 
-        <p className={css(styles.jobDescription)}>{jobDescription}</p>
+        <p className={css(styles.jobDescription)}>
+          {jobDescription}
+          {TimeSince && <> - {TimeSince}</>}
+          {/* {TimeSince && ' - ' + TimeSince} */}
+        </p>
       </div>
     );
   }
