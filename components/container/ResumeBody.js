@@ -145,12 +145,12 @@ class ResumeBody extends Component {
               <PaddedLi>CSS {timeSince(2014, 8)}</PaddedLi>
               <br />
               <PaddedLi>
-                <a href="../../static/YTT-cert.pdf" style={{ color: 'black' }}>
+                <a href="/YTT-cert.pdf" style={{ color: 'black' }}>
                   Certified Power Yoga Teacher - 200 hr training
                 </a>
               </PaddedLi>
               <PaddedLi>
-                <a href="../../static/eth-cert.jpg" style={{ color: 'black' }}>
+                <a href="/eth-cert.jpg" style={{ color: 'black' }}>
                   Ethereum and Solidity
                 </a>{' '}
                 {timeSince(2018, 12)}

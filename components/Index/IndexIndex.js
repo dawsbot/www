@@ -165,7 +165,7 @@ class IndexIndex extends React.Component {
               </div>
               <img
                 className={css(styles.headshot)}
-                src="../../static/my-face.jpg"
+                src="/my-face.jpg"
                 alt="my face"
               />
             </div>
@@ -334,7 +334,7 @@ class IndexIndex extends React.Component {
                 href="https://github.com/dawsbot"
               >
                 <img
-                  src="../../static/github-huge.png"
+                  src={require('../../media/github-huge.png')}
                   alt="GitHub logo"
                   className={css(styles.mediaImg)}
                 />
@@ -344,7 +344,7 @@ class IndexIndex extends React.Component {
                 href="https://linkedin.com/in/dawsonbotsford"
               >
                 <img
-                  src="../../static/linkedin-huge.png"
+                  src={require('../../media/linkedin-huge.png')}
                   alt="LinkedIn logo"
                   className={css(styles.mediaImg)}
                 />
@@ -354,7 +354,7 @@ class IndexIndex extends React.Component {
                 href="https://twitter.com/dawsonbotsford"
               >
                 <img
-                  src="../../static/twitter-huge.png"
+                  src={require('../../media/twitter-huge.png')}
                   alt="Twitter logo"
                   className={css(styles.mediaImg)}
                 />

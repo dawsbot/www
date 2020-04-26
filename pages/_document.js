@@ -63,9 +63,6 @@ export default class MyDocument extends Document {
       <html lang="en">
         <Head>
           <style dangerouslySetInnerHTML={{ __html: this.props.css }} />
-          <style jsx global>
-            {``}
-          </style>
         </Head>
         <body>
           <Main />

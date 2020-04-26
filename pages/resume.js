@@ -8,10 +8,7 @@ class Resume extends Component {
     return (
       <div>
         <Head>
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-          />
+          <title>Resume - Dawson Botsford</title>
           <script src="https://use.fontawesome.com/669d282f9a.js" />
         </Head>
         <TopNav />
