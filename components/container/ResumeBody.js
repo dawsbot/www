@@ -50,7 +50,7 @@ const timeSince = (year, month) => {
   const oneDay = 86400;
   const oneYear = oneDay * 365.25;
 
-  let secondsDiff = (today - then) / 1000;
+  const secondsDiff = (today - then) / 1000;
   const years = secondsDiff / oneYear;
   const yr = years.toFixed(8);
   return <code style={{ fontSize: 16 }}>{yr} yrs</code>;
