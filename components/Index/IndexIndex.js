@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React from 'react';
 import { css } from 'glamor';
 import Typed from 'typed.js';
 
@@ -70,10 +70,8 @@ const styles = {
     fontWeight: 'bold'
   },
   bioDescription: {
-    border: '1px solid grey',
-    borderRadius: '4px',
+    borderRadius: '16px',
     boxShadow: '0px 4px 14px 0px rgba(71,71,71,1)',
-    padding: '20px 30px',
     backgroundColor: 'black',
     color: 'white',
     lineHeight: 1.4,
@@ -88,7 +86,7 @@ const styles = {
     border: '2px solid white',
     backgroundColor: 'white',
     color: 'black',
-    borderRadius: '4px',
+    borderRadius: '16px',
     padding: '40px'
   },
   input: {
@@ -125,7 +123,7 @@ const styles = {
   }
 };
 
-class IndexIndex extends Component {
+class IndexIndex extends React.Component {
   componentDidMount() {
     // You can pass other options here, such as typing speed, back speed, etc.
     const options = {
