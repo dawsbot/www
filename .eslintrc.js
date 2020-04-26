@@ -1,37 +1,35 @@
 'use strict';
 module.exports = {
-  "parser": "babel-eslint",
-  "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:jsx-a11y/recommended"
+  parser: 'babel-eslint',
+  env: {
+    amd: true,
+    browser: true
+  },
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:jsx-a11y/recommended'
   ],
-  "plugins": [
-    "react",
-    "jsx-a11y"
-  ],
-  "parserOptions": {
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true,
-      "classes": true
+  parserOptions: {
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+      classes: true
     }
   },
-  "rules": {
-    "react/jsx-indent": [2, 2],
-    "react/prop-types": [2, {
-      ignore: [
-        'children'
-      ]
-    }],
-    "prefer-const": 2,
-    "no-var": 2,
-    "semi": [2, "always"],
+  rules: {
+    'react/no-unescaped-entities': 'off',
+    'react/jsx-indent': [2, 2],
+    'react/prop-types': 'off',
+    'prefer-const': 2,
+    'no-var': 2,
+    semi: [2, 'always'],
     quotes: [
-      "error",
-      "single", {
-        "allowTemplateLiterals": true
+      'error',
+      'single',
+      {
+        allowTemplateLiterals: true
       }
     ]
   }
-}
+};

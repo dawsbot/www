@@ -19,8 +19,7 @@ const styles = {
   },
   blackBackground: {
     backgroundColor: 'black',
-    boxShadow:
-      'inset 0 1px 0 rgba(255,255,255,.6), 0 22px 70px 4px rgba(0,0,0,0.56), 0 0 0 1px rgba(0, 0, 0, 0.3)',
+    boxShadow: '0px 4px 14px 0px rgba(71,71,71,1)',
     color: 'white',
     width: '100vw',
     boxSizing: 'border-box',

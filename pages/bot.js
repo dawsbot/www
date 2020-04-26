@@ -9,21 +9,7 @@ class Bot extends Component {
     return (
       <div>
         <Head>
-          <title>Dawson | Engineer</title>
-          <meta charSet="utf-8" />
-
-          <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-          />
-          <meta name="author" content="Dawson Botsford" />
-          <meta
-            name="description"
-            content="Personal website of Dawson Botsford. Web engineer and entrepreneur"
-          />
-
-          <link rel="shortcut icon" href="/static/favicon.ico" />
+          <title>Gravatar Tool: Dawson Botsford</title>
         </Head>
         <TopNav />
         <BotIndex />

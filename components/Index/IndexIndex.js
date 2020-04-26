@@ -1,12 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { css } from 'glamor';
 import Typed from 'typed.js';
 
-import Tag from '../presentational/Tag';
-import TagGroup from '../presentational/TagGroup';
-
-import PaddedLi from '../presentational/PaddedLi';
-
+import { ProjectCard, ProjectsGridContainer } from './styled-components';
 const styles = {
   introTextContainer: {
     textAlign: 'center'
@@ -25,7 +21,7 @@ const styles = {
   },
   section: {
     margin: '0 auto',
-    maxWidth: '800px'
+    maxWidth: '1000px'
   },
   headshot: {
     borderRadius: '3px',
@@ -37,8 +33,7 @@ const styles = {
   },
   blackBackground: {
     backgroundColor: 'black',
-    boxShadow:
-      'inset 0 1px 0 rgba(255,255,255,.6), 0 22px 70px 4px rgba(0,0,0,0.56), 0 0 0 1px rgba(0, 0, 0, 0.3)',
+    boxShadow: '0px 4px 14px 0px rgba(71,71,71,1)',
     color: 'white',
     width: '100vw',
     boxSizing: 'border-box',
@@ -53,8 +48,7 @@ const styles = {
     transform: 'skewY(-8deg)'
   },
   liWorkedOn: {
-    color: 'white',
-    borderBottom: '1px solid white'
+    color: 'white'
   },
   black: {
     color: 'black'
@@ -76,20 +70,23 @@ const styles = {
     fontWeight: 'bold'
   },
   bioDescription: {
-    border: '1px solid grey',
-    borderRadius: '4px',
-    boxShadow:
-      'inset 0 1px 0 rgba(255,255,255,.6), 0 22px 70px 4px rgba(0,0,0,0.56), 0 0 0 1px rgba(0, 0, 0, 0.3)',
-    padding: '20px 30px',
+    borderRadius: '16px',
+    boxShadow: '0px 4px 14px 0px rgba(71,71,71,1)',
     backgroundColor: 'black',
     color: 'white',
-    lineHeight: 1.4
+    lineHeight: 1.4,
+    display: 'flex',
+    margin: '40px',
+    padding: '40px',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'column'
   },
   formContainer: {
     border: '2px solid white',
     backgroundColor: 'white',
     color: 'black',
-    borderRadius: '4px',
+    borderRadius: '16px',
     padding: '40px'
   },
   input: {
@@ -126,7 +123,7 @@ const styles = {
   }
 };
 
-class IndexIndex extends Component {
+class IndexIndex extends React.Component {
   componentDidMount() {
     // You can pass other options here, such as typing speed, back speed, etc.
     const options = {
@@ -160,11 +157,15 @@ class IndexIndex extends Component {
             <div className={css(styles.introWithPicture)}>
               <div className={css(styles.introTextContainer)}>
                 <h1 className={css(styles.introHeader)}>Hi, I'm Dawson!</h1>
-                <h1 className={css(styles.mega)}>👋</h1>
+                <h1 className={css(styles.mega)}>
+                  <span role="img" aria-label="hand wave">
+                    👋
+                  </span>
+                </h1>
               </div>
               <img
                 className={css(styles.headshot)}
-                src="../../static/my-face.jpg"
+                src="/my-face.jpg"
                 alt="my face"
               />
             </div>
@@ -177,9 +178,52 @@ class IndexIndex extends Component {
               />{' '}
               who ❤️'s the web
             </h1>
-            <p className={css(styles.bioDescription)}>
-              React.js and Node.js are my specialties, but all of the web is
-              beautiful! I'm a freelance software engineer{' '}
+            <div className={css(styles.bioDescription)}>
+              <h3 style={{ marginBottom: '40px' }}>I build with</h3>
+              <div style={{ display: 'flex' }}>
+                <span
+                  style={{
+                    backgroundColor: 'white',
+                    borderRadius: '50%',
+                    width: 180,
+                    height: 180,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    flexDirection: 'column',
+                    marginRight: '40px'
+                  }}
+                >
+                  <img
+                    src={require('../../media/icons8-react-native.svg')}
+                    style={{ height: 100 }}
+                    alt="logo for react"
+                  />
+                  <div style={{ color: 'black' }}>React</div>
+                </span>
+                <span
+                  style={{
+                    backgroundColor: 'white',
+                    borderRadius: '50%',
+                    width: 180,
+                    height: 180,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    flexDirection: 'column'
+                  }}
+                >
+                  <img
+                    src={require('../../media/icons8-nodejs.svg')}
+                    style={{ height: 100 }}
+                    alt="logo for nodejs"
+                  />
+                  <div style={{ color: 'black' }}>Node.js</div>
+                </span>
+              </div>
+              <span style={{ marginTop: '40px' }}>
+                I'm a freelance software engineer
+              </span>
               <span className={css(styles.available)}>available for hire.</span>
               <br />
               <br />
@@ -188,157 +232,95 @@ class IndexIndex extends Component {
               <a href="#email-form" style={{ color: 'white' }}>
                 bottom of this page!
               </a>
-            </p>
-
-            <iframe
-              src="https://player.vimeo.com/video/324015038"
-              width="100%"
-              height="360"
-              frameBorder="0"
-              style={{ marginTop: '80px' }}
-            />
+            </div>
+            {/* </div> */}
           </section>
         </div>
 
         <div {...css(styles.sectionWrapper, styles.blackBackground)}>
           <div className={css(styles.untilt)}>
             <section className={css(styles.section)}>
-              <h2 id="worked-on">Professional Creations</h2>
-              <ul>
-                <PaddedLi>
-                  <a
-                    className={css(styles.liWorkedOn)}
-                    href="https://driver.xyz"
-                  >
-                    Driver Company Website
-                  </a>
-                  <span>
-                    : A full application for marketing and signup. I lead the
-                    frontend team from day one till near-launch.
-                  </span>
-                  <br />
-                  <TagGroup>
-                    <Tag>⚛️ React.js</Tag>
-                    <Tag>JavaScript</Tag>
-                    <Tag>FlowType</Tag>
-                    <Tag>Create React App</Tag>
-                    <Tag>Express.js</Tag>
-                    <Tag>WebPack</Tag>
-                    <Tag>Prettier</Tag>
-                    <Tag>ESLint</Tag>
-                    <Tag>Multi-Language</Tag>
-                    <Tag>Stripe Payment Integration</Tag>
-                    <Tag>WeChat Auth Integration</Tag>
-                  </TagGroup>
-                </PaddedLi>
-                <PaddedLi>
-                  <a className={css(styles.liWorkedOn)} href="https://aero.com">
-                    Aero Company Website
-                  </a>
-                  : In late 2018, Aero wanted to update their web presence. I
-                  embedded with their engineers on-site in San Francisco to
-                  update their new web presence
-                  <br />
-                  <TagGroup>
-                    <Tag>⚛️ React.js</Tag>
-                    <Tag>Gatsby.js</Tag>
-                    <Tag>JavaScript</Tag>
-                    <Tag>TypeScript</Tag>
-                    <Tag>Prettier</Tag>
-                    <Tag>TSLint</Tag>
-                  </TagGroup>
-                </PaddedLi>
-              </ul>
-              <br />
-              <br />
-              <h2 id="worked-on">Passion Creations</h2>
-              <ul>
-                <PaddedLi>
-                  <a
-                    className={css(styles.liWorkedOn)}
-                    href="https://uplift.now.sh"
-                  >
-                    Uplift
-                  </a>
-                  : 🙌 A website for happy quotes
-                  <br />
-                  <TagGroup>
-                    <Tag>JavaScript</Tag>
-                    <Tag>LightWeight</Tag>
-                  </TagGroup>
-                </PaddedLi>
-                <br />
-                <PaddedLi>
-                  <a
-                    className={css(styles.liWorkedOn)}
-                    href="https://github.com/teamsempo/StableVoucher"
-                  >
-                    Stable Voucher 🏅 Hackathon Winner 🏅
-                  </a>
-                  : A crypto site for humanitarian aid
-                  <br />
-                  <TagGroup>
-                    <Tag>⚛️ React.js</Tag>
-                    <Tag>💅 UI/UX optimized</Tag>
-                    <Tag>JavaScript</Tag>
-                    <Tag>Ethereum</Tag>
-                    <Tag>Solidity</Tag>
-                    <Tag>Create React App</Tag>
-                  </TagGroup>
-                </PaddedLi>
-                <br />
-                <PaddedLi>
-                  <a
-                    className={css(styles.liWorkedOn)}
-                    href="https://vimrc-builder.now.sh"
-                  >
-                    vimrc Builder
-                  </a>
-                  : A web app for software devs to build a vimrc file
-                  <br />
-                  <TagGroup>
-                    <Tag>⚛️ React.js</Tag>
-                    <Tag>💅 UI/UX optimized</Tag>
-                    <Tag>Create React App</Tag>
-                    <Tag>JavaScript</Tag>
-                    <Tag>FlowType</Tag>
-                    <Tag>Prettier.js</Tag>
-                  </TagGroup>
-                </PaddedLi>
-                <PaddedLi>
-                  <a
-                    className={css(styles.liWorkedOn)}
-                    href="https://mailto.now.sh"
-                  >
-                    Mailto
-                  </a>
-                  : 💌⚡️ A web app for software devs to create email mailto's
-                  <br />
-                  <TagGroup>
-                    <Tag>⚛️ React.js</Tag>
-                    <Tag>Next.js</Tag>
-                    <Tag>JavaScript</Tag>
-                    <Tag>Prettier.js</Tag>
-                    <Tag>ESLint</Tag>
-                  </TagGroup>
-                </PaddedLi>
-                <br />
-                <PaddedLi>
-                  <a
-                    className={css(styles.liWorkedOn)}
-                    href="https://github.com/dawsbot/skrub"
-                  >
-                    Skrub
-                  </a>
-                  : Irreversible file deletion on every Operating System
-                  <br />
-                  <TagGroup>
-                    <Tag>JavaScript</Tag>
-                    <Tag>Node.js</Tag>
-                    <Tag>Dev Tool</Tag>
-                  </TagGroup>
-                </PaddedLi>
-              </ul>
+              {/* <h2 id="worked-on">Professional Creations</h2> */}
+              {/* <ul> */}
+              {/*   <PaddedLi> */}
+              {/*     <a */}
+              {/*       className={css(styles.liWorkedOn)} */}
+              {/*       href="https://driver.xyz" */}
+              {/*     > */}
+              {/*       Driver Company Website */}
+              {/*     </a> */}
+              {/*     <span> */}
+              {/*       : A full application for marketing and signup. I lead the */}
+              {/*       frontend team from day one till near-launch. */}
+              {/*     </span> */}
+              {/*     <br /> */}
+              {/*     <TagGroup> */}
+              {/*       <Tag>⚛️ React.js</Tag> */}
+              {/*       <Tag>JavaScript</Tag> */}
+              {/*       <Tag>FlowType</Tag> */}
+              {/*       <Tag>Create React App</Tag> */}
+              {/*       <Tag>Express.js</Tag> */}
+              {/*       <Tag>WebPack</Tag> */}
+              {/*       <Tag>Prettier</Tag> */}
+              {/*       <Tag>ESLint</Tag> */}
+              {/*       <Tag>Multi-Language</Tag> */}
+              {/*       <Tag>Stripe Payment Integration</Tag> */}
+              {/*       <Tag>WeChat Auth Integration</Tag> */}
+              {/*     </TagGroup> */}
+              {/*   </PaddedLi> */}
+              {/*   <PaddedLi> */}
+              {/*     <a className={css(styles.liWorkedOn)} href="https://aero.com"> */}
+              {/*       Aero Company Website */}
+              {/*     </a> */}
+              {/*     : In late 2018, Aero wanted to update their web presence. I */}
+              {/*     embedded with their engineers on-site in San Francisco to */}
+              {/*     update their new web presence */}
+              {/*     <br /> */}
+              {/*     <TagGroup> */}
+              {/*       <Tag>⚛️ React.js</Tag> */}
+              {/*       <Tag>Gatsby.js</Tag> */}
+              {/*       <Tag>JavaScript</Tag> */}
+              {/*       <Tag>TypeScript</Tag> */}
+              {/*       <Tag>Prettier</Tag> */}
+              {/*       <Tag>TSLint</Tag> */}
+              {/*     </TagGroup> */}
+              {/*   </PaddedLi> */}
+              {/* </ul> */}
+              {/* <br /> */}
+              {/* <br /> */}
+              <h2>Some of my creations:</h2>
+              <ProjectsGridContainer>
+                <ProjectCard
+                  title="Uplift"
+                  href="https://uplift.now.sh"
+                  description="A website for happy quotes"
+                  uses={['javascript']}
+                />
+                <ProjectCard
+                  href="https://mailto.now.sh"
+                  title="Mailto"
+                  description="⚡️ A web app for software devs to create email mailto's"
+                  uses={['javascript', 'reactjs']}
+                />
+                <ProjectCard
+                  href="https://vimrc-builder.now.sh"
+                  title="vimrc Builder"
+                  description="A web app for software devs to build a vimrc file"
+                  uses={['javascript', 'reactjs']}
+                />
+                <ProjectCard
+                  href="https://github.com/teamsempo/StableVoucher"
+                  title="🏅 Stable Voucher 🏅"
+                  description="A web-app for distibuting humanitarian aid with crypocurrency. (Hackathon winner)"
+                  uses={['ethereum', 'javascript', 'reactjs']}
+                />
+                <ProjectCard
+                  href="https://github.com/dawsbot/skrub"
+                  title="Skrub"
+                  description="Irreversible file deletion on every Operating System"
+                  uses={['javascript', 'nodejs']}
+                />
+              </ProjectsGridContainer>
             </section>
           </div>
         </div>
@@ -352,8 +334,8 @@ class IndexIndex extends Component {
                 href="https://github.com/dawsbot"
               >
                 <img
-                  src="../../static/github-huge.png"
-                  alt="my github account"
+                  src={require('../../media/github-huge.png')}
+                  alt="GitHub logo"
                   className={css(styles.mediaImg)}
                 />
               </a>
@@ -362,8 +344,8 @@ class IndexIndex extends Component {
                 href="https://linkedin.com/in/dawsonbotsford"
               >
                 <img
-                  src="../../static/linkedin-huge.png"
-                  alt="my github account"
+                  src={require('../../media/linkedin-huge.png')}
+                  alt="LinkedIn logo"
                   className={css(styles.mediaImg)}
                 />
               </a>
@@ -372,8 +354,8 @@ class IndexIndex extends Component {
                 href="https://twitter.com/dawsonbotsford"
               >
                 <img
-                  src="../../static/twitter-huge.png"
-                  alt="my github account"
+                  src={require('../../media/twitter-huge.png')}
+                  alt="Twitter logo"
                   className={css(styles.mediaImg)}
                 />
               </a>
@@ -433,6 +415,9 @@ class IndexIndex extends Component {
                   type="submit"
                   value="Send Me This Message"
                 />
+                <p>
+                  icons from <a href="https://icons8.com/">icons8</a>
+                </p>
               </form>
             </section>
           </div>
