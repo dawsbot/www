@@ -1,9 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
 
-const DEFAULT_TITLE = 'Dawson: Software Developer and React.js Guru';
+const DEFAULT_TITLE = 'Dawson: Software Engineer and React.js Guru';
 const DEFAULT_DESCRIPTION =
-  'Dawson Botsford is a recognized React.js expert and software engineer working for over a decade with the NSA, Uber, and more.';
+  'Dawson Botsford is a recognized React.js expert and software engineer working for a half-decade with the NSA, Uber, and more.';
 
 function App({ Component, pageProps }) {
   return (
@@ -25,7 +25,7 @@ function App({ Component, pageProps }) {
         <meta itemProp="image" content="https://dawsbot.com/my-face.jpg" />
         {/* <!-- Facebook Meta Tags --> */}
         <meta property="og:url" content="https://dawsbot.com" />
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
         <meta property="og:title" content={DEFAULT_TITLE} />
         <meta property="og:description" content={DEFAULT_DESCRIPTION} />
         <meta property="og:image" content="https://dawsbot.com/my-face.jpg" />

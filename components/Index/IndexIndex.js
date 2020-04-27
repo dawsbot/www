@@ -2,7 +2,12 @@ import React from 'react';
 import { css } from 'glamor';
 import Typed from 'typed.js';
 
-import { ProjectCard, ProjectsGridContainer } from './styled-components';
+import {
+  ProjectCard,
+  BuiltWithBubblesContainer,
+  BubbleContainer,
+  ProjectsGridContainer
+} from './styled-components';
 const styles = {
   introTextContainer: {
     textAlign: 'center'
@@ -76,8 +81,7 @@ const styles = {
     color: 'white',
     lineHeight: 1.4,
     display: 'flex',
-    margin: '40px',
-    padding: '40px',
+    padding: '60px',
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column'
@@ -180,60 +184,36 @@ class IndexIndex extends React.Component {
             </h1>
             <div className={css(styles.bioDescription)}>
               <h3 style={{ marginBottom: '40px' }}>I build with</h3>
-              <div style={{ display: 'flex' }}>
-                <span
-                  style={{
-                    backgroundColor: 'white',
-                    borderRadius: '50%',
-                    width: 180,
-                    height: 180,
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    flexDirection: 'column',
-                    marginRight: '40px'
-                  }}
-                >
+              <BuiltWithBubblesContainer>
+                <BubbleContainer>
                   <img
                     src={require('../../media/icons8-react-native.svg')}
                     style={{ height: 100 }}
                     alt="logo for react"
                   />
                   <div style={{ color: 'black' }}>React</div>
-                </span>
-                <span
-                  style={{
-                    backgroundColor: 'white',
-                    borderRadius: '50%',
-                    width: 180,
-                    height: 180,
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    flexDirection: 'column'
-                  }}
-                >
+                </BubbleContainer>
+                <BubbleContainer>
                   <img
                     src={require('../../media/icons8-nodejs.svg')}
                     style={{ height: 100 }}
                     alt="logo for nodejs"
                   />
                   <div style={{ color: 'black' }}>Node.js</div>
-                </span>
-              </div>
+                </BubbleContainer>
+              </BuiltWithBubblesContainer>
               <span style={{ marginTop: '40px' }}>
-                I'm a freelance software engineer
+                I'm a software engineer consultant
+                <span className={css(styles.available)}>
+                  {' '}
+                  available for hire.{' '}
+                </span>
+                If you would like to work together, reach out now at the{' '}
+                <a href="#email-form" style={{ color: 'white' }}>
+                  bottom of this page!
+                </a>
               </span>
-              <span className={css(styles.available)}>available for hire.</span>
-              <br />
-              <br />
-              Let's work together to make your site fast and beautiful. Reach
-              out now at the{' '}
-              <a href="#email-form" style={{ color: 'white' }}>
-                bottom of this page!
-              </a>
             </div>
-            {/* </div> */}
           </section>
         </div>
 
