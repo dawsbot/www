@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+// linking to open-source projects I've created
 const Card = styled.div`
   @keyframes bounce {
     0%,
@@ -29,6 +30,13 @@ const Card = styled.div`
   text-align: center;
   background-color: white;
   color: black;
+  /* width: minmax(100%, 500px); */
+  width: 300px;
+  // desktop only
+  @media (min-width: 800px) {
+    width: 400px;
+  }
+  margin: 20px;
   :hover {
     animation: bounce 0.7s;
   }
@@ -65,9 +73,32 @@ export const ProjectCard = ({ title, href, description, uses = [] }) => (
   </a>
 );
 
+export const BuiltWithBubblesContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+`;
+
+export const BubbleContainer = styled.span`
+  background-color: white;
+  border-radius: 50%;
+  margin: 10px;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+`;
+
 export const ProjectsGridContainer = styled.div`
   margin-top: 80px;
-  display: grid;
-  grid-gap: 40px;
-  grid-template-columns: repeat(auto-fill, minmax(400px, auto));
+  display: flex;
+  flex-direction: column;
+  // desktop only
+  @media (min-width: 800px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 `;
