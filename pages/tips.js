@@ -1,5 +1,25 @@
+import React from 'react';
 import { TwitterTweetEmbed } from 'react-twitter-embed';
+import styled from 'styled-components';
 
+const PageContainer = styled.div`
+  margin: 0 auto;
+  padding: 100px 20px;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  > h1 {
+    line-height: 1.1;
+  }
+`;
+const Tweet = styled.div`
+  margin: 30px 0px;
+  max-width: 100%;
+`;
+
+// Tweet ID's from https://twitter.com/DawsonBotsford/media
 const tweetsToEmbed = [
   '1256306431902400512',
   '1255497313738543106',
@@ -19,6 +39,18 @@ const tweetsToEmbed = [
   '733669891861938176',
   '732980590819991552'
 ];
-export default () => {
-  return tweetsToEmbed.map(tweetId => <TwitterTweetEmbed tweetId={tweetId} />);
+
+const Tips = () => {
+  return (
+    <PageContainer>
+      <h1>Become a better developer with these {tweetsToEmbed.length} tips!</h1>
+      {tweetsToEmbed.map(tweetId => (
+        <Tweet key={tweetId}>
+          <TwitterTweetEmbed tweetId={tweetId} />
+        </Tweet>
+      ))}
+    </PageContainer>
+  );
 };
+
+export default Tips;

@@ -38,6 +38,11 @@ class TopNav extends Component {
           <a {...css(styles.link, styles.white, styles.borderRight)}>Home</a>
         </Link>
 
+        <Link href="/tips">
+          <a {...css(styles.link, styles.white, styles.borderRight)}>
+            Developer Tips
+          </a>
+        </Link>
         <Link href="/resume">
           <a {...css(styles.link, styles.white)}>Resume</a>
         </Link>
