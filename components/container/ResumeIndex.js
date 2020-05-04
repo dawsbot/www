@@ -10,13 +10,13 @@ const styles = {
     // collapse printable-page view on smaller screens
     '@media(min-width: 670px)': {
       height: '842px',
-      width: '670px'
-    }
+      width: '670px',
+    },
   },
   sectionWrapper: {
     padding: '50px 26px 50px 26px',
     maxWidth: '800px',
-    margin: '0 auto'
+    margin: '0 auto',
   },
   buttonWrapper: {
     display: 'flex',
@@ -24,23 +24,23 @@ const styles = {
     // only show on desktop
     '@media(min-width: 769px)': {
       marginTop: '100px',
-      marginBottom: '100px'
+      marginBottom: '100px',
     },
     '@media print': {
       marginTop: '0px',
-      marginBottom: '0px'
-    }
+      marginBottom: '0px',
+    },
   },
   printButton: {
     margin: 'auto',
     '@media print': {
-      display: 'none'
+      display: 'none',
     },
     // hide from mobile
     '@media(max-width: 769px)': {
-      display: 'none'
-    }
-  }
+      display: 'none',
+    },
+  },
 };
 
 class ResumeIndex extends Component {

@@ -12,13 +12,13 @@ const styles = {
     borderRadius: '3px',
     padding: '8px 18px',
     fontSize: '16px',
-    cursor: 'pointer'
-  }
+    cursor: 'pointer',
+  },
 };
 
 class Button extends Component {
   static propTypes = {
-    styles: PropTypes.object
+    styles: PropTypes.object,
   };
 
   render() {

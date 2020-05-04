@@ -1,16 +1,4 @@
-import React, { Component } from 'react';
-
-export default class KeybaseTxt extends Component {
-  static getInitialProps({ res }) {
-    res.end(claim);
-  }
-
-  render() {
-    return <div>We'll never get this far</div>;
-  }
-}
-
-const claim = `==================================================================
+==================================================================
 https://keybase.io/dawsonbotsford
 --------------------------------------------------------------------
 
@@ -65,4 +53,4 @@ appending to this document.
 
 View my publicly-auditable identity here: https://keybase.io/dawsonbotsford
 
-==================================================================`;
+==================================================================

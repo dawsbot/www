@@ -12,22 +12,22 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
     '@media print': {
-      display: 'none'
-    }
+      display: 'none',
+    },
   },
   white: {
-    color: 'white'
+    color: 'white',
   },
   link: {
     padding: '0 52px',
     textDecoration: 'none',
     ':hover': {
-      textDecoration: 'underline'
-    }
+      textDecoration: 'underline',
+    },
   },
   borderRight: {
-    borderRight: '1px solid white'
-  }
+    borderRight: '1px solid white',
+  },
 };
 
 class TopNav extends Component {
@@ -38,6 +38,11 @@ class TopNav extends Component {
           <a {...css(styles.link, styles.white, styles.borderRight)}>Home</a>
         </Link>
 
+        <Link href="/tips">
+          <a {...css(styles.link, styles.white, styles.borderRight)}>
+            Developer Tips
+          </a>
+        </Link>
         <Link href="/resume">
           <a {...css(styles.link, styles.white)}>Resume</a>
         </Link>

@@ -3,21 +3,21 @@ import PropTypes from 'prop-types';
 
 const styles = {
   container: {
-    marginBottom: '3px'
+    marginBottom: '3px',
   },
   anchor: {
-    color: 'black'
+    color: 'black',
   },
   icon: {
-    paddingRight: '6px'
-  }
+    paddingRight: '6px',
+  },
 };
 
 class SocialIcon extends Component {
   static propTypes = {
     iconName: PropTypes.string,
     url: PropTypes.string,
-    label: PropTypes.string.isRequired
+    label: PropTypes.string.isRequired,
   };
 
   render() {

@@ -3,8 +3,8 @@ import { css } from 'glamor';
 
 const styles = {
   ul: {
-    paddingLeft: '1.2em'
-  }
+    paddingLeft: '1.2em',
+  },
 };
 
 class UnpaddedUl extends Component {

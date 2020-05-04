@@ -6,35 +6,35 @@ import {
   ProjectCard,
   BuiltWithBubblesContainer,
   BubbleContainer,
-  ProjectsGridContainer
+  ProjectsGridContainer,
 } from './styled-components';
 const styles = {
   introTextContainer: {
-    textAlign: 'center'
+    textAlign: 'center',
   },
   mega: {
-    fontSize: '50px'
+    fontSize: '50px',
   },
   introWithPicture: {
     '@media(min-width: 670px)': {
       display: 'flex',
-      alignItems: 'center'
-    }
+      alignItems: 'center',
+    },
   },
   sectionWrapper: {
-    padding: '110px 26px 100px 26px'
+    padding: '110px 26px 100px 26px',
   },
   section: {
     margin: '0 auto',
-    maxWidth: '1000px'
+    maxWidth: '1000px',
   },
   headshot: {
     borderRadius: '3px',
     padding: '4px',
     border: '1px solid black',
     '@media(min-width: 670px)': {
-      marginLeft: '140px'
-    }
+      marginLeft: '140px',
+    },
   },
   blackBackground: {
     backgroundColor: 'black',
@@ -47,32 +47,25 @@ const styles = {
     paddingTop: '80px',
     paddingBottom: '180px',
     paddingLeft: '26px',
-    paddingRight: '26px'
+    paddingRight: '26px',
   },
   untilt: {
-    transform: 'skewY(-8deg)'
-  },
-  liWorkedOn: {
-    color: 'white'
+    transform: 'skewY(-8deg)',
   },
   black: {
-    color: 'black'
+    color: 'black',
   },
   introHeader: {
-    lineHeight: '36px'
+    lineHeight: '36px',
   },
   loveHeader: {
     lineHeight: '36px',
     height: '60px',
-    marginBottom: '40px'
+    marginBottom: '40px',
   },
   available: {
     color: 'rgb(125, 241, 131)',
-    fontWeight: 'bold'
-  },
-  unavailable: {
-    color: '#E8B00C',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
   bioDescription: {
     borderRadius: '16px',
@@ -84,14 +77,14 @@ const styles = {
     padding: '60px',
     justifyContent: 'center',
     alignItems: 'center',
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
   formContainer: {
     border: '2px solid white',
     backgroundColor: 'white',
     color: 'black',
     borderRadius: '16px',
-    padding: '40px'
+    padding: '40px',
   },
   input: {
     width: '100%',
@@ -102,7 +95,7 @@ const styles = {
     marginBottom: '20px',
     borderRadius: '4px',
     paddingLeft: '20px',
-    fontSize: '17px'
+    fontSize: '17px',
   },
   submitButton: {
     fontSize: '17px',
@@ -110,21 +103,21 @@ const styles = {
     fontWeight: 'bold',
     cursor: 'pointer',
     backgroundColor: 'black',
-    color: 'white'
+    color: 'white',
   },
   textArea: {
     height: '120px',
     paddingTop: '14px',
-    paddingBottom: '14px'
+    paddingBottom: '14px',
   },
   vendorLink: {
     textDecoration: 'underline',
     fontWeight: 'bold',
-    color: '#E8B00C'
+    color: '#E8B00C',
   },
   mediaImg: {
-    maxWidth: '260px'
-  }
+    maxWidth: '260px',
+  },
 };
 
 class IndexIndex extends React.Component {
@@ -136,12 +129,12 @@ class IndexIndex extends React.Component {
         'an Artist',
         'a Coder',
         'a Yogi',
-        'an Engineer'
+        'an Engineer',
       ],
       typeSpeed: 50,
       backSpeed: 35,
       backDelay: 1400,
-      loop: true
+      loop: true,
     };
     // this.el refers to the <span> in the render() method
     this.typed = new Typed(this.el, options);
