@@ -1,5 +1,5 @@
 import React from 'react';
-import { TwitterTweetEmbed } from 'react-twitter-embed';
+import TweetEmbed from 'react-tweet-embed';
 import styled from 'styled-components';
 
 const PageContainer = styled.div`
@@ -13,10 +13,11 @@ const PageContainer = styled.div`
   > h1 {
     line-height: 1.1;
   }
-`;
-const Tweet = styled.div`
-  margin: 30px 0px;
-  width: 100%;
+  > div {
+    margin: 30px 0px;
+    width: 500px;
+    max-width: 100%;
+  }
 `;
 
 // Tweet ID's from https://twitter.com/DawsonBotsford/media
@@ -45,9 +46,7 @@ const Tips = () => {
     <PageContainer>
       <h1>Become a better developer with these {tweetsToEmbed.length} tips!</h1>
       {tweetsToEmbed.map(tweetId => (
-        <Tweet key={tweetId}>
-          <TwitterTweetEmbed tweetId={tweetId} />
-        </Tweet>
+        <TweetEmbed id={tweetId} />
       ))}
     </PageContainer>
   );

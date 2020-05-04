@@ -20,7 +20,7 @@
     "next-images": "^1.4.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-twitter-embed": "^3.0.3",
+    "react-tweet-embed": "^1.2.2",
     "styled-components": "^5.1.0",
     "typed.js": "^2.0.9"
   },
