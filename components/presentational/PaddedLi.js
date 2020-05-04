@@ -3,8 +3,8 @@ import { css } from 'glamor';
 
 const styles = {
   li: {
-    marginBottom: '8px'
-  }
+    marginBottom: '8px',
+  },
 };
 
 class PaddedLi extends Component {

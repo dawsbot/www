@@ -9,7 +9,7 @@ const styles = {
   main: {
     display: 'flex',
     content: 'center',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
   },
   sectionHeading: {
     borderBottom: '3px solid lightgray',
@@ -18,23 +18,23 @@ const styles = {
     textTransform: 'uppercase',
     fontSize: '24px',
     letterSpacing: '3px',
-    padding: '0px 0px 4px 0px'
+    padding: '0px 0px 4px 0px',
   },
   bodySection: {
-    margin: '16px'
+    margin: '16px',
   },
   sectionLeft: {
     flex: '11',
-    textAlign: 'left'
+    textAlign: 'left',
   },
   sectionRight: {
     flex: '18',
-    textAlign: 'right'
+    textAlign: 'right',
   },
   h2: {
     marginBottom: '0px',
-    fontSize: '20px'
-  }
+    fontSize: '20px',
+  },
 };
 
 const SectionHeading = displayText => {
@@ -58,13 +58,13 @@ const timeSince = (year, month) => {
 
 class ResumeBody extends Component {
   state = {
-    now: new Date().getTime()
+    now: new Date().getTime(),
   };
 
   componentDidMount() {
     this.interval = setInterval(
       () => this.setState({ now: new Date().getTime() }),
-      100
+      100,
     );
   }
   componentWillUnmount() {

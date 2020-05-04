@@ -4,18 +4,18 @@ import { css } from 'glamor';
 
 const styles = {
   cardWrapper: {
-    paddingBottom: '4px'
+    paddingBottom: '4px',
   },
   header: {
     marginBottom: '0px',
-    fontSize: '20px'
+    fontSize: '20px',
   },
   jobDescription: {
-    marginTop: '6px'
+    marginTop: '6px',
   },
   anchor: {
-    color: 'black'
-  }
+    color: 'black',
+  },
 };
 
 class JobPosition extends Component {
@@ -25,7 +25,7 @@ class JobPosition extends Component {
       companyName,
       jobDescription,
       jobTitle,
-      TimeSince
+      TimeSince,
     } = this.props;
 
     const company = companyUrl ? (
@@ -58,7 +58,7 @@ JobPosition.propTypes = {
   companyName: PropTypes.string.isRequired,
   companyUrl: PropTypes.string,
   jobTitle: PropTypes.string.isRequired,
-  jobDescription: PropTypes.string.isRequired
+  jobDescription: PropTypes.string.isRequired,
 };
 
 export default JobPosition;
