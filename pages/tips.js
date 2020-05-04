@@ -16,7 +16,7 @@ const PageContainer = styled.div`
 `;
 const Tweet = styled.div`
   margin: 30px 0px;
-  max-width: 100%;
+  width: 100%;
 `;
 
 // Tweet ID's from https://twitter.com/DawsonBotsford/media

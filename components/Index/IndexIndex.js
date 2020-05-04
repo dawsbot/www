@@ -52,9 +52,6 @@ const styles = {
   untilt: {
     transform: 'skewY(-8deg)'
   },
-  liWorkedOn: {
-    color: 'white'
-  },
   black: {
     color: 'black'
   },
@@ -68,10 +65,6 @@ const styles = {
   },
   available: {
     color: 'rgb(125, 241, 131)',
-    fontWeight: 'bold'
-  },
-  unavailable: {
-    color: '#E8B00C',
     fontWeight: 'bold'
   },
   bioDescription: {
