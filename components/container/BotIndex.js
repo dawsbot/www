@@ -5,17 +5,17 @@ const gravatar = require('gravatar');
 
 const styles = {
   sectionWrapper: {
-    padding: '110px 26px 100px 26px'
+    padding: '110px 26px 100px 26px',
   },
   section: {
     margin: '0 auto',
-    maxWidth: '800px'
+    maxWidth: '800px',
   },
   headshot: {
     width: '170px',
     borderRadius: '3px',
     padding: '4px',
-    border: '1px solid black'
+    border: '1px solid black',
   },
   blackBackground: {
     backgroundColor: 'black',
@@ -28,24 +28,24 @@ const styles = {
     paddingTop: '80px',
     paddingBottom: '180px',
     paddingLeft: '26px',
-    paddingRight: '26px'
+    paddingRight: '26px',
   },
   untilt: {
-    transform: 'skewY(-8deg)'
+    transform: 'skewY(-8deg)',
   },
   liWorkedOn: {
     color: 'white',
-    borderBottom: '1px solid white'
+    borderBottom: '1px solid white',
   },
   black: {
-    color: 'black'
+    color: 'black',
   },
   formContainer: {
     border: '2px solid white',
     backgroundColor: 'white',
     color: 'black',
     borderRadius: '4px',
-    padding: '40px'
+    padding: '40px',
   },
   input: {
     width: '100%',
@@ -56,7 +56,7 @@ const styles = {
     marginBottom: '20px',
     borderRadius: '4px',
     paddingLeft: '20px',
-    fontSize: '17px'
+    fontSize: '17px',
   },
   submitButton: {
     fontSize: '17px',
@@ -64,28 +64,28 @@ const styles = {
     fontWeight: 'bold',
     cursor: 'pointer',
     backgroundColor: 'black',
-    color: 'white'
+    color: 'white',
   },
   textArea: {
     height: '120px',
     paddingTop: '14px',
-    paddingBottom: '14px'
+    paddingBottom: '14px',
   },
   vendorLink: {
     textDecoration: 'underline',
     fontWeight: 'bold',
-    color: '#E8B00C'
-  }
+    color: '#E8B00C',
+  },
 };
 
 class BotIndex extends Component {
   state = {
-    gravatarUrl: 'start typing...'
+    gravatarUrl: 'start typing...',
   };
 
   handleInput = e => {
     this.setState({
-      gravatarUrl: `https:${gravatar.url(e.target.value)}`
+      gravatarUrl: `https:${gravatar.url(e.target.value)}`,
     });
   };
 

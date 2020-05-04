@@ -7,7 +7,7 @@ const styles = {
     display: 'inline-flex',
     flexWrap: 'wrap',
     justifyContent: 'space-between',
-    width: '100%'
+    width: '100%',
   },
   header: {
     fontSize: '40px',
@@ -19,22 +19,22 @@ const styles = {
     textTransform: 'uppercase',
     // make text not as huge on smaller screens
     '@media(max-width: 670px)': {
-      fontSize: '30px'
+      fontSize: '30px',
     },
     // align heading properly on print
     '@media print': {
-      fontSize: '34px'
-    }
+      fontSize: '34px',
+    },
   },
   linksContainer: {
     margin: '30px 0px 0px 0px',
-    textAlign: 'right'
+    textAlign: 'right',
   },
   row: {
     display: 'flex',
     width: '220px',
-    justifyContent: 'space-between'
-  }
+    justifyContent: 'space-between',
+  },
 };
 
 class ResumeHeader extends Component {

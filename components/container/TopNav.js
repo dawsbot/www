@@ -12,22 +12,22 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
     '@media print': {
-      display: 'none'
-    }
+      display: 'none',
+    },
   },
   white: {
-    color: 'white'
+    color: 'white',
   },
   link: {
     padding: '0 52px',
     textDecoration: 'none',
     ':hover': {
-      textDecoration: 'underline'
-    }
+      textDecoration: 'underline',
+    },
   },
   borderRight: {
-    borderRight: '1px solid white'
-  }
+    borderRight: '1px solid white',
+  },
 };
 
 class TopNav extends Component {
