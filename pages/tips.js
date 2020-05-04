@@ -1,6 +1,7 @@
 import React from 'react';
 import TweetEmbed from 'react-tweet-embed';
 import styled from 'styled-components';
+import LazyLoad from 'react-lazyload';
 
 const PageContainer = styled.div`
   margin: 0 auto;
@@ -13,7 +14,8 @@ const PageContainer = styled.div`
   > h1 {
     line-height: 1.1;
   }
-  > div {
+  /* Nested selector required here so cascading flex styles apply to tweet */
+  > div.tweet-embed {
     margin: 30px 0px;
     width: 500px;
     max-width: 100%;
@@ -45,9 +47,18 @@ const Tips = () => {
   return (
     <PageContainer>
       <h1>Become a better developer with these {tweetsToEmbed.length} tips!</h1>
-      {tweetsToEmbed.map(tweetId => (
-        <TweetEmbed id={tweetId} />
-      ))}
+      {tweetsToEmbed.map((tweetId, index) => {
+        if (index > 4) {
+          return (
+            <LazyLoad height={500} offset={1000} once>
+              <TweetEmbed key={tweetId} id={tweetId} className="tweet-embed" />
+            </LazyLoad>
+          );
+        }
+        return (
+          <TweetEmbed key={tweetId} id={tweetId} className="tweet-embed" />
+        );
+      })}
     </PageContainer>
   );
 };
