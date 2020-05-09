@@ -24,7 +24,7 @@ const Card = styled.div`
   }
   border-radius: 16px;
   padding: 30px;
-  height: 240px;
+  height: 280px;
   display: grid;
   align-items: center; // vertical
   text-align: center;

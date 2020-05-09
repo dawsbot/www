@@ -3,19 +3,19 @@ module.exports = {
   parser: 'babel-eslint',
   env: {
     amd: true,
-    browser: true
+    browser: true,
   },
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
-    'plugin:jsx-a11y/recommended'
+    'plugin:jsx-a11y/recommended',
   ],
   parserOptions: {
     sourceType: 'module',
     ecmaFeatures: {
       jsx: true,
-      classes: true
-    }
+      classes: true,
+    },
   },
   rules: {
     'react/no-unescaped-entities': 'off',
@@ -23,13 +23,14 @@ module.exports = {
     'react/prop-types': 'off',
     'prefer-const': 2,
     'no-var': 2,
+    'jsx-a11y/anchor-is-valid': 'off',
     semi: [2, 'always'],
     quotes: [
       'error',
       'single',
       {
-        allowTemplateLiterals: true
-      }
-    ]
-  }
+        allowTemplateLiterals: true,
+      },
+    ],
+  },
 };
