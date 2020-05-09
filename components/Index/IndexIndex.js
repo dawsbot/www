@@ -328,7 +328,13 @@ class IndexIndex extends React.Component {
                   value="Send Me This Message"
                 />
                 <p>
-                  icons from <a href="https://icons8.com/">icons8</a>
+                  icons from{' '}
+                  <a
+                    href="https://icons8.com/"
+                    style={{ textDecoration: 'none', color: 'black' }}
+                  >
+                    icons8
+                  </a>
                 </p>
               </form>
             </section>
