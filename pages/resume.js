@@ -8,7 +8,6 @@ class Resume extends Component {
       <div>
         <Head>
           <title>Resume of Work: Dawson Botsford</title>
-          <script src="https://use.fontawesome.com/669d282f9a.js" />
         </Head>
         <ResumeIndex />
       </div>

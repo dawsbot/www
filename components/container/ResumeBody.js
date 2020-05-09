@@ -73,87 +73,84 @@ class ResumeBody extends Component {
 
   render() {
     return (
-      <div>
-        <div className={css(styles.main)}>
-          <section {...css(styles.bodySection, styles.sectionRight)}>
-            {SectionHeading('Experience')}
-            <JobPosition
-              jobTitle={`Founder & Engineer`}
-              companyName="Dark Triangle"
-              companyUrl="https://darktriangle.now.sh/"
-              jobDescription="Consulting with startups who want world-class web apps."
-              TimeSince={timeSince(2018, 10)}
-            />
-            <JobPosition
-              jobTitle="Lead Software Engineer"
-              companyName="Driver"
-              companyUrl="https://driver.xyz"
-              jobDescription={`Owned and delivered flagship web app. Heavy leadership, tasking, and coding. React and Redux - 1.08 yrs`}
-            />
-            <JobPosition
-              jobTitle="Full-stack Web Engineer"
-              companyName="Uber"
-              companyUrl="https://uber.com"
-              jobDescription="PM'd and coded JavaScript to all of Uber's
-              web with React & Node.js. - 1.08 yrs"
-            />
-            <JobPosition
-              jobTitle="Co-founder & Director"
-              companyName="HackCU"
-              companyUrl="https://hackcu.org"
-              jobDescription="Started and grew this collegiate
+      <div className={css(styles.main)}>
+        <section {...css(styles.bodySection, styles.sectionRight)}>
+          {SectionHeading('Experience')}
+          <JobPosition
+            jobTitle={`Founder & Engineer`}
+            companyName="Dark Triangle"
+            companyUrl="https://darktriangle.now.sh/"
+            jobDescription="Consulting with startups who want world-class web apps."
+            TimeSince={timeSince(2018, 10)}
+          />
+          <JobPosition
+            jobTitle="Lead Software Engineer"
+            companyName="Driver"
+            companyUrl="https://driver.xyz"
+            jobDescription={`Started and lead public-facing marketing site. Heavy leadership and coding React web-app - 1.08 yrs`}
+          />
+          <JobPosition
+            jobTitle="Full-stack Web Engineer"
+            companyName="Uber"
+            companyUrl="https://uber.com"
+            jobDescription="Web platform team. Programmed shared library of React and Node.js code. - 1.08 yrs"
+          />
+          <JobPosition
+            jobTitle="Co-founder"
+            companyName="HackCU"
+            companyUrl="https://hackcu.org"
+            jobDescription="Started and grew this
               hackathon to > 200 students - 1.66 yrs"
-            />
-            <JobPosition
-              jobTitle="Frontend Engineer Intern"
-              companyName="Shape"
-              companyUrl="https://shapesecurity.com"
-              jobDescription="KPCB Engineering Fellow in Silicon Valley
+          />
+          <JobPosition
+            jobTitle="Frontend Engineer"
+            companyName="Shape Security"
+            companyUrl="https://shapesecurity.com"
+            jobDescription="KPCB Engineering Fellow. College internship
               (< 3% acceptance) - 0.33 yrs"
-            />
-            <JobPosition
-              jobTitle="Software Engineer"
-              companyName="DoD"
-              companyUrl="https://www.defense.gov/"
-              jobDescription="U.S. Security
+          />
+          <JobPosition
+            jobTitle="Software Engineer"
+            companyName="NSA"
+            companyUrl="https://www.defense.gov/"
+            jobDescription="U.S. Security
               Clearance 2012 - 2015. Stokes Scholar (< 2% acceptance rate) - 2.75 yrs"
-            />
-          </section>
-          <section {...css(styles.bodySection, styles.sectionLeft)}>
-            {SectionHeading('Skills')}
-            <ul style={{ paddingLeft: '22px' }}>
-              <PaddedLi>JavaScript</PaddedLi>
-              <UnpaddedUl>
-                <PaddedLi>JavaScript {timeSince(2014, 8)}</PaddedLi>
-                <PaddedLi>
-                  React.js {timeSince(2015, 5)}
-                  <small> (I made this page with React)</small>
-                </PaddedLi>
-                <PaddedLi>Node.js {timeSince(2014, 9)}</PaddedLi>
-              </UnpaddedUl>
-              <PaddedLi>HTML {timeSince(2014, 8)}</PaddedLi>
-              <PaddedLi>CSS {timeSince(2014, 8)}</PaddedLi>
-              <br />
+          />
+        </section>
+        <section {...css(styles.bodySection, styles.sectionLeft)}>
+          {SectionHeading('Skills')}
+          <ul style={{ paddingLeft: '22px' }}>
+            <PaddedLi>JavaScript</PaddedLi>
+            <UnpaddedUl>
+              <PaddedLi>JavaScript {timeSince(2014, 8)}</PaddedLi>
               <PaddedLi>
-                <a href="/YTT-cert.pdf" style={{ color: 'black' }}>
-                  Certified Power Yoga Teacher - 200 hr training
-                </a>
+                React.js {timeSince(2015, 5)}
+                <small> (I made this page with React)</small>
               </PaddedLi>
-              <PaddedLi>
-                <a href="/eth-cert.jpg" style={{ color: 'black' }}>
-                  Ethereum and Solidity
-                </a>{' '}
-                {timeSince(2018, 12)}
-              </PaddedLi>
-            </ul>
-            <div className={css(styles.main)}>
-              {SectionHeading('Education')}
-              <h2 className={css(styles.h2)}>B.S. Computer Science</h2>
-              University of Colorado
-              <div {...css(styles.bodySection, styles.sectionLeft)} />
-            </div>
-          </section>
-        </div>
+              <PaddedLi>Node.js {timeSince(2014, 9)}</PaddedLi>
+            </UnpaddedUl>
+            <PaddedLi>HTML {timeSince(2014, 8)}</PaddedLi>
+            <PaddedLi>CSS {timeSince(2014, 8)}</PaddedLi>
+            <br />
+            <PaddedLi>
+              <a href="/YTT-cert.pdf" style={{ color: 'black' }}>
+                Certified Power Yoga Teacher - 200 hr training
+              </a>
+            </PaddedLi>
+            <PaddedLi>
+              <a href="/eth-cert.jpg" style={{ color: 'black' }}>
+                Ethereum and Solidity
+              </a>{' '}
+              {timeSince(2018, 12)}
+            </PaddedLi>
+          </ul>
+          <div className={css(styles.main)}>
+            {SectionHeading('Education')}
+            <h2 className={css(styles.h2)}>B.S. Computer Science</h2>
+            University of Colorado
+            <div {...css(styles.bodySection, styles.sectionLeft)} />
+          </div>
+        </section>
       </div>
     );
   }

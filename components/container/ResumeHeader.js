@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { css } from 'glamor';
-import SocialIcon from '../presentational/SocialIcon';
+import styled from 'styled-components';
+import { FaGithub, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
 
 const styles = {
   main: {
@@ -15,7 +17,7 @@ const styles = {
     letterSpacing: '3px',
     lineHeight: '1',
     weight: 90,
-    margin: '30px 0px 10px 0px',
+    margin: '0px 0px 10px 0px',
     textTransform: 'uppercase',
     // make text not as huge on smaller screens
     '@media(max-width: 670px)': {
@@ -37,44 +39,51 @@ const styles = {
   },
 };
 
+const SocialIconAnchor = styled.a`
+  text-decoration: none;
+  color: black;
+  display: grid;
+  grid-template-columns: auto 1fr; /* put inline */
+  grid-column-gap: 6px; /* space between icon and text */
+  align-items: center;
+`;
+
+const SocialMediaGrid = styled.div`
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 20px;
+  /* height of row */
+  grid-template-rows: 40px;
+`;
+
 class ResumeHeader extends Component {
   render() {
     return (
-      <div>
-        <div className={css(styles.main)}>
-          <h1 className={css(styles.header)}>
-            Dawson
-            <br />
-            Botsford
-          </h1>
-          <section className={css(styles.linksContainer)}>
-            <div className={css(styles.row)}>
-              <SocialIcon
-                label="GitHub"
-                iconName="github"
-                url="https://github.com/dawsbot"
-              />
-              <SocialIcon
-                label="LinkedIn"
-                iconName="linkedin"
-                url="https://linkedin.com/in/dawsonbotsford"
-              />
-            </div>
-            <div className={css(styles.row)}>
-              <SocialIcon
-                label="Twitter"
-                iconName="twitter"
-                url="https://twitter.com/dawsonbotsford"
-              />
-              <a
-                href="mailto:&#100;&#097;&#119;&#115;&#111;&#110;&#098;&#111;&#116;&#115;&#102;&#111;&#114;&#100;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;"
-                style={{ color: 'black' }}
-              >
-                Email Me
-              </a>
-            </div>
-          </section>
-        </div>
+      <div className={css(styles.main)}>
+        <h1 className={css(styles.header)}>
+          Dawson
+          <br />
+          Botsford
+        </h1>
+        <SocialMediaGrid>
+          {/* <section className={css(styles.linksContainer)}>
+          <div className={css(styles.row)}> */}
+          <SocialIconAnchor href="https://github.com/dawsbot">
+            <FaGithub /> GitHub
+          </SocialIconAnchor>
+          <SocialIconAnchor href="https://linkedin.com/in/dawsonbotsford">
+            <FaLinkedinIn /> LinkedIn
+          </SocialIconAnchor>
+          <SocialIconAnchor href="https://twitter.com/dawsonbotsford">
+            <FaTwitter /> Twitter
+          </SocialIconAnchor>
+
+          <SocialIconAnchor href="mailto:&#100;&#097;&#119;&#115;&#111;&#110;&#098;&#111;&#116;&#115;&#102;&#111;&#114;&#100;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">
+            <MdEmail /> Email
+          </SocialIconAnchor>
+        </SocialMediaGrid>
+        {/* </div>
+        </section> */}
       </div>
     );
   }
