@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import Link from 'next/link';
 
 const TopNavContainer = styled.div`
+  @media print {
+    display: none;
+  }
   background-color: black;
   height: 60px;
   color: white;

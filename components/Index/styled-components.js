@@ -30,10 +30,10 @@ const Card = styled.div`
   text-align: center;
   background-color: white;
   color: black;
-  /* width: minmax(100%, 500px); */
-  width: 300px;
+  box-sizing: border-box;
+  max-width: 100%;
   // desktop only
-  @media (min-width: 800px) {
+  @media (min-width: 700px) {
     width: 400px;
   }
   margin: 20px;
@@ -96,6 +96,7 @@ export const ProjectsGridContainer = styled.div`
   margin-top: 80px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   // desktop only
   @media (min-width: 800px) {
     flex-direction: row;

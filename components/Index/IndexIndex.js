@@ -2,12 +2,20 @@ import React from 'react';
 import { css } from 'glamor';
 import Typed from 'typed.js';
 
+import styled from 'styled-components';
+import { FaGithubSquare, FaLinkedin, FaTwitterSquare } from 'react-icons/fa';
+
 import {
   ProjectCard,
   BuiltWithBubblesContainer,
   BubbleContainer,
   ProjectsGridContainer,
 } from './styled-components';
+
+const SocialIconAnchor = styled.a`
+  text-decoration: none;
+  color: black;
+`;
 const styles = {
   introTextContainer: {
     textAlign: 'center',
@@ -110,14 +118,6 @@ const styles = {
     paddingTop: '14px',
     paddingBottom: '14px',
   },
-  vendorLink: {
-    textDecoration: 'underline',
-    fontWeight: 'bold',
-    color: '#E8B00C',
-  },
-  mediaImg: {
-    maxWidth: '260px',
-  },
 };
 
 class IndexIndex extends React.Component {
@@ -148,7 +148,7 @@ class IndexIndex extends React.Component {
 
   render() {
     return (
-      <div>
+      <>
         <div className={css(styles.sectionWrapper)}>
           <section className={css(styles.section)}>
             <div className={css(styles.introWithPicture)}>
@@ -213,54 +213,6 @@ class IndexIndex extends React.Component {
         <div {...css(styles.sectionWrapper, styles.blackBackground)}>
           <div className={css(styles.untilt)}>
             <section className={css(styles.section)}>
-              {/* <h2 id="worked-on">Professional Creations</h2> */}
-              {/* <ul> */}
-              {/*   <PaddedLi> */}
-              {/*     <a */}
-              {/*       className={css(styles.liWorkedOn)} */}
-              {/*       href="https://driver.xyz" */}
-              {/*     > */}
-              {/*       Driver Company Website */}
-              {/*     </a> */}
-              {/*     <span> */}
-              {/*       : A full application for marketing and signup. I lead the */}
-              {/*       frontend team from day one till near-launch. */}
-              {/*     </span> */}
-              {/*     <br /> */}
-              {/*     <TagGroup> */}
-              {/*       <Tag>⚛️ React.js</Tag> */}
-              {/*       <Tag>JavaScript</Tag> */}
-              {/*       <Tag>FlowType</Tag> */}
-              {/*       <Tag>Create React App</Tag> */}
-              {/*       <Tag>Express.js</Tag> */}
-              {/*       <Tag>WebPack</Tag> */}
-              {/*       <Tag>Prettier</Tag> */}
-              {/*       <Tag>ESLint</Tag> */}
-              {/*       <Tag>Multi-Language</Tag> */}
-              {/*       <Tag>Stripe Payment Integration</Tag> */}
-              {/*       <Tag>WeChat Auth Integration</Tag> */}
-              {/*     </TagGroup> */}
-              {/*   </PaddedLi> */}
-              {/*   <PaddedLi> */}
-              {/*     <a className={css(styles.liWorkedOn)} href="https://aero.com"> */}
-              {/*       Aero Company Website */}
-              {/*     </a> */}
-              {/*     : In late 2018, Aero wanted to update their web presence. I */}
-              {/*     embedded with their engineers on-site in San Francisco to */}
-              {/*     update their new web presence */}
-              {/*     <br /> */}
-              {/*     <TagGroup> */}
-              {/*       <Tag>⚛️ React.js</Tag> */}
-              {/*       <Tag>Gatsby.js</Tag> */}
-              {/*       <Tag>JavaScript</Tag> */}
-              {/*       <Tag>TypeScript</Tag> */}
-              {/*       <Tag>Prettier</Tag> */}
-              {/*       <Tag>TSLint</Tag> */}
-              {/*     </TagGroup> */}
-              {/*   </PaddedLi> */}
-              {/* </ul> */}
-              {/* <br /> */}
-              {/* <br /> */}
               <h2>Some of my creations:</h2>
               <ProjectsGridContainer>
                 <ProjectCard
@@ -301,37 +253,24 @@ class IndexIndex extends React.Component {
         <div className={css(styles.sectionWrapper)}>
           <section className={css(styles.section)}>
             <h2>See more at:</h2>
-            <div>
-              <a
-                {...css(styles.li, styles.black)}
-                href="https://github.com/dawsbot"
-              >
-                <img
-                  src={require('../../media/github-huge.png')}
-                  alt="GitHub logo"
-                  className={css(styles.mediaImg)}
-                />
-              </a>
-              <a
-                {...css(styles.li, styles.black)}
-                href="https://linkedin.com/in/dawsonbotsford"
-              >
-                <img
-                  src={require('../../media/linkedin-huge.png')}
-                  alt="LinkedIn logo"
-                  className={css(styles.mediaImg)}
-                />
-              </a>
-              <a
-                {...css(styles.li, styles.black)}
-                href="https://twitter.com/dawsonbotsford"
-              >
-                <img
-                  src={require('../../media/twitter-huge.png')}
-                  alt="Twitter logo"
-                  className={css(styles.mediaImg)}
-                />
-              </a>
+            <div
+              style={{
+                maxWidth: '100%',
+                display: 'flex',
+                justifyContent: 'space-between',
+                marginRight: '40px',
+                marginLeft: '40px',
+              }}
+            >
+              <SocialIconAnchor href="https://github.com/dawsbot">
+                <FaGithubSquare size="20vw" title="github icon" />
+              </SocialIconAnchor>
+              <SocialIconAnchor href="https://linkedin.com/in/dawsonbotsford">
+                <FaLinkedin size="20vw" title="LinkedIn icon" />
+              </SocialIconAnchor>
+              <SocialIconAnchor href="https://twitter.com/dawsonbotsford">
+                <FaTwitterSquare size="20vw" title="Twitter icon" />
+              </SocialIconAnchor>
             </div>
           </section>
         </div>
@@ -395,7 +334,7 @@ class IndexIndex extends React.Component {
             </section>
           </div>
         </div>
-      </div>
+      </>
     );
   }
 }

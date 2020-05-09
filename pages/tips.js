@@ -25,6 +25,7 @@ const PageContainer = styled.div`
 
 // Tweet ID's from https://twitter.com/DawsonBotsford/media
 const tweetsToEmbed = [
+  '1258056828392521728',
   '1256306431902400512',
   '1255497313738543106',
   '1251932593743900674',
@@ -57,12 +58,8 @@ const Tips = () => {
         {tweetsToEmbed.map((tweetId, index) => {
           if (index > 4) {
             return (
-              <LazyLoad height={500} offset={1000} once>
-                <TweetEmbed
-                  key={tweetId}
-                  id={tweetId}
-                  className="tweet-embed"
-                />
+              <LazyLoad height={500} offset={1000} once key={tweetId}>
+                <TweetEmbed id={tweetId} className="tweet-embed" />
               </LazyLoad>
             );
           }
