@@ -6,12 +6,12 @@ import BotIndex from '../components/container/BotIndex';
 class Bot extends Component {
   render() {
     return (
-      <div>
+      <>
         <Head>
           <title>Gravatar Tool: Dawson Botsford</title>
         </Head>
         <BotIndex />
-      </div>
+      </>
     );
   }
 }

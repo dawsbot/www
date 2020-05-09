@@ -2,6 +2,7 @@ import React from 'react';
 import TweetEmbed from 'react-tweet-embed';
 import styled from 'styled-components';
 import LazyLoad from 'react-lazyload';
+import Head from 'next/head';
 
 const PageContainer = styled.div`
   margin: 0 auto;
@@ -45,21 +46,32 @@ const tweetsToEmbed = [
 
 const Tips = () => {
   return (
-    <PageContainer>
-      <h1>Become a better developer with these {tweetsToEmbed.length} tips!</h1>
-      {tweetsToEmbed.map((tweetId, index) => {
-        if (index > 4) {
+    <>
+      <Head>
+        <title>Tips for JavaScript Coders: Dawson Botsford</title>
+      </Head>
+      <PageContainer>
+        <h1>
+          Become a better developer with these {tweetsToEmbed.length} tips!
+        </h1>
+        {tweetsToEmbed.map((tweetId, index) => {
+          if (index > 4) {
+            return (
+              <LazyLoad height={500} offset={1000} once>
+                <TweetEmbed
+                  key={tweetId}
+                  id={tweetId}
+                  className="tweet-embed"
+                />
+              </LazyLoad>
+            );
+          }
           return (
-            <LazyLoad height={500} offset={1000} once>
-              <TweetEmbed key={tweetId} id={tweetId} className="tweet-embed" />
-            </LazyLoad>
+            <TweetEmbed key={tweetId} id={tweetId} className="tweet-embed" />
           );
-        }
-        return (
-          <TweetEmbed key={tweetId} id={tweetId} className="tweet-embed" />
-        );
-      })}
-    </PageContainer>
+        })}
+      </PageContainer>
+    </>
   );
 };
 
