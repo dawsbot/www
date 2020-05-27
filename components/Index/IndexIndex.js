@@ -23,12 +23,6 @@ const styles = {
   mega: {
     fontSize: '50px',
   },
-  introWithPicture: {
-    '@media(min-width: 670px)': {
-      display: 'flex',
-      alignItems: 'center',
-    },
-  },
   sectionWrapper: {
     padding: '110px 26px 100px 26px',
   },
@@ -39,10 +33,8 @@ const styles = {
   headshot: {
     borderRadius: '3px',
     padding: '4px',
-    border: '1px solid black',
-    '@media(min-width: 670px)': {
-      marginLeft: '140px',
-    },
+    border: '2px solid grey',
+    width: '300px',
   },
   blackBackground: {
     backgroundColor: 'black',
@@ -151,20 +143,18 @@ class IndexIndex extends React.Component {
       <>
         <div className={css(styles.sectionWrapper)}>
           <section className={css(styles.section)}>
-            <div className={css(styles.introWithPicture)}>
-              <div className={css(styles.introTextContainer)}>
-                <h1 className={css(styles.introHeader)}>Hi, I'm Dawson!</h1>
-                <h1 className={css(styles.mega)}>
-                  <span role="img" aria-label="hand wave">
-                    👋
-                  </span>
-                </h1>
-              </div>
+            <div className={css(styles.introTextContainer)}>
               <img
                 className={css(styles.headshot)}
                 src="/my-face.jpg"
                 alt="my face"
               />
+              <h1 className={css(styles.introHeader)}>Hi, I'm Dawson!</h1>
+              <h1 className={css(styles.mega)}>
+                <span role="img" aria-label="hand wave">
+                  👋
+                </span>
+              </h1>
             </div>
             <h1 className={css(styles.loveHeader)}>
               I'm{' '}
