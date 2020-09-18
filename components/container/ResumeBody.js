@@ -23,16 +23,17 @@ const styles = {
   bodySection: {
     margin: '16px',
   },
-  sectionLeft: {
+  leftColumn: {
+    flex: '18',
+    textAlign: 'left',
+  },
+  rightColumn: {
     flex: '11',
     textAlign: 'left',
   },
-  sectionRight: {
-    flex: '18',
-    textAlign: 'right',
-  },
   h2: {
     marginBottom: '0px',
+    marginTop: '0px',
     fontSize: '20px',
   },
 };
@@ -74,8 +75,15 @@ class ResumeBody extends Component {
   render() {
     return (
       <div className={css(styles.main)}>
-        <section {...css(styles.bodySection, styles.sectionRight)}>
+        <section {...css(styles.bodySection, styles.leftColumn)}>
           {SectionHeading('Experience')}
+          <JobPosition
+            jobTitle={'Senior Full-Stack Engineer'}
+            companyName="Everipedia"
+            companyUrl="https://everipedia.org"
+            jobDescription="Leading product & engineering of everipedia.org; One of the world's largest crypto DApps with over 1.5 million visitors/month. Build on EOS."
+            TimeSince={timeSince(2019, 12)}
+          />
           <JobPosition
             jobTitle={`Founder & Engineer`}
             companyName="Dark Triangle"
@@ -102,13 +110,13 @@ class ResumeBody extends Component {
             jobDescription="Started and grew this
               hackathon to > 200 students - 1.66 yrs"
           />
-          <JobPosition
+          {/* <JobPosition
             jobTitle="Frontend Engineer"
             companyName="Shape Security"
             companyUrl="https://shapesecurity.com"
             jobDescription="KPCB Engineering Fellow. College internship
               (< 3% acceptance) - 0.33 yrs"
-          />
+          /> */}
           <JobPosition
             jobTitle="Software Engineer"
             companyName="NSA"
@@ -117,7 +125,7 @@ class ResumeBody extends Component {
               Clearance 2012 - 2015. Stokes Scholar (< 2% acceptance rate) - 2.75 yrs"
           />
         </section>
-        <section {...css(styles.bodySection, styles.sectionLeft)}>
+        <section {...css(styles.bodySection, styles.rightColumn)}>
           {SectionHeading('Skills')}
           <ul style={{ paddingLeft: '22px' }}>
             <PaddedLi>JavaScript</PaddedLi>
@@ -148,7 +156,7 @@ class ResumeBody extends Component {
             {SectionHeading('Education')}
             <h2 className={css(styles.h2)}>B.S. Computer Science</h2>
             University of Colorado
-            <div {...css(styles.bodySection, styles.sectionLeft)} />
+            <div {...css(styles.bodySection, styles.rightColumn)} />
           </div>
         </section>
       </div>
