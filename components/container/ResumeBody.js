@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import { css } from 'glamor';
+import styled from 'styled-components';
 
 import JobPosition from './JobPosition';
-import PaddedLi from '../presentational/PaddedLi';
 import UnpaddedUl from '../presentational/UnpaddedUl';
 
+const PaddedLi = styled.li`
+  margin-bottom: 14px;
+`;
 const styles = {
   main: {
     display: 'flex',
@@ -130,6 +133,7 @@ class ResumeBody extends Component {
         <section {...css(styles.bodySection, styles.rightColumn)}>
           {SectionHeading('Skills')}
           <ul style={{ paddingLeft: '22px' }}>
+            <PaddedLi>Software Engineering {timeSince(2011, 9)}</PaddedLi>
             <PaddedLi>JavaScript</PaddedLi>
             <UnpaddedUl>
               <PaddedLi>JavaScript {timeSince(2014, 8)}</PaddedLi>
