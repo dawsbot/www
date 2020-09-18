@@ -26,10 +26,12 @@ const styles = {
   leftColumn: {
     flex: '18',
     textAlign: 'left',
+    marginLeft: '0px',
   },
   rightColumn: {
     flex: '11',
     textAlign: 'left',
+    marginRight: '0px',
   },
   h2: {
     marginBottom: '0px',
