@@ -56,15 +56,22 @@ const SocialMediaGrid = styled.div`
   grid-template-rows: 40px;
 `;
 
+const HeaderAnchor = styled.a`
+  text-decoration: none;
+  color: black;
+`;
+
 class ResumeHeader extends Component {
   render() {
     return (
       <div className={css(styles.main)}>
-        <h1 className={css(styles.header)}>
-          Dawson
-          <br />
-          Botsford
-        </h1>
+        <HeaderAnchor href="https://dawsbot.com">
+          <h1 className={css(styles.header)}>
+            Dawson
+            <br />
+            Botsford
+          </h1>
+        </HeaderAnchor>
         <SocialMediaGrid>
           {/* <section className={css(styles.linksContainer)}>
           <div className={css(styles.row)}> */}
