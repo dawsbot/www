@@ -3,6 +3,9 @@ import { css } from 'glamor';
 import Typed from 'typed.js';
 
 import styled from 'styled-components';
+
+import { darkPurple, bleen } from '../colors';
+
 import { FaGithubSquare, FaLinkedin, FaTwitterSquare } from 'react-icons/fa';
 
 import {
@@ -14,7 +17,7 @@ import {
 
 const SocialIconAnchor = styled.a`
   text-decoration: none;
-  color: black;
+  color: ${darkPurple};
 `;
 const styles = {
   introTextContainer: {
@@ -36,8 +39,8 @@ const styles = {
     border: '2px solid grey',
     width: '300px',
   },
-  blackBackground: {
-    backgroundColor: 'black',
+  darkBackground: {
+    backgroundColor: darkPurple,
     boxShadow: '0px 4px 14px 0px rgba(71,71,71,1)',
     color: 'white',
     width: '100vw',
@@ -52,8 +55,8 @@ const styles = {
   untilt: {
     transform: 'skewY(-8deg)',
   },
-  black: {
-    color: 'black',
+  dark: {
+    color: darkPurple,
   },
   introHeader: {
     lineHeight: '36px',
@@ -63,14 +66,10 @@ const styles = {
     height: '60px',
     marginBottom: '40px',
   },
-  available: {
-    color: 'rgb(125, 241, 131)',
-    fontWeight: 'bold',
-  },
   bioDescription: {
     borderRadius: '16px',
     boxShadow: '0px 4px 14px 0px rgba(71,71,71,1)',
-    backgroundColor: 'black',
+    backgroundColor: darkPurple,
     color: 'white',
     lineHeight: 1.4,
     display: 'flex',
@@ -102,8 +101,9 @@ const styles = {
     height: '46px',
     fontWeight: 'bold',
     cursor: 'pointer',
-    backgroundColor: 'black',
-    color: 'white',
+    backgroundColor: darkPurple,
+    borderColor: darkPurple,
+    color: bleen,
   },
   textArea: {
     height: '120px',
@@ -111,6 +111,23 @@ const styles = {
     paddingBottom: '14px',
   },
 };
+
+const TalkButtonContainer = styled.div`
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+`;
+
+const Button = styled.button`
+  cursor: pointer;
+  padding: 18px 44px;
+  border-radius: 18px;
+  background-color: ${bleen};
+  color: ${darkPurple};
+  font-weight: bold;
+  border-width: 0px;
+  font-size: 18px;
+`;
 
 class IndexIndex extends React.Component {
   componentDidMount() {
@@ -166,11 +183,11 @@ class IndexIndex extends React.Component {
               who ❤️'s the web
             </h1>
             <div className={css(styles.bioDescription)}>
-              <h3 style={{ marginBottom: '40px' }}>I build with</h3>
+              <h3 style={{ marginBottom: '40px' }}>I build with JavaScript</h3>
               <BuiltWithBubblesContainer>
                 <BubbleContainer>
                   <img
-                    src={require('../../media/icons8-react-native.svg')}
+                    src={require('../../../media/icons8-react-native.svg')}
                     style={{ height: 100 }}
                     alt="logo for react"
                   />
@@ -178,7 +195,7 @@ class IndexIndex extends React.Component {
                 </BubbleContainer>
                 <BubbleContainer>
                   <img
-                    src={require('../../media/icons8-nodejs.svg')}
+                    src={require('../../../media/icons8-nodejs.svg')}
                     style={{ height: 100 }}
                     alt="logo for nodejs"
                   />
@@ -186,24 +203,23 @@ class IndexIndex extends React.Component {
                 </BubbleContainer>
               </BuiltWithBubblesContainer>
               <span style={{ marginTop: '40px' }}>
-                I'm a software engineer consultant
-                <span className={css(styles.available)}>
-                  {' '}
-                  available for hire.{' '}
-                </span>
-                If you would like to work together, reach out now at the{' '}
-                <a href="#email-form" style={{ color: 'white' }}>
-                  bottom of this page!
-                </a>
+                I'm a software engineer consultant. I work this way to gather a
+                breadth of knowledge. As Tony Robbins says, "compress years to
+                days"{' '}
+                <TalkButtonContainer>
+                  <a href="#email-form">
+                    <Button>Let's talk</Button>
+                  </a>
+                </TalkButtonContainer>
               </span>
             </div>
           </section>
         </div>
 
-        <div {...css(styles.sectionWrapper, styles.blackBackground)}>
+        <div {...css(styles.sectionWrapper, styles.darkBackground)}>
           <div className={css(styles.untilt)}>
             <section className={css(styles.section)}>
-              <h2>Some of my creations:</h2>
+              <h2 style={{ color: bleen }}>Some of my creations:</h2>
               <ProjectsGridContainer>
                 <ProjectCard
                   title="Uplift"
@@ -242,7 +258,7 @@ class IndexIndex extends React.Component {
 
         <div className={css(styles.sectionWrapper)}>
           <section className={css(styles.section)}>
-            <h2>See more at:</h2>
+            <h2 style={{ color: bleen }}>See more at:</h2>
             <div
               style={{
                 maxWidth: '100%',
@@ -253,22 +269,22 @@ class IndexIndex extends React.Component {
               }}
             >
               <SocialIconAnchor href="https://github.com/dawsbot">
-                <FaGithubSquare size="20vw" title="github icon" />
+                <FaGithubSquare size="300px" title="github icon" />
               </SocialIconAnchor>
               <SocialIconAnchor href="https://linkedin.com/in/dawsonbotsford">
-                <FaLinkedin size="20vw" title="LinkedIn icon" />
+                <FaLinkedin size="300px" title="LinkedIn icon" />
               </SocialIconAnchor>
               <SocialIconAnchor href="https://twitter.com/dawsonbotsford">
-                <FaTwitterSquare size="20vw" title="Twitter icon" />
+                <FaTwitterSquare size="300px" title="Twitter icon" />
               </SocialIconAnchor>
             </div>
           </section>
         </div>
 
-        <div {...css(styles.sectionWrapper, styles.blackBackground)}>
+        <div {...css(styles.sectionWrapper, styles.darkBackground)}>
           <div className={css(styles.untilt)}>
             <section className={css(styles.section)} id="email-form">
-              <h2>Let's Talk!</h2>
+              <h2 style={{ color: bleen }}>Let's Talk!</h2>
 
               <form
                 className={css(styles.formContainer)}
@@ -315,7 +331,7 @@ class IndexIndex extends React.Component {
                 <input
                   {...css(styles.input, styles.submitButton)}
                   type="submit"
-                  value="Send Me This Message"
+                  value="Send"
                 />
                 <p>
                   icons from{' '}

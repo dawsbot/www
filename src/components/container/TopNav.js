@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
+import { darkPurple } from '../colors';
 
 const TopNavContainer = styled.div`
   @media print {
     display: none;
   }
-  background-color: black;
+  background-color: ${darkPurple};
   height: 60px;
   color: white;
   display: flex;

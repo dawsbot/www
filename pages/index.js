@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { rehydrate } from 'glamor';
 
-import IndexIndex from '../components/Index/IndexIndex';
+import IndexIndex from '../src/components/Index/IndexIndex';
 
 // Adds server generated styles to glamor cache.
 // Has to run before any `css()` calls

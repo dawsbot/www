@@ -7,7 +7,7 @@ import LogRocket from 'logrocket';
 import setupLogRocketReact from 'logrocket-react';
 
 import { DEFAULT_TITLE } from './_app';
-import Fonts from '../components/presentational/Fonts';
+import Fonts from '../src/components/presentational/Fonts';
 
 const DEFAULT_DESCRIPTION =
   'Dawson Botsford is a recognized React.js expert and software engineer working for a half-decade with the NSA, Uber, and more.';

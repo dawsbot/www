@@ -27,7 +27,7 @@
     "typed.js": "^2.0.9"
   },
   "scripts": {
-    "test": "eslint components pages",
+    "test": "eslint src pages",
     "build": "next build",
     "now-build": "next build",
     "dev": "next",
