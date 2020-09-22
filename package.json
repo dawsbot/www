@@ -16,10 +16,10 @@
     "logrocket": "^0.6.21",
     "logrocket-react": "^3.0.0",
     "nanoid": "^2.0.1",
-    "next": "^9.3.5",
+    "next": "^9.5.3",
     "next-images": "^1.4.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-icons": "^3.10.0",
     "react-lazyload": "^2.6.7",
     "react-tweet-embed": "^1.2.2",
@@ -27,7 +27,7 @@
     "typed.js": "^2.0.9"
   },
   "scripts": {
-    "test": "eslint components pages",
+    "test": "eslint src pages",
     "build": "next build",
     "now-build": "next build",
     "dev": "next",
@@ -49,7 +49,7 @@
     }
   },
   "lint-staged": {
-    "{components,pages}/**/*.{js,jsx,css}": [
+    "{src,pages}/**/*.{js,jsx,css}": [
       "prettier --write",
       "git add"
     ]

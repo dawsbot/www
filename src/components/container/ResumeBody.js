@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 import JobPosition from './JobPosition';
 import UnpaddedUl from '../presentational/UnpaddedUl';
+import { bleen, darkPurple } from '../colors';
 
 const PaddedLi = styled.li`
   margin-bottom: 14px;
@@ -15,7 +16,8 @@ const styles = {
     flexWrap: 'wrap',
   },
   sectionHeading: {
-    borderBottom: '3px solid lightgray',
+    color: bleen,
+    borderBottom: `2px solid ${darkPurple}`,
     width: '100%',
     fontFamily: `'Scratch', sans-serif`,
     textTransform: 'uppercase',

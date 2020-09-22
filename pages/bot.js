@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Head from 'next/head';
 
-import BotIndex from '../components/container/BotIndex';
+import BotIndex from '../src/components/container/BotIndex';
 
 class Bot extends Component {
   render() {

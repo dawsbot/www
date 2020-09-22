@@ -3,6 +3,7 @@ import { css } from 'glamor';
 import styled from 'styled-components';
 import { FaGithub, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
+import { bleen } from '../colors';
 
 const styles = {
   main: {
@@ -19,6 +20,7 @@ const styles = {
     weight: 90,
     margin: '0px 0px 10px 0px',
     textTransform: 'uppercase',
+    color: bleen,
     // make text not as huge on smaller screens
     '@media(max-width: 670px)': {
       fontSize: '30px',

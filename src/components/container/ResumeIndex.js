@@ -3,6 +3,7 @@ import ResumeBody from './ResumeBody';
 import ResumeHeader from './ResumeHeader';
 import { css } from 'glamor';
 import Button from '../presentational/Button';
+import { darkPurple, bleen } from '../colors';
 
 /* eslint-disable no-undef */
 const styles = {
@@ -32,6 +33,9 @@ const styles = {
     },
   },
   printButton: {
+    backgroundColor: darkPurple,
+    borderColor: darkPurple,
+    color: bleen,
     margin: 'auto',
     '@media print': {
       display: 'none',

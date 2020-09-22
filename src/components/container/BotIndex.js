@@ -143,7 +143,7 @@ class BotIndex extends Component {
                 <br />
                 <img
                   src={`${this.state.gravatarUrl}?s=200`}
-                  role="presentation"
+                  alt="gravatar profile"
                 />
               </form>
             </section>
