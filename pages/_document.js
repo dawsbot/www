@@ -1,8 +1,10 @@
 import React from 'react';
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Document, { Head, Main, NextScript } from 'next/document';
 
 import { ServerStyleSheet } from 'styled-components';
 import { renderStatic } from 'glamor/server';
+import LogRocket from 'logrocket';
+import setupLogRocketReact from 'logrocket-react';
 
 import { DEFAULT_TITLE } from './_app';
 import Fonts from '../src/components/presentational/Fonts';
@@ -14,16 +16,11 @@ export default class MyDocument extends Document {
   // static async getInitialProps({ renderPage }) {
   // }
 
-  static async getInitialProps({ renderPage }) {
-    const page = await renderPage();
-    const { css, ids } = renderStatic(() => page.html || page.errorHtml);
-    return { ...page, css, ids };
-  }
   static async getInitialProps(ctx) {
     const sheet = new ServerStyleSheet();
     const page = ctx.renderPage();
     const originalRenderPage = ctx.renderPage;
-    // const styles = renderStatic(() => page.html || page.errorHtml);
+    const styles = renderStatic(() => page.html || page.errorHtml);
     // return { ...page, ...styles };
 
     try {
@@ -35,7 +32,7 @@ export default class MyDocument extends Document {
       const initialProps = await Document.getInitialProps(ctx);
       return {
         ...initialProps,
-        // ...styles,
+        ...styles,
         styles: (
           <>
             {initialProps.styles}
@@ -58,17 +55,24 @@ export default class MyDocument extends Document {
 
   componentDidMount() {
     Fonts();
+    // client-side only
+    if (typeof window !== 'undefined') {
+      LogRocket.init('ubu2ji/www');
+      setupLogRocketReact(LogRocket);
+    }
   }
 
   render() {
-    const { ids, css } = this.props;
-
     return (
-      <Html lang="en">
+      <html lang="en">
         <Head>
-          <style dangerouslySetInnerHTML={{ __html: css }} />
+          <style dangerouslySetInnerHTML={{ __html: this.props.css }} />
           <meta charSet="utf-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
           <meta name="author" content="Dawson Botsford" />
           <meta name="description" content={DEFAULT_DESCRIPTION} />
           <meta
@@ -102,17 +106,8 @@ export default class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          {ids && (
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `
-                  window.__REHYDRATE_IDS = ${JSON.stringify(ids)}
-                `,
-              }}
-            />
-          )}
         </body>
-      </Html>
+      </html>
     );
   }
 }
