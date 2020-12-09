@@ -95,7 +95,7 @@ class ResumeBody extends Component {
             jobTitle={`Founder & Engineer`}
             companyName="Dark Triangle"
             companyUrl="https://darktriangle.now.sh/"
-            jobDescription="Consulting with startups who want world-class web apps."
+            jobDescription="Consulting with startups building world-class web apps. Interum CTO roles, react and solidity team leads."
             TimeSince={timeSince(2018, 10)}
           />
           <JobPosition
@@ -136,6 +136,12 @@ class ResumeBody extends Component {
           {SectionHeading('Skills')}
           <ul style={{ paddingLeft: '22px' }}>
             <PaddedLi>Software Engineering {timeSince(2011, 9)}</PaddedLi>
+            <PaddedLi>
+              <a href="/eth-cert.jpg" style={{ color: 'black' }}>
+                Ethereum and Solidity
+              </a>{' '}
+              {timeSince(2018, 12)}
+            </PaddedLi>
             <PaddedLi>JavaScript</PaddedLi>
             <UnpaddedUl>
               <PaddedLi>JavaScript {timeSince(2014, 8)}</PaddedLi>
@@ -152,12 +158,6 @@ class ResumeBody extends Component {
               <a href="/YTT-cert.pdf" style={{ color: 'black' }}>
                 Certified Power Yoga Teacher - 200 hr training
               </a>
-            </PaddedLi>
-            <PaddedLi>
-              <a href="/eth-cert.jpg" style={{ color: 'black' }}>
-                Ethereum and Solidity
-              </a>{' '}
-              {timeSince(2018, 12)}
             </PaddedLi>
           </ul>
           <div className={css(styles.main)}>
