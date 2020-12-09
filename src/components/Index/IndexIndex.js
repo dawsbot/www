@@ -6,7 +6,12 @@ import styled from 'styled-components';
 
 import { darkPurple, bleen } from '../colors';
 
-import { FaGithubSquare, FaLinkedin, FaTwitterSquare } from 'react-icons/fa';
+import {
+  FaGithubSquare,
+  FaLinkedin,
+  FaTwitterSquare,
+  FaYoutubeSquare,
+} from 'react-icons/fa';
 
 import {
   ProjectCard,
@@ -134,15 +139,15 @@ class IndexIndex extends React.Component {
     // You can pass other options here, such as typing speed, back speed, etc.
     const options = {
       strings: [
-        'a Freelancer',
-        'an Artist',
-        'a Coder',
-        'a Yogi',
-        'an Engineer',
+        'a Solidity Dev',
+        'a React Dev',
+        'a YouTuber',
+        'an Open-Source contributor',
+        'a Consultant',
       ],
-      typeSpeed: 50,
+      typeSpeed: 36,
       backSpeed: 35,
-      backDelay: 1400,
+      backDelay: 1700,
       loop: true,
     };
     // this.el refers to the <span> in the render() method
@@ -183,7 +188,9 @@ class IndexIndex extends React.Component {
               who ❤️'s the web
             </h1>
             <div className={css(styles.bioDescription)}>
-              <h3 style={{ marginBottom: '40px' }}>I build with JavaScript</h3>
+              <h3 style={{ marginBottom: '40px' }}>
+                I build DApps with JavaScript & Solidity
+              </h3>
               <BuiltWithBubblesContainer>
                 <BubbleContainer>
                   <img
@@ -202,6 +209,14 @@ class IndexIndex extends React.Component {
                   <div style={{ color: 'black' }}>Node.js</div>
                 </BubbleContainer>
               </BuiltWithBubblesContainer>
+              <BubbleContainer>
+                <img
+                  src={require('../../../media/icons8-ethereum.svg')}
+                  style={{ height: 100 }}
+                  alt="ethereum"
+                />
+                <div style={{ color: 'black' }}>Solidity</div>
+              </BubbleContainer>
               <span style={{ marginTop: '40px' }}>
                 I'm a software engineer consultant. I work this way to gather a
                 breadth of knowledge. As Tony Robbins says, "compress years to
@@ -222,6 +237,12 @@ class IndexIndex extends React.Component {
               <h2 style={{ color: bleen }}>Some of my creations:</h2>
               <ProjectsGridContainer>
                 <ProjectCard
+                  href="https://github.com/teamsempo/StableVoucher"
+                  title="🏅 Stable Voucher 🏅"
+                  description="A web-app for distibuting humanitarian aid with crypocurrency. (Hackathon winner)"
+                  uses={['ethereum', 'javascript', 'reactjs']}
+                />
+                <ProjectCard
                   title="Uplift"
                   href="https://uplift.now.sh"
                   description="A website for happy quotes"
@@ -240,12 +261,6 @@ class IndexIndex extends React.Component {
                   uses={['javascript', 'reactjs']}
                 />
                 <ProjectCard
-                  href="https://github.com/teamsempo/StableVoucher"
-                  title="🏅 Stable Voucher 🏅"
-                  description="A web-app for distibuting humanitarian aid with crypocurrency. (Hackathon winner)"
-                  uses={['ethereum', 'javascript', 'reactjs']}
-                />
-                <ProjectCard
                   href="https://github.com/dawsbot/skrub"
                   title="Skrub"
                   description="Irreversible file deletion on every Operating System"
@@ -262,21 +277,31 @@ class IndexIndex extends React.Component {
             <div
               style={{
                 maxWidth: '100%',
-                display: 'flex',
-                justifyContent: 'space-between',
                 marginRight: '40px',
                 marginLeft: '40px',
+                textAlign: 'center',
               }}
             >
-              <SocialIconAnchor href="https://github.com/dawsbot">
-                <FaGithubSquare size="300px" title="github icon" />
+              <SocialIconAnchor href="https://www.youtube.com/c/DawsonBotsford">
+                <FaYoutubeSquare size="300px" title="YouTube" />
               </SocialIconAnchor>
-              <SocialIconAnchor href="https://linkedin.com/in/dawsonbotsford">
-                <FaLinkedin size="300px" title="LinkedIn icon" />
-              </SocialIconAnchor>
-              <SocialIconAnchor href="https://twitter.com/dawsonbotsford">
-                <FaTwitterSquare size="300px" title="Twitter icon" />
-              </SocialIconAnchor>
+
+              <div
+                style={{
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                }}
+              >
+                <SocialIconAnchor href="https://github.com/dawsbot">
+                  <FaGithubSquare size="300px" title="github" />
+                </SocialIconAnchor>
+                <SocialIconAnchor href="https://linkedin.com/in/dawsonbotsford">
+                  <FaLinkedin size="300px" title="LinkedIn" />
+                </SocialIconAnchor>
+                <SocialIconAnchor href="https://twitter.com/dawsonbotsford">
+                  <FaTwitterSquare size="300px" title="Twitter" />
+                </SocialIconAnchor>
+              </div>
             </div>
           </section>
         </div>

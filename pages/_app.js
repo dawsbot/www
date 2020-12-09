@@ -4,7 +4,8 @@ import Head from 'next/head';
 import { darkPurple } from '../src/components/colors';
 import TopNav from '../src/components/container/TopNav';
 
-export const DEFAULT_TITLE = 'Dawson: Software Engineer and React.js Guru';
+export const DEFAULT_TITLE =
+  'Dawson | Crypto nerd, Solidity dev & React.js Guru';
 
 function App({ Component, pageProps }) {
   return (
@@ -21,6 +22,7 @@ function App({ Component, pageProps }) {
       `}</style>
       <Head>
         <title>{DEFAULT_TITLE}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <TopNav />
       <Component {...pageProps} />
