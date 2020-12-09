@@ -6,7 +6,12 @@ import styled from 'styled-components';
 
 import { darkPurple, bleen } from '../colors';
 
-import { FaGithubSquare, FaLinkedin, FaTwitterSquare } from 'react-icons/fa';
+import {
+  FaGithubSquare,
+  FaLinkedin,
+  FaTwitterSquare,
+  FaYoutubeSquare,
+} from 'react-icons/fa';
 
 import {
   ProjectCard,
@@ -272,21 +277,31 @@ class IndexIndex extends React.Component {
             <div
               style={{
                 maxWidth: '100%',
-                display: 'flex',
-                justifyContent: 'space-between',
                 marginRight: '40px',
                 marginLeft: '40px',
+                textAlign: 'center',
               }}
             >
-              <SocialIconAnchor href="https://github.com/dawsbot">
-                <FaGithubSquare size="300px" title="github icon" />
+              <SocialIconAnchor href="https://www.youtube.com/c/DawsonBotsford">
+                <FaYoutubeSquare size="300px" title="YouTube" />
               </SocialIconAnchor>
-              <SocialIconAnchor href="https://linkedin.com/in/dawsonbotsford">
-                <FaLinkedin size="300px" title="LinkedIn icon" />
-              </SocialIconAnchor>
-              <SocialIconAnchor href="https://twitter.com/dawsonbotsford">
-                <FaTwitterSquare size="300px" title="Twitter icon" />
-              </SocialIconAnchor>
+
+              <div
+                style={{
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                }}
+              >
+                <SocialIconAnchor href="https://github.com/dawsbot">
+                  <FaGithubSquare size="300px" title="github" />
+                </SocialIconAnchor>
+                <SocialIconAnchor href="https://linkedin.com/in/dawsonbotsford">
+                  <FaLinkedin size="300px" title="LinkedIn" />
+                </SocialIconAnchor>
+                <SocialIconAnchor href="https://twitter.com/dawsonbotsford">
+                  <FaTwitterSquare size="300px" title="Twitter" />
+                </SocialIconAnchor>
+              </div>
             </div>
           </section>
         </div>

@@ -22,6 +22,7 @@ function App({ Component, pageProps }) {
       `}</style>
       <Head>
         <title>{DEFAULT_TITLE}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <TopNav />
       <Component {...pageProps} />
