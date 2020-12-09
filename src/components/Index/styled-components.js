@@ -57,7 +57,7 @@ export const ProjectCard = ({ title, href, description, uses = [] }) => (
   >
     <Card>
       <div>
-        <h3 style={{ fontSize: '22px' }}>{title}</h3> <p>$_ {description}</p>
+        <h3 style={{ fontSize: '22px' }}>{title}</h3> <p>{description}</p>
         {uses
           .sort()
           .reverse()

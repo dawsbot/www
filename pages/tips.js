@@ -53,7 +53,8 @@ const Tips = () => {
       </Head>
       <PageContainer>
         <h1>
-          Become a better developer with these {tweetsToEmbed.length} tips!
+          Become a better JavaScript developer with these {tweetsToEmbed.length}{' '}
+          tips!
         </h1>
         {tweetsToEmbed.map((tweetId, index) => {
           if (index > 4) {
