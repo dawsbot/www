@@ -85,11 +85,11 @@ class ResumeBody extends Component {
         <section {...css(styles.bodySection, styles.leftColumn)}>
           {SectionHeading('Experience')}
           <JobPosition
-            jobTitle={'Senior Full-Stack Engineer'}
-            companyName="Everipedia"
-            companyUrl="https://everipedia.org"
-            jobDescription="Leading product & engineering of everipedia.org; One of the world's largest crypto DApps with over 1.5 million visitors/month. Build on EOS."
-            TimeSince={timeSince(2019, 12)}
+            jobTitle={`Founder`}
+            companyName="Claimable"
+            companyUrl="https://claimable.vercel.app"
+            jobDescription="Helping crypto users find free tokens and POAPs"
+            TimeSince={timeSince(2021, 1)}
           />
           <JobPosition
             jobTitle={`Founder & Engineer`}
@@ -97,6 +97,12 @@ class ResumeBody extends Component {
             companyUrl="https://darktriangle.now.sh/"
             jobDescription="Consulting with startups building world-class web apps. Interum CTO roles, react and solidity team leads."
             TimeSince={timeSince(2018, 10)}
+          />
+          <JobPosition
+            jobTitle={'Senior Full-Stack Engineer'}
+            companyName="Everipedia"
+            companyUrl="https://everipedia.org"
+            jobDescription="Leading product & engineering of everipedia.org; One of the world's largest crypto DApps with over 1.5 million visitors/month. Build on Eth and EOS. - 1.18 yrs"
           />
           <JobPosition
             jobTitle="Lead Software Engineer"
@@ -117,6 +123,7 @@ class ResumeBody extends Component {
             jobDescription="Started and grew this
               hackathon to > 200 students - 1.66 yrs"
           />
+          {/* internships */}
           {/* <JobPosition
             jobTitle="Frontend Engineer"
             companyName="Shape Security"
@@ -124,13 +131,13 @@ class ResumeBody extends Component {
             jobDescription="KPCB Engineering Fellow. College internship
               (< 3% acceptance) - 0.33 yrs"
           /> */}
-          <JobPosition
+          {/* <JobPosition
             jobTitle="Software Engineer"
             companyName="NSA"
             companyUrl="https://www.defense.gov/"
             jobDescription="U.S. Security
               Clearance 2012 - 2015. Stokes Scholar (< 2% acceptance rate) - 2.75 yrs"
-          />
+          /> */}
         </section>
         <section {...css(styles.bodySection, styles.rightColumn)}>
           {SectionHeading('Skills')}
