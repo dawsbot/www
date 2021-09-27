@@ -86,9 +86,9 @@ class ResumeBody extends Component {
           {SectionHeading('Experience')}
           <JobPosition
             jobTitle={`Founder`}
-            companyName="Claimable"
-            companyUrl="https://claimable.vercel.app"
-            jobDescription="Helping crypto users find free tokens and POAPs"
+            companyName="Earnifi"
+            companyUrl="https://earni.fi"
+            jobDescription="Helping crypto users find over $100 million USD in airdrops and NFTs"
             TimeSince={timeSince(2021, 1)}
           />
           <JobPosition
@@ -161,6 +161,9 @@ class ResumeBody extends Component {
             <PaddedLi>HTML {timeSince(2014, 8)}</PaddedLi>
             <PaddedLi>CSS {timeSince(2014, 8)}</PaddedLi>
             <br />
+            <PaddedLi>
+              <p style={{ color: 'black' }}>CrossFit Level 1 Trainer (CF-L1)</p>
+            </PaddedLi>
             <PaddedLi>
               <a href="/YTT-cert.pdf" style={{ color: 'black' }}>
                 Certified Power Yoga Teacher - 200 hr training

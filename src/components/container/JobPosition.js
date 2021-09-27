@@ -31,7 +31,12 @@ class JobPosition extends Component {
     const company = companyUrl ? (
       <span>
         @
-        <a href={companyUrl} className={css(styles.anchor)}>
+        <a
+          href={companyUrl}
+          className={css(styles.anchor)}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {companyName}
         </a>
       </span>
