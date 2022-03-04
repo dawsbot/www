@@ -43,6 +43,7 @@ const Card = styled.div`
 `;
 
 const usesImages = {
+  typescript: require('../../../media/icons8-typescript.svg'),
   javascript: require('../../../media/icons8-javascript.svg'),
   nodejs: require('../../../media/icons8-nodejs.svg'),
   ethereum: require('../../../media/icons8-ethereum.svg'),

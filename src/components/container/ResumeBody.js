@@ -88,7 +88,7 @@ class ResumeBody extends Component {
             jobTitle={`Founder`}
             companyName="Earnifi"
             companyUrl="https://earni.fi"
-            jobDescription="Helping crypto users find over $100 million USD in airdrops and NFTs"
+            jobDescription="Helping crypto users find over $500 million USD in airdrops and NFTs"
             TimeSince={timeSince(2021, 1)}
           />
           <JobPosition
@@ -105,7 +105,7 @@ class ResumeBody extends Component {
             jobDescription="Leading product & engineering of everipedia.org; One of the world's largest crypto DApps with over 1.5 million visitors/month. Build on Eth and EOS. - 1.18 yrs"
           />
           <JobPosition
-            jobTitle="Lead Software Engineer"
+            jobTitle="Frontend Software Engineer"
             companyName="Driver"
             companyUrl="https://driver.xyz"
             jobDescription={`Started and lead public-facing marketing site. Heavy leadership and coding React web-app - 1.08 yrs`}
