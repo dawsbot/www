@@ -2,6 +2,7 @@ import React from 'react';
 import { css } from 'glamor';
 import Typed from 'typed.js';
 
+import Image from 'next/image';
 import styled from 'styled-components';
 
 import { darkPurple, bleen } from '../colors';
@@ -42,7 +43,6 @@ const styles = {
     borderRadius: '3px',
     padding: '4px',
     border: '2px solid grey',
-    width: '300px',
   },
   darkBackground: {
     backgroundColor: darkPurple,
@@ -165,12 +165,14 @@ class IndexIndex extends React.Component {
         <div className={css(styles.sectionWrapper)}>
           <section className={css(styles.section)}>
             <div className={css(styles.introTextContainer)}>
-              <img
+              <Image
                 className={css(styles.headshot)}
                 src="/my-face.jpg"
                 alt="my face"
+                width={300}
+                height={300}
               />
-              <h1 className={css(styles.introHeader)}>Hi, I'm Dawson!</h1>
+              <h1 className={css(styles.introHeader)}>{`Hi, I'm Dawson!`}</h1>
               <h1 className={css(styles.mega)}>
                 <span role="img" aria-label="hand wave">
                   👋
@@ -217,9 +219,9 @@ class IndexIndex extends React.Component {
                 <div style={{ color: 'black' }}>Solidity</div>
               </BubbleContainer>
               <span style={{ marginTop: '40px' }}>
-                I'm a software engineer consultant. I work this way to gather a
+                {/* I'm a software engineer consultant. I work this way to gather a
                 breadth of knowledge. As Tony Robbins says, "compress years to
-                days"{' '}
+                days"{' '} */}
                 <TalkButtonContainer>
                   <a href="#email-form">
                     <Button>Let's talk</Button>
