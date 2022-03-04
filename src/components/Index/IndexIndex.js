@@ -134,24 +134,23 @@ const Button = styled.button`
   font-size: 18px;
 `;
 
+const typedJSOptions = {
+  strings: [
+    'a Founder',
+    'a Developer',
+    'a Speaker',
+    'an Open-Source contributor',
+  ],
+  typeSpeed: 36,
+  backSpeed: 35,
+  backDelay: 1700,
+  loop: true,
+};
 class IndexIndex extends React.Component {
   componentDidMount() {
     // You can pass other options here, such as typing speed, back speed, etc.
-    const options = {
-      strings: [
-        'a Solidity Dev',
-        'a React Dev',
-        'a YouTuber',
-        'an Open-Source contributor',
-        'a Consultant',
-      ],
-      typeSpeed: 36,
-      backSpeed: 35,
-      backDelay: 1700,
-      loop: true,
-    };
     // this.el refers to the <span> in the render() method
-    this.typed = new Typed(this.el, options);
+    this.typed = new Typed(this.el, typedJSOptions);
   }
 
   componentWillUnmount() {
@@ -237,10 +236,16 @@ class IndexIndex extends React.Component {
               <h2 style={{ color: bleen }}>Some of my creations:</h2>
               <ProjectsGridContainer>
                 <ProjectCard
-                  href="https://github.com/teamsempo/StableVoucher"
-                  title="🏅 Stable Voucher 🏅"
-                  description="A web-app for distibuting humanitarian aid with crypocurrency. (Hackathon winner)"
-                  uses={['ethereum', 'javascript', 'reactjs']}
+                  href="https://earni.fi"
+                  title="🏅 Earnifi 🏅"
+                  description="An airdrop checker. Found $500 million for web3 users in 2021"
+                  uses={['ethereum', 'typescript', 'reactjs', 'nodejs']}
+                />
+                <ProjectCard
+                  href="https://github.com/Earnifi/essential-eth"
+                  title="🪶 Essential Eth"
+                  description="A library for interacting with Ethereum. 50x smaller than ethersJS and web3JS"
+                  uses={['typescript', 'javascript', 'ethereum']}
                 />
                 <ProjectCard
                   title="Uplift"
@@ -249,13 +254,13 @@ class IndexIndex extends React.Component {
                   uses={['javascript']}
                 />
                 <ProjectCard
-                  href="https://mailto.now.sh"
+                  href="https://mailto.vercel.app"
                   title="Mailto"
                   description="⚡️ A web app for software devs to create email mailto's"
                   uses={['javascript', 'reactjs']}
                 />
                 <ProjectCard
-                  href="https://vimrc-builder.now.sh"
+                  href="https://vimrc-builder.vercel.app"
                   title="vimrc Builder"
                   description="A web app for software devs to build a vimrc file"
                   uses={['javascript', 'reactjs']}
