@@ -2,6 +2,7 @@ import React from 'react';
 import { css } from 'glamor';
 import Typed from 'typed.js';
 
+import Image from 'next/image';
 import styled from 'styled-components';
 
 import { darkPurple, bleen } from '../colors';
@@ -42,7 +43,6 @@ const styles = {
     borderRadius: '3px',
     padding: '4px',
     border: '2px solid grey',
-    width: '300px',
   },
   darkBackground: {
     backgroundColor: darkPurple,
@@ -134,24 +134,23 @@ const Button = styled.button`
   font-size: 18px;
 `;
 
+const typedJSOptions = {
+  strings: [
+    'a Founder',
+    'a Developer',
+    'a Speaker',
+    'an Open-Source contributor',
+  ],
+  typeSpeed: 36,
+  backSpeed: 35,
+  backDelay: 1700,
+  loop: true,
+};
 class IndexIndex extends React.Component {
   componentDidMount() {
     // You can pass other options here, such as typing speed, back speed, etc.
-    const options = {
-      strings: [
-        'a Solidity Dev',
-        'a React Dev',
-        'a YouTuber',
-        'an Open-Source contributor',
-        'a Consultant',
-      ],
-      typeSpeed: 36,
-      backSpeed: 35,
-      backDelay: 1700,
-      loop: true,
-    };
     // this.el refers to the <span> in the render() method
-    this.typed = new Typed(this.el, options);
+    this.typed = new Typed(this.el, typedJSOptions);
   }
 
   componentWillUnmount() {
@@ -166,12 +165,14 @@ class IndexIndex extends React.Component {
         <div className={css(styles.sectionWrapper)}>
           <section className={css(styles.section)}>
             <div className={css(styles.introTextContainer)}>
-              <img
+              <Image
                 className={css(styles.headshot)}
                 src="/my-face.jpg"
                 alt="my face"
+                width={300}
+                height={300}
               />
-              <h1 className={css(styles.introHeader)}>Hi, I'm Dawson!</h1>
+              <h1 className={css(styles.introHeader)}>{`Hi, I'm Dawson!`}</h1>
               <h1 className={css(styles.mega)}>
                 <span role="img" aria-label="hand wave">
                   👋
@@ -179,17 +180,17 @@ class IndexIndex extends React.Component {
               </h1>
             </div>
             <h1 className={css(styles.loveHeader)}>
-              I'm{' '}
+              {`I'm `}
               <span
                 ref={el => {
                   this.el = el;
                 }}
-              />{' '}
-              who ❤️'s the web
+              />
+              {` who ❤️'s the web`}
             </h1>
             <div className={css(styles.bioDescription)}>
               <h3 style={{ marginBottom: '40px' }}>
-                I build DApps with JavaScript & Solidity
+                {`I build DApps with JavaScript & Solidity`}
               </h3>
               <BuiltWithBubblesContainer>
                 <BubbleContainer>
@@ -218,12 +219,12 @@ class IndexIndex extends React.Component {
                 <div style={{ color: 'black' }}>Solidity</div>
               </BubbleContainer>
               <span style={{ marginTop: '40px' }}>
-                I'm a software engineer consultant. I work this way to gather a
+                {/* I'm a software engineer consultant. I work this way to gather a
                 breadth of knowledge. As Tony Robbins says, "compress years to
-                days"{' '}
+                days"{' '} */}
                 <TalkButtonContainer>
                   <a href="#email-form">
-                    <Button>Let's talk</Button>
+                    <Button>{`Let's talk`}</Button>
                   </a>
                 </TalkButtonContainer>
               </span>
@@ -237,10 +238,16 @@ class IndexIndex extends React.Component {
               <h2 style={{ color: bleen }}>Some of my creations:</h2>
               <ProjectsGridContainer>
                 <ProjectCard
-                  href="https://github.com/teamsempo/StableVoucher"
-                  title="🏅 Stable Voucher 🏅"
-                  description="A web-app for distibuting humanitarian aid with crypocurrency. (Hackathon winner)"
-                  uses={['ethereum', 'javascript', 'reactjs']}
+                  href="https://earni.fi"
+                  title="🏅 Earnifi 🏅"
+                  description="An airdrop checker. Found $500 million for web3 users in 2021"
+                  uses={['ethereum', 'typescript', 'reactjs', 'nodejs']}
+                />
+                <ProjectCard
+                  href="https://github.com/Earnifi/essential-eth"
+                  title="🪶 Essential Eth"
+                  description="A library for interacting with Ethereum. 50x smaller than ethersJS and web3JS"
+                  uses={['typescript', 'javascript', 'ethereum']}
                 />
                 <ProjectCard
                   title="Uplift"
@@ -249,13 +256,13 @@ class IndexIndex extends React.Component {
                   uses={['javascript']}
                 />
                 <ProjectCard
-                  href="https://mailto.now.sh"
+                  href="https://mailto.vercel.app"
                   title="Mailto"
                   description="⚡️ A web app for software devs to create email mailto's"
                   uses={['javascript', 'reactjs']}
                 />
                 <ProjectCard
-                  href="https://vimrc-builder.now.sh"
+                  href="https://vimrc-builder.vercel.app"
                   title="vimrc Builder"
                   description="A web app for software devs to build a vimrc file"
                   uses={['javascript', 'reactjs']}
@@ -309,7 +316,7 @@ class IndexIndex extends React.Component {
         <div {...css(styles.sectionWrapper, styles.darkBackground)}>
           <div className={css(styles.untilt)}>
             <section className={css(styles.section)} id="email-form">
-              <h2 style={{ color: bleen }}>Let's Talk!</h2>
+              <h2 style={{ color: bleen }}>{`Let's Talk!`}</h2>
 
               <form
                 className={css(styles.formContainer)}

@@ -5,7 +5,7 @@ import { darkPurple } from '../src/components/colors';
 import TopNav from '../src/components/container/TopNav';
 
 export const DEFAULT_TITLE =
-  'Dawson | Crypto nerd, Solidity dev & React.js Guru';
+  'Dawson | Founder, web3 builder, and software engineer';
 
 function App({ Component, pageProps }) {
   return (

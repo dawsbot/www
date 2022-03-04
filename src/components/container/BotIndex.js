@@ -96,7 +96,7 @@ class BotIndex extends Component {
           <section {...css(styles.section)}>
             {' '}
             <h2>
-              Hi, I'm DawsBot!
+              {`Hi, I'm DawsBot!`}
               <br />
               <br />
               Use me to preview and copy your{' '}
@@ -105,9 +105,9 @@ class BotIndex extends Component {
               </a>
             </h2>{' '}
             <p>
-              Every email address has a Gravatar image. It's like a profile
+              {`Every email address has a Gravatar image. It's like a profile
               picture for you on the whole internet. Many sites use a gravatar
-              as your default profile picture.
+              as your default profile picture.`}
               <br />
               <br />
               If you want your gravatar url directly, it was{' '}
