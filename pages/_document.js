@@ -1,5 +1,5 @@
 import React from 'react';
-import Document, { Head, Main, NextScript } from 'next/document';
+import Document, { Head, Main, NextScript, Html } from 'next/document';
 
 import { ServerStyleSheet } from 'styled-components';
 import { renderStatic } from 'glamor/server';
@@ -64,15 +64,11 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <html lang="en">
+      <Html lang="en">
         <Head>
           <style dangerouslySetInnerHTML={{ __html: this.props.css }} />
           <meta charSet="utf-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-          />
           <meta name="author" content="Dawson Botsford" />
           <meta name="description" content={DEFAULT_DESCRIPTION} />
           <meta
@@ -107,7 +103,7 @@ export default class MyDocument extends Document {
           <Main />
           <NextScript />
         </body>
-      </html>
+      </Html>
     );
   }
 }
