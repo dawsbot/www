@@ -180,17 +180,17 @@ class IndexIndex extends React.Component {
               </h1>
             </div>
             <h1 className={css(styles.loveHeader)}>
-              I'm{' '}
+              {`I'm `}
               <span
                 ref={el => {
                   this.el = el;
                 }}
-              />{' '}
-              who ❤️'s the web
+              />
+              {` who ❤️'s the web`}
             </h1>
             <div className={css(styles.bioDescription)}>
               <h3 style={{ marginBottom: '40px' }}>
-                I build DApps with JavaScript & Solidity
+                {`I build DApps with JavaScript & Solidity`}
               </h3>
               <BuiltWithBubblesContainer>
                 <BubbleContainer>
@@ -224,7 +224,7 @@ class IndexIndex extends React.Component {
                 days"{' '} */}
                 <TalkButtonContainer>
                   <a href="#email-form">
-                    <Button>Let's talk</Button>
+                    <Button>{`Let's talk`}</Button>
                   </a>
                 </TalkButtonContainer>
               </span>
@@ -316,7 +316,7 @@ class IndexIndex extends React.Component {
         <div {...css(styles.sectionWrapper, styles.darkBackground)}>
           <div className={css(styles.untilt)}>
             <section className={css(styles.section)} id="email-form">
-              <h2 style={{ color: bleen }}>Let's Talk!</h2>
+              <h2 style={{ color: bleen }}>{`Let's Talk!`}</h2>
 
               <form
                 className={css(styles.formContainer)}
