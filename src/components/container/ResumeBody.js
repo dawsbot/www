@@ -85,13 +85,6 @@ class ResumeBody extends Component {
         <section {...css(styles.bodySection, styles.leftColumn)}>
           {SectionHeading('Experience')}
           <JobPosition
-            jobTitle={`Founder`}
-            companyName="Earnifi"
-            companyUrl="https://earni.fi"
-            jobDescription="Helping crypto users find over $500 million USD in airdrops and NFTs"
-            TimeSince={timeSince(2021, 1)}
-          />
-          <JobPosition
             jobTitle={`Founder & Engineer`}
             companyName="Dark Triangle"
             companyUrl="https://darktriangle.now.sh/"
@@ -99,16 +92,22 @@ class ResumeBody extends Component {
             TimeSince={timeSince(2018, 10)}
           />
           <JobPosition
+            jobTitle={'CTO'}
+            companyName="Bankless"
+            companyUrl="https://bankless.com"
+            jobDescription="Leading engineering of Claimables and airdrop checking. - 1.20 years"
+          />
+          <JobPosition
+            jobTitle={`Founder`}
+            companyName="Earnifi"
+            companyUrl="https://earni.fi"
+            jobDescription="Helping crypto users find over $1B USD in airdrops and NFTs - 2.97 years"
+          />
+          <JobPosition
             jobTitle={'Senior Full-Stack Engineer'}
             companyName="Everipedia"
             companyUrl="https://everipedia.org"
             jobDescription="Leading product & engineering of everipedia.org; One of the world's largest crypto DApps with over 1.5 million visitors/month. Build on Eth and EOS. - 1.18 yrs"
-          />
-          <JobPosition
-            jobTitle="Frontend Software Engineer"
-            companyName="Driver"
-            companyUrl="https://driver.xyz"
-            jobDescription={`Started and lead public-facing marketing site. Heavy leadership and coding React web-app - 1.08 yrs`}
           />
           <JobPosition
             jobTitle="Full-stack Web Engineer"
