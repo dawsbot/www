@@ -148,7 +148,7 @@ class ResumeBody extends Component {
               </a>{' '}
               {timeSince(2018, 12)}
             </PaddedLi>
-            <PaddedLi>JavaScript</PaddedLi>
+            <PaddedLi>JavaScript / TypeScript</PaddedLi>
             <UnpaddedUl>
               <PaddedLi>JavaScript {timeSince(2014, 8)}</PaddedLi>
               <PaddedLi>
@@ -161,10 +161,22 @@ class ResumeBody extends Component {
             <PaddedLi>CSS {timeSince(2014, 8)}</PaddedLi>
             <br />
             <PaddedLi>
-              <p style={{ color: 'black' }}>CrossFit Level 1 Trainer (CF-L1)</p>
+              <a
+                href="https://certificates.crossfit.com/88e8a73f-a235-4911-a878-916a9b13ed33#gs.83sn2p"
+                style={{ color: 'black' }}
+                target="_blank"
+                rel="noreferrer"
+              >
+                CrossFit Level 1 Trainer (CF-L1)
+              </a>
             </PaddedLi>
             <PaddedLi>
-              <a href="/YTT-cert.pdf" style={{ color: 'black' }}>
+              <a
+                href="/YTT-cert.pdf"
+                style={{ color: 'black' }}
+                target="_blank"
+                rel="noreferrer"
+              >
                 Certified Power Yoga Teacher - 200 hr training
               </a>
             </PaddedLi>
