@@ -3,8 +3,6 @@ import Document, { Head, Main, NextScript, Html } from 'next/document';
 
 import { ServerStyleSheet } from 'styled-components';
 import { renderStatic } from 'glamor/server';
-import LogRocket from 'logrocket';
-import setupLogRocketReact from 'logrocket-react';
 
 import { DEFAULT_TITLE } from './_app';
 import Fonts from '../src/components/presentational/Fonts';
@@ -55,11 +53,6 @@ export default class MyDocument extends Document {
 
   componentDidMount() {
     Fonts();
-    // client-side only
-    if (typeof window !== 'undefined') {
-      LogRocket.init('ubu2ji/www');
-      setupLogRocketReact(LogRocket);
-    }
   }
 
   render() {
