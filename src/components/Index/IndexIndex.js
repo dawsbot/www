@@ -219,13 +219,6 @@ const featuredProjects = [
     stars: 224,
   },
   {
-    title: '🔗 Config Chain',
-    href: 'https://github.com/dawsbot/config-chain',
-    description: 'Handle environment configuration once and for all.',
-    uses: ['javascript', 'nodejs'],
-    stars: 104,
-  },
-  {
     title: '🏊 Swim',
     href: 'https://github.com/dawsbot/swim',
     description: 'Switch between multiple vimrc files with ease.',
@@ -261,39 +254,11 @@ const featuredProjects = [
     stars: 51,
   },
   {
-    title: '₿ Satoshi-Bitcoin',
-    href: 'https://github.com/dawsbot/satoshi-bitcoin',
-    description: 'Convert precisely between Satoshi and Bitcoin.',
-    uses: ['javascript'],
-    stars: 43,
-  },
-  {
-    title: '📡 Opencast',
-    href: 'https://github.com/dawsbot/opencast',
-    description: 'APIs for Farcaster data — fast and local.',
-    uses: ['typescript'],
-    stars: 13,
-  },
-  {
     title: '🔥 Free Eth Node',
     href: 'https://github.com/dawsbot/free-eth-node',
     description: 'Connect to any EVM chain instantly — free RPC endpoints.',
     uses: ['typescript', 'ethereum'],
     stars: 27,
-  },
-  {
-    title: '💸 AcceptETH',
-    href: 'https://github.com/dawsbot/accepteth',
-    description: 'Accept crypto payments on your site in 60 seconds.',
-    uses: ['typescript', 'ethereum'],
-    stars: 10,
-  },
-  {
-    title: '₿ Bitfinex Scripts',
-    href: 'https://github.com/dawsbot/bitfinex',
-    description: 'Bitcoin trading automation scripts.',
-    uses: [],
-    stars: 106,
   },
 ];
 
