@@ -5,7 +5,7 @@ import { darkPurple } from '../src/components/colors';
 import TopNav from '../src/components/container/TopNav';
 
 export const DEFAULT_TITLE =
-  'Dawson | Founder, web3 builder, and software engineer';
+  'Dawson Botsford — CTO, AI & Fintech Leader, Open Source Engineer';
 
 function App({ Component, pageProps }) {
   return (

@@ -52,7 +52,6 @@ const SectionHeading = displayText => {
 // helper fn for calculating years since a date
 const timeSince = (year, month) => {
   const today = new Date();
-  // MM DD YYYY
   const then = new Date(year, month, 1);
 
   const oneDay = 86400;
@@ -85,66 +84,53 @@ class ResumeBody extends Component {
         <section {...css(styles.bodySection, styles.leftColumn)}>
           {SectionHeading('Experience')}
           <JobPosition
-            jobTitle={`Founder & Engineer`}
+            jobTitle="Founder & CTO"
             companyName="Dark Triangle"
             companyUrl="https://darktriangle.now.sh/"
-            jobDescription="Consulting with startups building world-class web apps. Interum CTO roles, react and solidity team leads."
+            jobDescription="AI consulting, fractional CTO engagements, and technical leadership for startups. Building AI-integrated products and advising on AI strategy, fintech architecture, and engineering team scaling."
             TimeSince={timeSince(2018, 10)}
           />
           <JobPosition
-            jobTitle={'CTO'}
+            jobTitle="CTO"
             companyName="Bankless"
             companyUrl="https://bankless.com"
-            jobDescription="Leading engineering of Claimables and airdrop checking. - 1.20 years"
+            jobDescription="Led engineering of Claimables and airdrop checking platform. Technical leadership of neobanking and web3 fintech products. - 1.20 years"
           />
           <JobPosition
-            jobTitle={`Founder`}
+            jobTitle="Founder"
             companyName="Earnifi"
             companyUrl="https://earni.fi"
-            jobDescription="Helping crypto users find over $1B USD in airdrops and NFTs - 2.97 years"
+            jobDescription="Built an airdrop platform that helped crypto users find over $1B USD in unclaimed tokens and NFTs. Acquired by Bankless. - 2.97 years"
           />
           <JobPosition
-            jobTitle={'Senior Full-Stack Engineer'}
+            jobTitle="Senior Full-Stack Engineer"
             companyName="Everipedia"
             companyUrl="https://everipedia.org"
-            jobDescription="Leading product & engineering of everipedia.org; One of the world's largest crypto DApps with over 1.5 million visitors/month. Build on Eth and EOS. - 1.18 yrs"
+            jobDescription="Led product & engineering for one of the world's largest crypto DApps with 1.5M+ visitors/month. Built on Ethereum and EOS. - 1.18 yrs"
           />
           <JobPosition
             jobTitle="Full-stack Web Engineer"
             companyName="Uber"
             companyUrl="https://uber.com"
-            jobDescription="Web platform team. Programmed shared library of React and Node.js code. - 1.08 yrs"
+            jobDescription="Web platform team. Built shared React and Node.js library used across engineering org. - 1.08 yrs"
           />
           <JobPosition
             jobTitle="Co-founder"
             companyName="HackCU"
             companyUrl="https://hackcu.org"
-            jobDescription="Started and grew this
-              hackathon to > 200 students - 1.66 yrs"
+            jobDescription="Started and grew this hackathon to 200+ students - 1.66 yrs"
           />
-          {/* internships */}
-          {/* <JobPosition
-            jobTitle="Frontend Engineer"
-            companyName="Shape Security"
-            companyUrl="https://shapesecurity.com"
-            jobDescription="KPCB Engineering Fellow. College internship
-              (< 3% acceptance) - 0.33 yrs"
-          /> */}
-          {/* <JobPosition
-            jobTitle="Software Engineer"
-            companyName="NSA"
-            companyUrl="https://www.defense.gov/"
-            jobDescription="U.S. Security
-              Clearance 2012 - 2015. Stokes Scholar (< 2% acceptance rate) - 2.75 yrs"
-          /> */}
         </section>
         <section {...css(styles.bodySection, styles.rightColumn)}>
           {SectionHeading('Skills')}
           <ul style={{ paddingLeft: '22px' }}>
             <PaddedLi>Software Engineering {timeSince(2011, 9)}</PaddedLi>
+            <PaddedLi>AI Strategy & Integration</PaddedLi>
+            <PaddedLi>Technical Leadership & Engineering Management</PaddedLi>
+            <PaddedLi>Fintech & Neobanking Architecture</PaddedLi>
             <PaddedLi>
               <a href="/eth-cert.jpg" style={{ color: 'black' }}>
-                Ethereum and Solidity
+                Ethereum, Solidity & Blockchain
               </a>{' '}
               {timeSince(2018, 12)}
             </PaddedLi>

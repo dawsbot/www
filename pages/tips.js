@@ -49,7 +49,14 @@ const Tips = () => {
   return (
     <>
       <Head>
-        <title>Tips for JavaScript Coders: Dawson Botsford</title>
+        <title>
+          JavaScript & TypeScript Tips — Dawson Botsford | Software Engineering
+          Leader
+        </title>
+        <meta
+          name="description"
+          content="Developer tips from Dawson Botsford — become a better JavaScript and TypeScript engineer with these practical coding insights."
+        />
       </Head>
       <PageContainer>
         <h1>
