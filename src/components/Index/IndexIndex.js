@@ -11,7 +11,6 @@ import {
   FaGithubSquare,
   FaLinkedin,
   FaTwitterSquare,
-  FaYoutubeSquare,
   FaStar,
 } from 'react-icons/fa';
 
@@ -178,7 +177,7 @@ const typedJSOptions = {
   loop: true,
 };
 
-const featuredProjects = [
+export const featuredProjects = [
   {
     title: '🏅 Earnifi',
     href: 'https://earni.fi',
@@ -401,16 +400,21 @@ class IndexIndex extends React.Component {
                 infrastructure used by thousands of developers worldwide.
               </p>
               <ProjectsGridContainer>
-                {featuredProjects.map(project => (
-                  <ProjectCard
-                    key={project.title}
-                    href={project.href}
-                    title={project.title}
-                    description={project.description}
-                    uses={project.uses}
-                    stars={project.stars}
-                  />
-                ))}
+                {featuredProjects.map(project => {
+                  const dynamicStars =
+                    this.props.starCounts &&
+                    this.props.starCounts[project.href];
+                  return (
+                    <ProjectCard
+                      key={project.title}
+                      href={project.href}
+                      title={project.title}
+                      description={project.description}
+                      uses={project.uses}
+                      stars={dynamicStars || project.stars}
+                    />
+                  );
+                })}
               </ProjectsGridContainer>
             </section>
           </div>
@@ -428,19 +432,18 @@ class IndexIndex extends React.Component {
                 textAlign: 'center',
               }}
             >
-              <SocialIconAnchor
-                href="https://www.youtube.com/c/DawsonBotsford"
-                aria-label="YouTube — Dawson Botsford"
-              >
-                <FaYoutubeSquare size="300px" title="YouTube" />
-              </SocialIconAnchor>
-
               <div
                 style={{
                   display: 'flex',
                   justifyContent: 'space-between',
                 }}
               >
+                <SocialIconAnchor
+                  href="https://twitter.com/dawsonbotsford"
+                  aria-label="Twitter — Dawson Botsford"
+                >
+                  <FaTwitterSquare size="300px" title="Twitter" />
+                </SocialIconAnchor>
                 <SocialIconAnchor
                   href="https://github.com/dawsbot"
                   aria-label="GitHub — Dawson Botsford open source projects"
@@ -452,12 +455,6 @@ class IndexIndex extends React.Component {
                   aria-label="LinkedIn — Dawson Botsford professional profile"
                 >
                   <FaLinkedin size="300px" title="LinkedIn" />
-                </SocialIconAnchor>
-                <SocialIconAnchor
-                  href="https://twitter.com/dawsonbotsford"
-                  aria-label="Twitter — Dawson Botsford"
-                >
-                  <FaTwitterSquare size="300px" title="Twitter" />
                 </SocialIconAnchor>
               </div>
             </div>
