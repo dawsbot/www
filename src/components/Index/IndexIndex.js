@@ -12,6 +12,7 @@ import {
   FaLinkedin,
   FaTwitterSquare,
   FaYoutubeSquare,
+  FaStar,
 } from 'react-icons/fa';
 
 import {
@@ -76,7 +77,7 @@ const styles = {
     boxShadow: '0px 4px 14px 0px rgba(71,71,71,1)',
     backgroundColor: darkPurple,
     color: 'white',
-    lineHeight: 1.4,
+    lineHeight: 1.6,
     display: 'flex',
     padding: '60px',
     justifyContent: 'center',
@@ -134,41 +135,201 @@ const Button = styled.button`
   font-size: 18px;
 `;
 
+const BioText = styled.p`
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 700px;
+  text-align: center;
+  margin: 0 auto 20px;
+  color: rgba(255, 255, 255, 0.9);
+`;
+
+const ExpertiseGrid = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 30px;
+  max-width: 700px;
+`;
+
+const ExpertiseTag = styled.span`
+  background-color: rgba(92, 229, 213, 0.15);
+  color: ${bleen};
+  border: 1px solid rgba(92, 229, 213, 0.3);
+  padding: 8px 18px;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+`;
+
 const typedJSOptions = {
   strings: [
-    'a Founder',
-    'a Developer',
-    'a Speaker',
-    'an Open-Source contributor',
+    'a CTO',
+    'an AI Strategist',
+    'an Open-Source Engineer',
+    'a Fintech Builder',
+    'a Technical Leader',
   ],
   typeSpeed: 36,
   backSpeed: 35,
   backDelay: 1700,
   loop: true,
 };
+
+const featuredProjects = [
+  {
+    title: '🏅 Earnifi',
+    href: 'https://earni.fi',
+    description:
+      'An airdrop checker that found $500 million+ for web3 users. Acquired by Bankless.',
+    uses: ['ethereum', 'typescript', 'reactjs', 'nodejs'],
+    stars: null,
+  },
+  {
+    title: '🪶 Essential Eth',
+    href: 'https://github.com/dawsbot/essential-eth',
+    description:
+      'A lightweight alternative to ethers.js & web3.js — 10x smaller bundle size.',
+    uses: ['typescript', 'ethereum'],
+    stars: 308,
+  },
+  {
+    title: '📃 Eth Labels',
+    href: 'https://github.com/dawsbot/eth-labels',
+    description:
+      'A public dataset of labeled Ethereum addresses for the crypto ecosystem.',
+    uses: ['ethereum'],
+    stars: 246,
+  },
+  {
+    title: '🫗 Drain',
+    href: 'https://github.com/dawsbot/drain',
+    description:
+      'Drain a wallet of ERC-20 tokens across Ethereum, Polygon, and Arbitrum — fast.',
+    uses: ['typescript', 'ethereum'],
+    stars: 203,
+  },
+  {
+    title: '💌 Mailto',
+    href: 'https://mailto.vercel.app',
+    description: 'A web app for creating email mailto links instantly.',
+    uses: ['javascript', 'reactjs'],
+    stars: 224,
+  },
+  {
+    title: '🔗 Config Chain',
+    href: 'https://github.com/dawsbot/config-chain',
+    description: 'Handle environment configuration once and for all.',
+    uses: ['javascript', 'nodejs'],
+    stars: 104,
+  },
+  {
+    title: '🏊 Swim',
+    href: 'https://github.com/dawsbot/swim',
+    description: 'Switch between multiple vimrc files with ease.',
+    uses: [],
+    stars: 84,
+  },
+  {
+    title: '🔌 RelativePath',
+    href: 'https://github.com/dawsbot/RelativePath',
+    description: 'VS Code extension for inserting relative file paths.',
+    uses: ['typescript'],
+    stars: 70,
+  },
+  {
+    title: 'ⓥ Vimrc Builder',
+    href: 'https://vimrc-builder.vercel.app',
+    description: 'A visual web app for building your perfect vimrc file.',
+    uses: ['javascript', 'reactjs'],
+    stars: 57,
+  },
+  {
+    title: '🧨 txn.xyz',
+    href: 'https://github.com/dawsbot/txn.xyz',
+    description: 'Connect any wallet to web3 instantly.',
+    uses: ['typescript', 'ethereum'],
+    stars: 56,
+  },
+  {
+    title: '🗑 Skrub',
+    href: 'https://github.com/dawsbot/skrub',
+    description: 'Irreversible file deletion on every operating system.',
+    uses: ['javascript', 'nodejs'],
+    stars: 51,
+  },
+  {
+    title: '₿ Satoshi-Bitcoin',
+    href: 'https://github.com/dawsbot/satoshi-bitcoin',
+    description: 'Convert precisely between Satoshi and Bitcoin.',
+    uses: ['javascript'],
+    stars: 43,
+  },
+  {
+    title: '📡 Opencast',
+    href: 'https://github.com/dawsbot/opencast',
+    description: 'APIs for Farcaster data — fast and local.',
+    uses: ['typescript'],
+    stars: 13,
+  },
+  {
+    title: '🔥 Free Eth Node',
+    href: 'https://github.com/dawsbot/free-eth-node',
+    description: 'Connect to any EVM chain instantly — free RPC endpoints.',
+    uses: ['typescript', 'ethereum'],
+    stars: 27,
+  },
+  {
+    title: '💸 AcceptETH',
+    href: 'https://github.com/dawsbot/accepteth',
+    description: 'Accept crypto payments on your site in 60 seconds.',
+    uses: ['typescript', 'ethereum'],
+    stars: 10,
+  },
+  {
+    title: '₿ Bitfinex Scripts',
+    href: 'https://github.com/dawsbot/bitfinex',
+    description: 'Bitcoin trading automation scripts.',
+    uses: [],
+    stars: 106,
+  },
+];
+
+const expertiseAreas = [
+  'AI Strategy & Consulting',
+  'Technical Leadership',
+  'Fintech & Neobanking',
+  'Ethereum & Blockchain',
+  'Open Source Engineering',
+  'JavaScript / TypeScript',
+  'React & Node.js',
+  'Web3 & DeFi',
+  'Engineering Management',
+  'Fractional CTO',
+];
+
 class IndexIndex extends React.Component {
   componentDidMount() {
-    // You can pass other options here, such as typing speed, back speed, etc.
-    // this.el refers to the <span> in the render() method
     this.typed = new Typed(this.el, typedJSOptions);
   }
 
   componentWillUnmount() {
-    // Make sure to destroy Typed instance on unmounting
-    // to prevent memory leaks
     this.typed.destroy();
   }
 
   render() {
     return (
       <>
+        {/* Hero Section */}
         <div className={css(styles.sectionWrapper)}>
           <section className={css(styles.section)}>
             <div className={css(styles.introTextContainer)}>
               <Image
                 className={css(styles.headshot)}
                 src="/my-face.jpg"
-                alt="my face"
+                alt="Dawson Botsford — CTO, AI strategist, and open source engineer"
                 width={300}
                 height={300}
               />
@@ -179,7 +340,7 @@ class IndexIndex extends React.Component {
                 </span>
               </h1>
             </div>
-            <h1 className={css(styles.loveHeader)}>
+            <h2 className={css(styles.loveHeader)}>
               {`I'm `}
               <span
                 ref={el => {
@@ -187,17 +348,46 @@ class IndexIndex extends React.Component {
                 }}
               />
               {` who ❤️'s the web`}
-            </h1>
+            </h2>
             <div className={css(styles.bioDescription)}>
-              <h3 style={{ marginBottom: '40px' }}>
-                {`I build DApps with JavaScript & Solidity`}
+              <BioText>
+                Dawson Botsford is a technology leader specializing in{' '}
+                <strong>AI strategy</strong>, fintech infrastructure, and{' '}
+                <strong>open source software</strong>. As a{' '}
+                <strong>CTO and engineering leader</strong>, he has built
+                products in <strong>neobanking</strong>,{' '}
+                <strong>blockchain</strong>, and developer tools used by
+                thousands of engineers worldwide.
+              </BioText>
+              <BioText>
+                With deep expertise in <strong>Ethereum</strong> and web3, he
+                founded Earnifi — an airdrop platform that found over $500M for
+                crypto users before being acquired by Bankless. He builds{' '}
+                <strong>AI-integrated products</strong> and advises companies on{' '}
+                <strong>AI consulting</strong> and technical strategy.
+              </BioText>
+
+              <h3
+                style={{
+                  color: bleen,
+                  marginBottom: '10px',
+                  marginTop: '30px',
+                }}
+              >
+                Areas of Expertise
               </h3>
-              <BuiltWithBubblesContainer>
+              <ExpertiseGrid>
+                {expertiseAreas.map(area => (
+                  <ExpertiseTag key={area}>{area}</ExpertiseTag>
+                ))}
+              </ExpertiseGrid>
+
+              <BuiltWithBubblesContainer style={{ marginTop: '40px' }}>
                 <BubbleContainer>
                   <img
                     src={require('../../../media/icons8-react-native.svg')}
                     style={{ height: 100 }}
-                    alt="logo for react"
+                    alt="React logo — core technology for building user interfaces"
                   />
                   <div style={{ color: 'black' }}>React</div>
                 </BubbleContainer>
@@ -205,82 +395,66 @@ class IndexIndex extends React.Component {
                   <img
                     src={require('../../../media/icons8-nodejs.svg')}
                     style={{ height: 100 }}
-                    alt="logo for nodejs"
+                    alt="Node.js logo — JavaScript runtime for server-side development"
                   />
                   <div style={{ color: 'black' }}>Node.js</div>
                 </BubbleContainer>
+                <BubbleContainer>
+                  <img
+                    src={require('../../../media/icons8-ethereum.svg')}
+                    style={{ height: 100 }}
+                    alt="Ethereum logo — blockchain platform for smart contracts"
+                  />
+                  <div style={{ color: 'black' }}>Solidity</div>
+                </BubbleContainer>
+                <BubbleContainer>
+                  <img
+                    src={require('../../../media/icons8-typescript.svg')}
+                    style={{ height: 100 }}
+                    alt="TypeScript logo — typed JavaScript for large-scale applications"
+                  />
+                  <div style={{ color: 'black' }}>TypeScript</div>
+                </BubbleContainer>
               </BuiltWithBubblesContainer>
-              <BubbleContainer>
-                <img
-                  src={require('../../../media/icons8-ethereum.svg')}
-                  style={{ height: 100 }}
-                  alt="ethereum"
-                />
-                <div style={{ color: 'black' }}>Solidity</div>
-              </BubbleContainer>
-              <span style={{ marginTop: '40px' }}>
-                {/* I'm a software engineer consultant. I work this way to gather a
-                breadth of knowledge. As Tony Robbins says, "compress years to
-                days"{' '} */}
-                <TalkButtonContainer>
-                  <a href="#email-form">
-                    <Button>{`Let's talk`}</Button>
-                  </a>
-                </TalkButtonContainer>
-              </span>
+
+              <TalkButtonContainer>
+                <a href="#email-form">
+                  <Button>{`Let's talk`}</Button>
+                </a>
+              </TalkButtonContainer>
             </div>
           </section>
         </div>
 
+        {/* Projects Section */}
         <div {...css(styles.sectionWrapper, styles.darkBackground)}>
           <div className={css(styles.untilt)}>
             <section className={css(styles.section)}>
-              <h2 style={{ color: bleen }}>Some of my creations:</h2>
+              <h2 style={{ color: bleen }}>Open Source Projects</h2>
+              <p style={{ opacity: 0.8, marginBottom: '10px' }}>
+                Building developer tools, Ethereum libraries, and fintech
+                infrastructure used by thousands of developers worldwide.
+              </p>
               <ProjectsGridContainer>
-                <ProjectCard
-                  href="https://earni.fi"
-                  title="🏅 Earnifi 🏅"
-                  description="An airdrop checker. Found $500 million for web3 users in 2021"
-                  uses={['ethereum', 'typescript', 'reactjs', 'nodejs']}
-                />
-                <ProjectCard
-                  href="https://github.com/Earnifi/essential-eth"
-                  title="🪶 Essential Eth"
-                  description="A library for interacting with Ethereum. 50x smaller than ethersJS and web3JS"
-                  uses={['typescript', 'javascript', 'ethereum']}
-                />
-                <ProjectCard
-                  title="Uplift"
-                  href="https://uplift.now.sh"
-                  description="A website for happy quotes"
-                  uses={['javascript']}
-                />
-                <ProjectCard
-                  href="https://mailto.vercel.app"
-                  title="Mailto"
-                  description="⚡️ A web app for software devs to create email mailto's"
-                  uses={['javascript', 'reactjs']}
-                />
-                <ProjectCard
-                  href="https://vimrc-builder.vercel.app"
-                  title="vimrc Builder"
-                  description="A web app for software devs to build a vimrc file"
-                  uses={['javascript', 'reactjs']}
-                />
-                <ProjectCard
-                  href="https://github.com/dawsbot/skrub"
-                  title="Skrub"
-                  description="Irreversible file deletion on every Operating System"
-                  uses={['javascript', 'nodejs']}
-                />
+                {featuredProjects.map(project => (
+                  <ProjectCard
+                    key={project.title}
+                    href={project.href}
+                    title={project.title}
+                    description={project.description}
+                    uses={project.uses}
+                    stars={project.stars}
+                  />
+                ))}
               </ProjectsGridContainer>
             </section>
           </div>
         </div>
 
+        {/* Social Section */}
         <div className={css(styles.sectionWrapper)}>
           <section className={css(styles.section)}>
-            <h2 style={{ color: bleen }}>See more at:</h2>
+            <h2 style={{ color: bleen }}>Connect with Dawson</h2>
             <div
               style={{
                 maxWidth: '100%',
@@ -289,7 +463,10 @@ class IndexIndex extends React.Component {
                 textAlign: 'center',
               }}
             >
-              <SocialIconAnchor href="https://www.youtube.com/c/DawsonBotsford">
+              <SocialIconAnchor
+                href="https://www.youtube.com/c/DawsonBotsford"
+                aria-label="YouTube — Dawson Botsford"
+              >
                 <FaYoutubeSquare size="300px" title="YouTube" />
               </SocialIconAnchor>
 
@@ -299,13 +476,22 @@ class IndexIndex extends React.Component {
                   justifyContent: 'space-between',
                 }}
               >
-                <SocialIconAnchor href="https://github.com/dawsbot">
-                  <FaGithubSquare size="300px" title="github" />
+                <SocialIconAnchor
+                  href="https://github.com/dawsbot"
+                  aria-label="GitHub — Dawson Botsford open source projects"
+                >
+                  <FaGithubSquare size="300px" title="GitHub" />
                 </SocialIconAnchor>
-                <SocialIconAnchor href="https://linkedin.com/in/dawsonbotsford">
+                <SocialIconAnchor
+                  href="https://linkedin.com/in/dawsonbotsford"
+                  aria-label="LinkedIn — Dawson Botsford professional profile"
+                >
                   <FaLinkedin size="300px" title="LinkedIn" />
                 </SocialIconAnchor>
-                <SocialIconAnchor href="https://twitter.com/dawsonbotsford">
+                <SocialIconAnchor
+                  href="https://twitter.com/dawsonbotsford"
+                  aria-label="Twitter — Dawson Botsford"
+                >
                   <FaTwitterSquare size="300px" title="Twitter" />
                 </SocialIconAnchor>
               </div>
@@ -313,10 +499,17 @@ class IndexIndex extends React.Component {
           </section>
         </div>
 
+        {/* Contact Section */}
         <div {...css(styles.sectionWrapper, styles.darkBackground)}>
           <div className={css(styles.untilt)}>
             <section className={css(styles.section)} id="email-form">
-              <h2 style={{ color: bleen }}>{`Let's Talk!`}</h2>
+              <h2 style={{ color: bleen }}>
+                {`Get in Touch — AI Consulting & Technical Leadership`}
+              </h2>
+              <p style={{ opacity: 0.8, marginBottom: '30px' }}>
+                Looking for a fractional CTO, AI strategy advisor, or technical
+                co-founder? {`Let's`} talk about your project.
+              </p>
 
               <form
                 className={css(styles.formContainer)}
@@ -348,7 +541,7 @@ class IndexIndex extends React.Component {
                   <textarea
                     {...css(styles.input, styles.textArea)}
                     name="subject"
-                    placeholder="Can we get your thoughts on our software project? We're trying to do _"
+                    placeholder="Looking for AI consulting, technical leadership, or open source collaboration..."
                   />
                 </label>
 
