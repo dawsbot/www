@@ -34,17 +34,11 @@ const TopNav = () => {
       $navText={theme.navText}
       $font={theme.bodyFont}
     >
-      <Link href="/">
-        <a>Home</a>
-      </Link>
+      <Link href="/">Home</Link>
       •
-      <Link href="/tips">
-        <a>Developer Tips</a>
-      </Link>
+      <Link href="/tips">Developer Tips</Link>
       •
-      <Link href="/resume">
-        <a>Resume</a>
-      </Link>
+      <Link href="/resume">Resume</Link>
     </TopNavContainer>
   );
 };

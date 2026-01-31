@@ -1,0 +1,51 @@
+# Dawson Botsford
+
+> CTO, AI strategist, and open source engineer
+
+## About
+
+Dawson Botsford is a technology leader specializing in AI strategy, fintech infrastructure, and open source software. He serves as a CTO and engineering leader, building products in neobanking, blockchain, and developer tools used by thousands of engineers worldwide.
+
+## Current Role
+
+CTO at Dark Triangle -- leading AI strategy, engineering, and product development.
+
+## Areas of Expertise
+
+- AI strategy and consulting
+- Technical leadership and engineering management
+- Fintech and neobanking infrastructure
+- Ethereum, blockchain, and web3
+- Open source software engineering
+- JavaScript, TypeScript, React, Node.js
+- Fractional CTO services
+
+## Key Projects and Achievements
+
+- **Earnifi** (https://earni.fi): Founded an airdrop checker that found $500M+ for web3 users. Acquired by Bankless.
+- **Essential Eth** (https://github.com/dawsbot/essential-eth): A lightweight alternative to ethers.js and web3.js with 10x smaller bundle size.
+- **Eth Labels** (https://github.com/dawsbot/eth-labels): A public dataset of labeled Ethereum addresses for the crypto ecosystem.
+- **Drain** (https://github.com/dawsbot/drain): Drain a wallet of ERC-20 tokens across Ethereum, Polygon, and Arbitrum.
+- **Mailto** (https://mailto.vercel.app): A web app for creating email mailto links instantly.
+- **Swim** (https://github.com/dawsbot/swim): Switch between multiple vimrc files with ease.
+- **RelativePath** (https://github.com/dawsbot/RelativePath): VS Code extension for inserting relative file paths.
+- **Vimrc Builder** (https://vimrc-builder.vercel.app): A visual web app for building your perfect vimrc file.
+- **txn.xyz** (https://github.com/dawsbot/txn.xyz): Connect any wallet to web3 instantly.
+- **Skrub** (https://github.com/dawsbot/skrub): Irreversible file deletion on every operating system.
+- **Free Eth Node** (https://github.com/dawsbot/free-eth-node): Connect to any EVM chain instantly with free RPC endpoints.
+
+## Profiles
+
+- Website: https://dawsbot.com
+- GitHub: https://github.com/dawsbot
+- Twitter: https://twitter.com/dawsonbotsford
+- LinkedIn: https://linkedin.com/in/dawsonbotsford
+- YouTube: https://www.youtube.com/c/DawsonBotsford
+
+## Education
+
+University of Colorado
+
+## Contact
+
+Reach out via the contact form at https://dawsbot.com or connect on any of the profiles above.
