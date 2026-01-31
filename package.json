@@ -13,7 +13,7 @@
     "gravatar": "^1.8.1",
     "just-omit": "^1.0.1",
     "nanoid": "^2.0.1",
-    "next": "^14.2.0",
+    "next": "^16.1.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.2.0",
