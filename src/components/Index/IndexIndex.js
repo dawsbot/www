@@ -1,12 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import Typed from 'typed.js';
 import Image from 'next/image';
-import {
-  FaGithubSquare,
-  FaLinkedin,
-  FaTwitterSquare,
-  FaStar,
-} from 'react-icons/fa';
+import { FaGithubSquare, FaLinkedin, FaTwitterSquare } from 'react-icons/fa';
 import { useTheme } from '../ThemeContext';
 
 const typedJSOptions = {
@@ -130,14 +125,6 @@ const expertiseAreas = [
   'Engineering Management',
   'Fractional CTO',
 ];
-
-const usesImages = {
-  typescript: require('../../../media/icons8-typescript.svg'),
-  javascript: require('../../../media/icons8-javascript.svg'),
-  nodejs: require('../../../media/icons8-nodejs.svg'),
-  ethereum: require('../../../media/icons8-ethereum.svg'),
-  reactjs: require('../../../media/icons8-react-native.svg'),
-};
 
 function ThemeEffects() {
   return (
