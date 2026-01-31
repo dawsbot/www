@@ -56,11 +56,11 @@ const StarBadge = styled.span`
 `;
 
 const usesImages = {
-  typescript: require('../../../media/icons8-typescript.svg'),
-  javascript: require('../../../media/icons8-javascript.svg'),
-  nodejs: require('../../../media/icons8-nodejs.svg'),
-  ethereum: require('../../../media/icons8-ethereum.svg'),
-  reactjs: require('../../../media/icons8-react-native.svg'),
+  typescript: '/icons8-typescript.svg',
+  javascript: '/icons8-javascript.svg',
+  nodejs: '/icons8-nodejs.svg',
+  ethereum: '/icons8-ethereum.svg',
+  reactjs: '/icons8-react-native.svg',
 };
 
 export const ProjectCard = ({ title, href, description, uses = [], stars }) => (

@@ -11,13 +11,11 @@
     "fontfaceobserver": "^2.1.0",
     "glamor": "^2.20.40",
     "gravatar": "^1.8.1",
-    "husky": "^4.2.5",
     "just-omit": "^1.0.1",
     "nanoid": "^2.0.1",
-    "next": "^12.1.0",
-    "next-images": "^1.8.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "next": "^14.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-icons": "^4.2.0",
     "react-lazyload": "^3.2.0",
     "react-tweet-embed": "^2.0.0",
@@ -36,20 +34,14 @@
     "babel-eslint": "^10.1.0",
     "babel-plugin-styled-components": "^1.13.2",
     "eslint": "^8.10.0",
-    "eslint-config-next": "12.1.0",
+    "eslint-config-next": "^14.2.0",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.29.3",
     "lint-staged": "^12.3.4",
     "prettier": "^1.15.3",
     "prop-types": "^15.7.2"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "npm run test"
-    }
-  },
-  "lint-staged": {
+"lint-staged": {
     "{src,pages}/**/*.{js,jsx,css}": [
       "prettier --write",
       "git add"

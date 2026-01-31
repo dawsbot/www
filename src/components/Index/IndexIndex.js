@@ -128,7 +128,7 @@ const expertiseAreas = [
 
 function ThemeEffects() {
   return (
-    <style>{`
+    <style dangerouslySetInnerHTML={{ __html: `
       .swiss-number {
         font-family: 'Bebas Neue', sans-serif;
         font-size: 72px;
@@ -157,7 +157,7 @@ function ThemeEffects() {
         color: #e60012;
         opacity: 0.3;
       }
-    `}</style>
+    `}} />
   );
 }
 
@@ -309,7 +309,7 @@ function IndexIndex({ starCounts }) {
               style={{
                 borderRadius: '0px',
                 border: 'none',
-                filter: 'grayscale(1) contrast(1.3)',
+                filter: 'none',
               }}
             />
             <div style={{ textAlign: 'center' }}>
@@ -463,19 +463,19 @@ function IndexIndex({ starCounts }) {
             >
               {[
                 {
-                  src: require('../../../media/icons8-react-native.svg'),
+                  src: '/icons8-react-native.svg',
                   label: 'React',
                 },
                 {
-                  src: require('../../../media/icons8-nodejs.svg'),
+                  src: '/icons8-nodejs.svg',
                   label: 'Node.js',
                 },
                 {
-                  src: require('../../../media/icons8-ethereum.svg'),
+                  src: '/icons8-ethereum.svg',
                   label: 'Solidity',
                 },
                 {
-                  src: require('../../../media/icons8-typescript.svg'),
+                  src: '/icons8-typescript.svg',
                   label: 'TypeScript',
                 },
               ].map(tech => (

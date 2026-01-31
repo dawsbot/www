@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 import TopNav from '../src/components/container/TopNav';
 import { ThemeProvider, useTheme } from '../src/components/ThemeContext';
@@ -9,6 +10,8 @@ export const DEFAULT_TITLE =
 
 function ThemedApp({ Component, pageProps }) {
   const { theme } = useTheme();
+  const router = useRouter();
+  const canonicalUrl = `https://dawsbot.com${router.asPath === '/' ? '' : router.asPath}`;
 
   return (
     <>
@@ -34,6 +37,7 @@ function ThemedApp({ Component, pageProps }) {
       <Head>
         <title>{DEFAULT_TITLE}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="canonical" href={canonicalUrl} />
       </Head>
       <TopNav />
       <Component {...pageProps} />

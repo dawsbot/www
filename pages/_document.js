@@ -2,7 +2,7 @@ import React from 'react';
 import Document, { Head, Main, NextScript, Html } from 'next/document';
 
 import { ServerStyleSheet } from 'styled-components';
-import { renderStatic } from 'glamor/server';
+import { renderStaticOptimized } from 'glamor/server';
 
 import { DEFAULT_TITLE } from './_app';
 import Fonts from '../src/components/presentational/Fonts';
@@ -16,9 +16,7 @@ const DEFAULT_DESCRIPTION =
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const sheet = new ServerStyleSheet();
-    const page = ctx.renderPage();
     const originalRenderPage = ctx.renderPage;
-    const styles = renderStatic(() => page.html || page.errorHtml);
 
     try {
       ctx.renderPage = () =>
@@ -27,9 +25,14 @@ export default class MyDocument extends Document {
         });
 
       const initialProps = await Document.getInitialProps(ctx);
+
+      // Extract glamor styles from the rendered HTML
+      const glamorStyles = renderStaticOptimized(() => initialProps.html);
+
       return {
         ...initialProps,
-        ...styles,
+        ids: glamorStyles.ids,
+        glamorCss: glamorStyles.css,
         styles: (
           <>
             {initialProps.styles}
@@ -48,10 +51,6 @@ export default class MyDocument extends Document {
     if (ids) {
       __NEXT_DATA__.ids = this.props.ids;
     }
-  }
-
-  componentDidMount() {
-    Fonts();
   }
 
   render() {
@@ -110,7 +109,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <style dangerouslySetInnerHTML={{ __html: this.props.css }} />
+          <style dangerouslySetInnerHTML={{ __html: this.props.glamorCss }} />
           <meta charSet="utf-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
 
@@ -121,7 +120,6 @@ export default class MyDocument extends Document {
             name="keywords"
             content="CTO, AI consulting, AI strategy, fintech, neobanking, digital banking, Ethereum, blockchain, web3, open source, JavaScript, TypeScript, React, Node.js, software engineering, technical leadership, fractional CTO, engineering management"
           />
-          <link rel="canonical" href="https://dawsbot.com" />
 
           {/* Google / Search Engine Tags */}
           <meta itemProp="name" content="Dawson Botsford" />
