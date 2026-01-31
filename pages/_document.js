@@ -6,6 +6,9 @@ import { renderStatic } from 'glamor/server';
 
 import { DEFAULT_TITLE } from './_app';
 import Fonts from '../src/components/presentational/Fonts';
+import { themes } from '../src/components/themes';
+
+const allFontImports = [themes['swiss-modernist'].fontImport];
 
 const DEFAULT_DESCRIPTION =
   'Dawson Botsford is a CTO and engineering leader specializing in AI strategy, fintech infrastructure, and open source software. Builder of neobanking products, Ethereum tools, and developer platforms.';
@@ -151,6 +154,11 @@ export default class MyDocument extends Document {
               __html: JSON.stringify(structuredData),
             }}
           />
+
+          {/* Theme font imports */}
+          {allFontImports.map(url => (
+            <link key={url} rel="stylesheet" href={url} />
+          ))}
 
           <link
             rel="shortcut icon"

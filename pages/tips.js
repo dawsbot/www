@@ -50,12 +50,12 @@ const Tips = () => {
     <>
       <Head>
         <title>
-          JavaScript & TypeScript Tips — Dawson Botsford | Software Engineering
+          JavaScript & TypeScript Tips | Dawson Botsford | Software Engineering
           Leader
         </title>
         <meta
           name="description"
-          content="Developer tips from Dawson Botsford — become a better JavaScript and TypeScript engineer with these practical coding insights."
+          content="Developer tips from Dawson Botsford. Become a better JavaScript and TypeScript engineer with these practical coding insights."
         />
       </Head>
       <PageContainer>

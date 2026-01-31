@@ -8,12 +8,12 @@ class Resume extends Component {
       <div>
         <Head>
           <title>
-            Resume — Dawson Botsford | CTO, AI Strategy & Fintech Engineering
+            Resume | Dawson Botsford | CTO, AI Strategy & Fintech Engineering
             Leader
           </title>
           <meta
             name="description"
-            content="Resume of Dawson Botsford — CTO, AI strategist, and engineering leader with experience at Bankless, Earnifi, Uber, and more. Expertise in fintech, blockchain, and open source."
+            content="Resume of Dawson Botsford. CTO, AI strategist, and engineering leader with experience at Bankless, Earnifi, Uber, and more. Expertise in fintech, blockchain, and open source."
           />
         </Head>
         <ResumeIndex />

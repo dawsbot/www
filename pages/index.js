@@ -1,12 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import IndexIndex from '../src/components/Index/IndexIndex';
 import { featuredProjects } from '../src/components/Index/IndexIndex';
 
-class Index extends Component {
-  render() {
-    return <IndexIndex starCounts={this.props.starCounts} />;
-  }
+function Index({ starCounts }) {
+  return <IndexIndex starCounts={starCounts} />;
 }
 
 export async function getStaticProps() {
