@@ -1,4 +1,3 @@
-// 22. radiant zoas from https://www.shutterstock.com/blog/neon-color-palettes
-export const darkPurple = '#001437';
-export const blue = '#7898fb';
-export const bleen = '#5ce5d5';
+export const darkPurple = '#1a1a1a';
+export const blue = '#1a1a1a';
+export const bleen = '#e60012';

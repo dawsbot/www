@@ -87,7 +87,7 @@ class ResumeHeader extends Component {
             <FaTwitter /> Twitter
           </SocialIconAnchor>
 
-          <SocialIconAnchor href="mailto:&#100;&#097;&#119;&#115;&#111;&#110;&#098;&#111;&#116;&#115;&#102;&#111;&#114;&#100;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">
+          <SocialIconAnchor href="mailto:&#098;&#114;&#097;&#118;&#101;&#046;&#098;&#101;&#100;&#055;&#051;&#049;&#057;&#064;&#102;&#097;&#115;&#116;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">
             <MdEmail /> Email
           </SocialIconAnchor>
         </SocialMediaGrid>
