@@ -12,7 +12,6 @@
     "glamor": "^2.20.40",
     "gravatar": "^1.8.1",
     "just-omit": "^1.0.1",
-    "nanoid": "^2.0.1",
     "next": "^16.1.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -41,7 +40,7 @@
     "prettier": "^1.15.3",
     "prop-types": "^15.7.2"
   },
-"lint-staged": {
+  "lint-staged": {
     "{src,pages}/**/*.{js,jsx,css}": [
       "prettier --write",
       "git add"
