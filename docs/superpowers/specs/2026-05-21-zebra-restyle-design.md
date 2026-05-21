@@ -13,7 +13,7 @@ Redesign the site's look to echo the layout of michaelgreen06.com (two-column he
 - **Accent color:** electric lime `#c4f000`, used sparingly.
 - **Sections:** restyle the existing sections only — Hero, About/Expertise, Open Source Projects, Connect, Contact. No blog, no separate footer.
 - **Hero:** two-column (text left, headshot right).
-- **Fonts:** Space Grotesk (headings) + Inter (body), replacing Bebas Neue + Barlow.
+- **Fonts:** Archivo (heavy weights, display/headings) + Hanken Grotesk (body), replacing Bebas Neue + Barlow.
 
 ## Visual language
 
