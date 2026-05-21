@@ -85,18 +85,17 @@ class ResumeBody extends Component {
         <section {...css(styles.bodySection, styles.leftColumn)}>
           {SectionHeading('Experience')}
           <JobPosition
-            jobTitle="Co-Founder & CTO"
-            companyName="Haraka"
-            companyUrl="https://haraka.xyz"
-            jobDescription="Making finance borderless & personalized"
-            TimeSince={timeSince(2025, 6)}
-          />
-          <JobPosition
             jobTitle="Founder & CTO"
             companyName="Dark Triangle"
             companyUrl="https://darktriangle.now.sh/"
             jobDescription="AI consulting, fractional CTO engagements, and technical leadership for startups. Building AI-integrated products and advising on AI strategy, fintech architecture, and engineering team scaling."
             TimeSince={timeSince(2018, 10)}
+          />
+          <JobPosition
+            jobTitle="Co-Founder & CTO"
+            companyName="Haraka"
+            companyUrl="https://haraka.xyz"
+            jobDescription="Making finance borderless & personalized. Jul 2025 to May 2026."
           />
           <JobPosition
             jobTitle="CTO"
