@@ -3,7 +3,6 @@ import { css } from 'glamor';
 import styled from 'styled-components';
 import { FaGithub, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
-import { bleen } from '../colors';
 
 const styles = {
   main: {
@@ -13,14 +12,14 @@ const styles = {
     width: '100%',
   },
   header: {
-    fontSize: '40px',
-    fontFamily: `'Work Sans', sans-serif`,
-    letterSpacing: '3px',
-    lineHeight: '1',
-    weight: 90,
+    fontSize: '44px',
+    fontFamily: `'Archivo', 'Helvetica Neue', sans-serif`,
+    fontWeight: 900,
+    letterSpacing: '1px',
+    lineHeight: '0.95',
     margin: '0px 0px 10px 0px',
     textTransform: 'uppercase',
-    color: bleen,
+    color: '#0e0e0e',
     // make text not as huge on smaller screens
     '@media(max-width: 670px)': {
       fontSize: '30px',

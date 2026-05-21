@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import JobPosition from './JobPosition';
 import UnpaddedUl from '../presentational/UnpaddedUl';
-import { bleen, darkPurple } from '../colors';
+import { darkPurple } from '../colors';
 
 const PaddedLi = styled.li`
   margin-bottom: 14px;
@@ -16,13 +16,14 @@ const styles = {
     flexWrap: 'wrap',
   },
   sectionHeading: {
-    color: bleen,
+    color: '#0e0e0e',
     borderBottom: `2px solid ${darkPurple}`,
     width: '100%',
-    fontFamily: `'Scratch', sans-serif`,
+    fontFamily: `'Archivo', 'Helvetica Neue', sans-serif`,
+    fontWeight: 800,
     textTransform: 'uppercase',
     fontSize: '24px',
-    letterSpacing: '3px',
+    letterSpacing: '2px',
     padding: '0px 0px 4px 0px',
   },
   bodySection: {

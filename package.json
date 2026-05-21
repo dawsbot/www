@@ -16,8 +16,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.2.0",
-    "react-lazyload": "^3.2.0",
-    "react-tweet-embed": "^2.0.0",
     "styled-components": "^5.1.0",
     "typed.js": "^2.0.9"
   },
