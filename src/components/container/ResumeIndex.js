@@ -18,6 +18,8 @@ const styles = {
     padding: '50px 26px 50px 26px',
     maxWidth: '800px',
     margin: '0 auto',
+    // slightly smaller body text so the print view fits on one page
+    fontSize: '16px',
   },
   buttonWrapper: {
     display: 'flex',

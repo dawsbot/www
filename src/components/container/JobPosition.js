@@ -8,6 +8,7 @@ const styles = {
   },
   header: {
     marginBottom: '0px',
+    marginTop: '6px',
     fontSize: '20px',
   },
   jobDescription: {
@@ -45,9 +46,9 @@ class JobPosition extends Component {
     );
     return (
       <div className={css(styles.cardWrapper)}>
-        <h2 className={css(styles.header)}>
+        <h4 className={css(styles.header)}>
           {jobTitle} {company}
-        </h2>
+        </h4>
 
         <p className={css(styles.jobDescription)}>
           {jobDescription}

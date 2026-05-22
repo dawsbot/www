@@ -158,10 +158,8 @@ export default class MyDocument extends Document {
             <link key={url} rel="stylesheet" href={url} />
           ))}
 
-          <link
-            rel="shortcut icon"
-            href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/237/male-mechanic-type-1-2_1f468-1f3fb-200d-1f527.png"
-          />
+          {/* Black & white "DB" monogram favicon, matching the top nav */}
+          <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         </Head>
         <body>
           <Main />
