@@ -27,7 +27,7 @@ const styles = {
     padding: '0px 0px 4px 0px',
   },
   bodySection: {
-    margin: '16px',
+    margin: '12px',
   },
   leftColumn: {
     flex: '18',
@@ -39,7 +39,7 @@ const styles = {
     textAlign: 'left',
     marginRight: '0px',
   },
-  h2: {
+  h3: {
     marginBottom: '0px',
     marginTop: '0px',
     fontSize: '20px',
@@ -47,7 +47,7 @@ const styles = {
 };
 
 const SectionHeading = displayText => {
-  return <h2 className={css(styles.sectionHeading)}> {displayText} </h2>;
+  return <h3 className={css(styles.sectionHeading)}> {displayText} </h3>;
 };
 
 // helper fn for calculating years since a date
@@ -86,7 +86,7 @@ class ResumeBody extends Component {
           {SectionHeading('Experience')}
           <JobPosition
             jobTitle="Founder & CTO"
-            companyName="Dark Triangle"
+            companyName="Lost in the Sauce LLC"
             companyUrl="https://darktriangle.now.sh/"
             jobDescription="AI consulting, fractional CTO engagements, and technical leadership for startups. Building AI-integrated products and advising on AI strategy, fintech architecture, and engineering team scaling."
             TimeSince={timeSince(2018, 10)}
