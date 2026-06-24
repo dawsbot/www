@@ -32,7 +32,6 @@ CTO at Dark Triangle -- leading AI strategy, engineering, and product developmen
 - **Vimrc Builder** (https://vimrc-builder.vercel.app): A visual web app for building your perfect vimrc file.
 - **txn.xyz** (https://github.com/dawsbot/txn.xyz): Connect any wallet to web3 instantly.
 - **Skrub** (https://github.com/dawsbot/skrub): Irreversible file deletion on every operating system.
-- **Free Eth Node** (https://github.com/dawsbot/free-eth-node): Connect to any EVM chain instantly with free RPC endpoints.
 
 ## Profiles
 
