@@ -38,20 +38,20 @@ export const featuredProjects = [
     href: 'https://github.com/dawsbot/eth-labels',
     description:
       'A public dataset of labeled Ethereum addresses for the crypto ecosystem.',
-    stars: 246,
+    stars: 281,
   },
   {
     title: 'Drain',
     href: 'https://github.com/dawsbot/drain',
     description:
       'Drain a wallet of ERC-20 tokens across Ethereum, Polygon, and Arbitrum. Fast.',
-    stars: 203,
+    stars: 231,
   },
   {
     title: 'Mailto',
     href: 'https://mailto.vercel.app',
     description: 'A web app for creating email mailto links instantly.',
-    stars: 224,
+    stars: 226,
   },
   {
     title: 'Swim',
@@ -63,31 +63,25 @@ export const featuredProjects = [
     title: 'RelativePath',
     href: 'https://github.com/dawsbot/RelativePath',
     description: 'VS Code extension for inserting relative file paths.',
-    stars: 70,
+    stars: 71,
   },
   {
     title: 'Vimrc Builder',
     href: 'https://vimrc-builder.vercel.app',
     description: 'A visual web app for building your perfect vimrc file.',
-    stars: 57,
+    stars: 56,
   },
   {
     title: 'txn.xyz',
     href: 'https://github.com/dawsbot/txn.xyz',
     description: 'Connect any wallet to web3 instantly.',
-    stars: 56,
+    stars: 55,
   },
   {
     title: 'Skrub',
     href: 'https://github.com/dawsbot/skrub',
     description: 'Irreversible file deletion on every operating system.',
     stars: 51,
-  },
-  {
-    title: 'Free Eth Node',
-    href: 'https://github.com/dawsbot/free-eth-node',
-    description: 'Connect to any EVM chain instantly. Free RPC endpoints.',
-    stars: 27,
   },
 ];
 
