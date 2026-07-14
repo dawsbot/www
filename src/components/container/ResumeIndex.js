@@ -20,6 +20,9 @@ const styles = {
     margin: '0 auto',
     // slightly smaller body text so the print view fits on one page
     fontSize: '16px',
+    '@media print': {
+      padding: '10px 26px 0px 26px',
+    },
   },
   buttonWrapper: {
     display: 'flex',

@@ -8,6 +8,10 @@ import { darkPurple } from '../colors';
 
 const PaddedLi = styled.li`
   margin-bottom: 14px;
+
+  @media print {
+    margin-bottom: 8px;
+  }
 `;
 const styles = {
   main: {
@@ -50,26 +54,15 @@ const SectionHeading = displayText => {
   return <h3 className={css(styles.sectionHeading)}> {displayText} </h3>;
 };
 
-// helper fn for calculating years since a date
-const timeSince = (year, month) => {
-  const today = new Date();
-  const then = new Date(year, month, 1);
-
-  const oneDay = 86400;
-  const oneYear = oneDay * 365.25;
-
-  const secondsDiff = (today - then) / 1000;
-  const years = secondsDiff / oneYear;
-  const yr = years.toFixed(8);
-  return <code style={{ fontSize: 16 }}>{yr} yrs</code>;
-};
-
 class ResumeBody extends Component {
+  // `now` stays null during SSR and the first client render so both produce
+  // identical markup (a live timestamp here causes a hydration mismatch)
   state = {
-    now: new Date().getTime(),
+    now: null,
   };
 
   componentDidMount() {
+    this.setState({ now: new Date().getTime() });
     this.interval = setInterval(
       () => this.setState({ now: new Date().getTime() }),
       100,
@@ -78,6 +71,21 @@ class ResumeBody extends Component {
   componentWillUnmount() {
     clearInterval(this.interval);
   }
+
+  // helper fn for calculating years since a date
+  timeSince = (year, month) => {
+    const { now } = this.state;
+    if (now === null) return null;
+    const then = new Date(year, month, 1);
+
+    const oneDay = 86400;
+    const oneYear = oneDay * 365.25;
+
+    const secondsDiff = (now - then.getTime()) / 1000;
+    const years = secondsDiff / oneYear;
+    const yr = years.toFixed(8);
+    return <code style={{ fontSize: 16 }}>{yr} yrs</code>;
+  };
 
   render() {
     return (
@@ -89,7 +97,7 @@ class ResumeBody extends Component {
             companyName="Lost in the Sauce LLC"
             companyUrl="https://darktriangle.now.sh/"
             jobDescription="AI consulting, fractional CTO engagements, and technical leadership for startups. Building AI-integrated products and advising on AI strategy, fintech architecture, and engineering team scaling."
-            TimeSince={timeSince(2018, 10)}
+            TimeSince={this.timeSince(2018, 10)}
           />
           <JobPosition
             jobTitle="Co-Founder & CTO"
@@ -98,16 +106,10 @@ class ResumeBody extends Component {
             jobDescription="Making finance borderless & personalized. Jul 2025 to May 2026."
           />
           <JobPosition
-            jobTitle="CTO"
-            companyName="Bankless"
-            companyUrl="https://bankless.com"
-            jobDescription="Led engineering of Claimables and airdrop checking platform. Technical leadership of neobanking and web3 fintech products. - 1.20 years"
-          />
-          <JobPosition
-            jobTitle="Founder"
-            companyName="Earnifi"
+            jobTitle="Founder, then CTO"
+            companyName="Earnifi (acquired by Bankless)"
             companyUrl="https://earni.fi"
-            jobDescription="Built an airdrop platform that helped crypto users find over $1B USD in unclaimed tokens and NFTs. Acquired by Bankless. - 2.97 years"
+            jobDescription="Built an airdrop platform that helped crypto users find over $1B USD in unclaimed tokens and NFTs. After acquisition, served as CTO of Bankless, leading engineering of Claimables and web3 fintech products. - 4.2 years"
           />
           <JobPosition
             jobTitle="Senior Full-Stack Engineer"
@@ -131,7 +133,7 @@ class ResumeBody extends Component {
         <section {...css(styles.bodySection, styles.rightColumn)}>
           {SectionHeading('Skills')}
           <ul style={{ paddingLeft: '22px' }}>
-            <PaddedLi>Software Engineering {timeSince(2011, 9)}</PaddedLi>
+            <PaddedLi>Software Engineering {this.timeSince(2011, 9)}</PaddedLi>
             <PaddedLi>AI Strategy & Integration</PaddedLi>
             <PaddedLi>Technical Leadership & Engineering Management</PaddedLi>
             <PaddedLi>Fintech & Neobanking Architecture</PaddedLi>
@@ -139,19 +141,19 @@ class ResumeBody extends Component {
               <a href="/eth-cert.jpg" style={{ color: 'black' }}>
                 Ethereum, Solidity & Blockchain
               </a>{' '}
-              {timeSince(2018, 12)}
+              {this.timeSince(2018, 12)}
             </PaddedLi>
             <PaddedLi>JavaScript / TypeScript</PaddedLi>
             <UnpaddedUl>
-              <PaddedLi>JavaScript {timeSince(2014, 8)}</PaddedLi>
+              <PaddedLi>JavaScript {this.timeSince(2014, 8)}</PaddedLi>
               <PaddedLi>
-                React.js {timeSince(2015, 5)}
+                React.js {this.timeSince(2015, 5)}
                 <small> (I made this page with React)</small>
               </PaddedLi>
-              <PaddedLi>Node.js {timeSince(2014, 9)}</PaddedLi>
+              <PaddedLi>Node.js {this.timeSince(2014, 9)}</PaddedLi>
             </UnpaddedUl>
-            <PaddedLi>HTML {timeSince(2014, 8)}</PaddedLi>
-            <PaddedLi>CSS {timeSince(2014, 8)}</PaddedLi>
+            <PaddedLi>HTML {this.timeSince(2014, 8)}</PaddedLi>
+            <PaddedLi>CSS {this.timeSince(2014, 8)}</PaddedLi>
             <br />
             <PaddedLi>
               <a
@@ -176,8 +178,8 @@ class ResumeBody extends Component {
           </ul>
           <div className={css(styles.main)}>
             {SectionHeading('Education')}
-            <h2 className={css(styles.h2)}>B.S. Computer Science</h2>
-            University of Colorado
+            <h4 className={css(styles.h3)}>B.S. Computer Science</h4>
+            University of Colorado, 2012-2016
             <div {...css(styles.bodySection, styles.rightColumn)} />
           </div>
         </section>
