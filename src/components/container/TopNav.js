@@ -78,8 +78,13 @@ const NavLink = styled(Link)`
 
 const links = [
   { href: '/', label: 'Home' },
+  { href: '/blog', label: 'Blog' },
   { href: '/resume', label: 'Resume' },
 ];
+
+// `/blog` stays highlighted while reading an individual post at `/blog/[slug]`.
+const isActive = (pathname, href) =>
+  href === '/' ? pathname === '/' : pathname.startsWith(href);
 
 const TopNav = () => {
   const { theme } = useTheme();
@@ -95,7 +100,7 @@ const TopNav = () => {
           <NavLink
             key={link.href}
             href={link.href}
-            $active={router.pathname === link.href}
+            $active={isActive(router.pathname, link.href)}
           >
             {link.label}
           </NavLink>
