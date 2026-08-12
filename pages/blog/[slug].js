@@ -48,13 +48,14 @@ function BlogPost({ slug }) {
       <Head>
         <title>{pageTitle}</title>
         <meta name="description" content={description} />
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={description} />
+        {/* Social cards carry the post title only — no authored summary copy. */}
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={title} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={url} />
         <meta property="article:published_time" content={date} />
-        <meta name="twitter:title" content={pageTitle} />
-        <meta name="twitter:description" content={description} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={title} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
