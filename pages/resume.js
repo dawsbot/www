@@ -12,6 +12,7 @@ class Resume extends Component {
             Leader
           </title>
           <meta
+            key="description"
             name="description"
             content="Resume of Dawson Botsford. CTO, AI strategist, and engineering leader with experience at Bankless, Earnifi, Uber, and more. Expertise in fintech, blockchain, and open source."
           />

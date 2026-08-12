@@ -21,6 +21,7 @@ function BlogPost({ slug }) {
   } = post;
   const url = `https://dawsbot.com/blog/${slug}`;
   const pageTitle = `${title} | Dawson Botsford`;
+  const image = `https://dawsbot.com/og/${slug}.png`;
 
   const structuredData = {
     '@context': 'https://schema.org',
@@ -47,15 +48,31 @@ function BlogPost({ slug }) {
     <main className="zb">
       <Head>
         <title>{pageTitle}</title>
-        <meta name="description" content={description} />
-        {/* Social cards carry the post title only — no authored summary copy. */}
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={title} />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content={url} />
+        <meta key="description" name="description" content={description} />
+        {/* Social cards carry the post title only — no authored summary copy.
+            Keys match the defaults in _app.js so these replace them. */}
+        <meta key="og:title" property="og:title" content={title} />
+        <meta key="og:description" property="og:description" content={title} />
+        <meta key="og:type" property="og:type" content="article" />
+        <meta key="og:url" property="og:url" content={url} />
+        <meta key="og:image" property="og:image" content={image} />
+        <meta property="og:image:width" content="2400" />
+        <meta property="og:image:height" content="1260" />
+        <meta property="og:image:alt" content={title} />
         <meta property="article:published_time" content={date} />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={title} />
+        <meta
+          key="twitter:card"
+          name="twitter:card"
+          content="summary_large_image"
+        />
+        <meta key="twitter:title" name="twitter:title" content={title} />
+        <meta
+          key="twitter:description"
+          name="twitter:description"
+          content={title}
+        />
+        <meta key="twitter:image" name="twitter:image" content={image} />
+        <meta name="twitter:image:alt" content={title} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
