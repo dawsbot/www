@@ -24,6 +24,7 @@
     "build": "next build",
     "now-build": "next build",
     "dev": "next",
+    "og": "node scripts/generate-og.js",
     "start": "next start"
   },
   "devDependencies": {
