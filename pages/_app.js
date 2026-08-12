@@ -20,6 +20,12 @@ function ThemedApp({ Component, pageProps }) {
     router.asPath === '/' ? '' : router.asPath
   }`;
 
+  // /og/* is a screenshot target for `npm run og`, not a page anyone visits:
+  // no nav, no meta, nothing but the card itself in the viewport.
+  if (router.pathname.startsWith('/og/')) {
+    return <Component {...pageProps} />;
+  }
+
   return (
     <>
       <style jsx global>{`
