@@ -33,6 +33,12 @@ CTO at Dark Triangle -- leading AI strategy, engineering, and product developmen
 - **txn.xyz** (https://github.com/dawsbot/txn.xyz): Connect any wallet to web3 instantly.
 - **Skrub** (https://github.com/dawsbot/skrub): Irreversible file deletion on every operating system.
 
+## Writing
+
+Blog: https://dawsbot.com/blog
+
+- **Six Months Without Writing a Line of Code** (https://dawsbot.com/blog/six-months-without-writing-code), August 12, 2026: An honest snapshot of software engineering in 2026 -- full-time vibe-coding, mixing frontier models for AI code review, the convergence of Opus 5 / Sol 5.6 / Grok 4.5, the job market and AI bubble, and running local models on-device with LM Studio.
+
 ## Profiles
 
 - Website: https://dawsbot.com
