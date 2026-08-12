@@ -17,11 +17,11 @@ export const posts = [
   },
   {
     slug: 'kpcb-fellow-jeff-holden',
-    title: `What's it like to be a KPCB Fellow and Hear from Jeff Holden?`,
+    title: `What’s it like to be a KPCB Fellow and Hear from Jeff Holden?`,
     // Originally posted 2015-11-07; published to Medium 2016-07-06.
     date: '2015-11-07',
     dateLabel: 'November 7, 2015',
-    readingTime: '3 min read',
+    readingTime: '2 min read',
     description: `Notes from a Kleiner Perkins Fellows evening with Jeff Holden of Uber.`,
     Body: KpcbFellowJeffHolden,
   },

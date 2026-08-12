@@ -44,7 +44,7 @@ const PostBody = () => (
     <p>
       {`Being a fellow is hard work and hard play — We sailed the San Francisco
       Bay and heard from Jeff Holden of Uber. I want to spend the rest of this
-      post highlighting Jeff Holden's talking points. Many of us forgot to write
+      post highlighting Jeff Holden’s talking points. Many of us forgot to write
       down notes, so this can serve as a notepad to launch back into his ideas.`}
     </p>
     <p>
