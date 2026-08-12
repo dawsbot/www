@@ -9,10 +9,9 @@ export const posts = [
     date: '2026-08-12',
     dateLabel: 'August 12, 2026',
     readingTime: '5 min read',
-    description:
-      'An honest snapshot of software engineering in August 2026: full-time vibe-coding, AI reviewing AI, converged frontier models, and local models that are almost good enough.',
-    standfirst:
-      'What the job actually looks like now that the model is faster than me and writes future bugs.',
+    // Dawson's own words. Never write voiced copy for him — see the blog card,
+    // the subtitle, and the meta/OG description, which all read from here.
+    description: `What it's like today as a software engineer.`,
     Body: SixMonthsWithoutWritingCode,
   },
 ];
