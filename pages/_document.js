@@ -4,14 +4,11 @@ import Document, { Head, Main, NextScript, Html } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 import { renderStaticOptimized } from 'glamor/server';
 
-import { DEFAULT_TITLE } from './_app';
+import { DEFAULT_DESCRIPTION } from './_app';
 import Fonts from '../src/components/presentational/Fonts';
 import { themes, defaultTheme } from '../src/components/themes';
 
 const allFontImports = [themes[defaultTheme].fontImport];
-
-const DEFAULT_DESCRIPTION =
-  'Dawson Botsford is a CTO and engineering leader specializing in AI strategy, fintech infrastructure, and open source software. Builder of neobanking products, Ethereum tools, and developer platforms.';
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -113,9 +110,10 @@ export default class MyDocument extends Document {
           <meta charSet="utf-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
 
-          {/* Primary Meta Tags */}
+          {/* Primary Meta Tags. Social tags (og:*, twitter:*) and the page
+              description live in _app.js so individual pages can override
+              them via next/head keys — see pages/blog/[slug].js. */}
           <meta name="author" content="Dawson Botsford" />
-          <meta name="description" content={DEFAULT_DESCRIPTION} />
           <meta
             name="keywords"
             content="CTO, AI consulting, AI strategy, fintech, neobanking, digital banking, Ethereum, blockchain, web3, open source, JavaScript, TypeScript, React, Node.js, software engineering, technical leadership, fractional CTO, engineering management"
@@ -126,24 +124,10 @@ export default class MyDocument extends Document {
           <meta itemProp="description" content={DEFAULT_DESCRIPTION} />
           <meta itemProp="image" content="https://dawsbot.com/my-face.jpg" />
 
-          {/* Open Graph / Facebook */}
-          <meta property="og:url" content="https://dawsbot.com" />
-          <meta property="og:type" content="website" />
-          <meta property="og:title" content={DEFAULT_TITLE} />
-          <meta property="og:description" content={DEFAULT_DESCRIPTION} />
-          <meta property="og:image" content="https://dawsbot.com/my-face.jpg" />
-          <meta property="og:site_name" content="Dawson Botsford" />
-
-          {/* Twitter Card */}
-          <meta name="twitter:card" content="summary_large_image" />
+          {/* Twitter Card (account attribution; never page-specific) */}
           <meta name="twitter:site" content="@dawsonbotsford" />
           <meta name="twitter:creator" content="@dawsonbotsford" />
-          <meta name="twitter:title" content={DEFAULT_TITLE} />
-          <meta name="twitter:description" content={DEFAULT_DESCRIPTION} />
-          <meta
-            name="twitter:image"
-            content="https://dawsbot.com/my-face.jpg"
-          />
+          <meta property="og:site_name" content="Dawson Botsford" />
 
           {/* Structured Data (JSON-LD) for AI Discovery */}
           <script
