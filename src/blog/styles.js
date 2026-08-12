@@ -44,8 +44,10 @@ export const blogCss = `
 .zb .page-intro { max-width:560px; margin:20px 0 0; font-size:16px; line-height:1.6; color:var(--gray); }
 
 /* index list */
+/* One full-width entry per row, newest first — posts stack rather than
+   reflowing into columns as more are added. */
 .zb .post-grid {
-  display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  display:grid; grid-template-columns:1fr;
   gap:2px; background:var(--ink); border:2px solid var(--ink); margin-top:44px;
 }
 .zb .post-card {
@@ -140,6 +142,31 @@ export const blogCss = `
 .zb .article ul li::before {
   content:""; position:absolute; left:0; top:9px;
   width:11px; height:11px; background:var(--lime); border:2px solid var(--ink);
+}
+.zb .article ol { margin:0 0 24px; padding:0; list-style:none; counter-reset:zb-ol; }
+.zb .article ol li {
+  position:relative; padding-left:52px; margin-bottom:14px;
+  font-size:17px; line-height:1.65; counter-increment:zb-ol;
+}
+.zb .article ol li::before {
+  content:counter(zb-ol); position:absolute; left:0; top:0;
+  min-width:34px; height:26px; padding:0 6px; box-sizing:border-box;
+  background:var(--lime); border:2px solid var(--ink);
+  font-family:var(--hf); font-weight:800; font-size:13px;
+  display:flex; align-items:center; justify-content:center;
+}
+.zb .article figure { margin:0 0 34px; text-align:center; }
+.zb .article figure img {
+  display:block; width:100%; height:auto;
+  border:2px solid var(--ink); background:var(--ink);
+}
+/* Small square assets (logos) stay near their native size rather than being
+   upscaled to the column width, which just makes them soft — centered in the
+   text column instead of hugging the left edge. */
+.zb .article figure.mark { max-width:340px; margin-left:auto; margin-right:auto; }
+.zb .article figcaption {
+  margin-top:10px; font-family:var(--hf); font-weight:700; font-size:11.5px;
+  letter-spacing:1.6px; text-transform:uppercase; color:var(--gray);
 }
 .zb .pull {
   margin:44px 0; padding:28px 30px; background:var(--ink); color:var(--paper);

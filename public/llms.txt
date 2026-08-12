@@ -39,6 +39,8 @@ Blog: https://dawsbot.com/blog
 
 - **Six Months Without Writing a Line of Code** (https://dawsbot.com/blog/six-months-without-writing-code), August 12, 2026: What it's like today as a software engineer. Topics: vibe-coding full-time, mixing frontier models for code review, Opus 5 / Sol 5.6 / Grok 4.5, the job market and AI bubble, and running local models with LMStudio.
 
+- **What's it like to be a KPCB Fellow and Hear from Jeff Holden?** (https://dawsbot.com/blog/kpcb-fellow-jeff-holden), November 7, 2015: Notes from the Kleiner Perkins Fellows program and an evening with Jeff Holden, Chief Product Officer at Uber. Originally published on Medium.
+
 ## Profiles
 
 - Website: https://dawsbot.com
