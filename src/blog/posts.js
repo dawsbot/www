@@ -13,6 +13,14 @@ export const posts = [
     // Dawson's own words. Never write voiced copy for him — see the blog card,
     // the subtitle, and the meta/OG description, which all read from here.
     description: `What it's like today as a software engineer.`,
+    // Factual index labels for llms.txt — not prose, not shown on the site.
+    topics: [
+      'vibe-coding full-time',
+      'mixing frontier models for code review',
+      'Opus 5 / Sol 5.6 / Grok 4.5',
+      'the job market and AI bubble',
+      'running local models with LMStudio',
+    ],
     Body: SixMonthsWithoutWritingCode,
   },
   {
@@ -23,6 +31,12 @@ export const posts = [
     dateLabel: 'November 7, 2015',
     readingTime: '2 min read',
     description: `Notes from a Kleiner Perkins Fellows evening with Jeff Holden of Uber.`,
+    topics: [
+      'the Kleiner Perkins Fellows program',
+      `Jeff Holden's talking points`,
+    ],
+    originalUrl:
+      'https://medium.com/@dawsonbotsford/whats-it-like-to-be-a-kpcb-fellow-and-hear-from-jeff-holden-a38c658cf2c9',
     Body: KpcbFellowJeffHolden,
   },
 ];
