@@ -1,4 +1,11 @@
-# Dawson Botsford
+import { posts } from '../src/blog/posts';
+
+const SITE = 'https://dawsbot.com';
+
+// Everything above the Writing section is hand-maintained profile copy; the
+// Writing section is generated from src/blog/posts.js so a new post shows up
+// here automatically.
+const PROFILE = `# Dawson Botsford
 
 > CTO, AI strategist, and open source engineer
 
@@ -31,19 +38,11 @@ CTO at Dark Triangle -- leading AI strategy, engineering, and product developmen
 - **RelativePath** (https://github.com/dawsbot/RelativePath): VS Code extension for inserting relative file paths.
 - **Vimrc Builder** (https://vimrc-builder.vercel.app): A visual web app for building your perfect vimrc file.
 - **txn.xyz** (https://github.com/dawsbot/txn.xyz): Connect any wallet to web3 instantly.
-- **Skrub** (https://github.com/dawsbot/skrub): Irreversible file deletion on every operating system.
+- **Skrub** (https://github.com/dawsbot/skrub): Irreversible file deletion on every operating system.`;
 
-## Writing
+const PROFILES_AND_CONTACT = `## Profiles
 
-Blog: https://dawsbot.com/blog
-
-- **Six Months Without Writing a Line of Code** (https://dawsbot.com/blog/six-months-without-writing-code), August 12, 2026: What it's like today as a software engineer. Topics: vibe-coding full-time, mixing frontier models for code review, Opus 5 / Sol 5.6 / Grok 4.5, the job market and AI bubble, and running local models with LMStudio.
-
-- **What's it like to be a KPCB Fellow and Hear from Jeff Holden?** (https://dawsbot.com/blog/kpcb-fellow-jeff-holden), November 7, 2015: Notes from the Kleiner Perkins Fellows program and an evening with Jeff Holden, Chief Product Officer at Uber. Originally published on Medium.
-
-## Profiles
-
-- Website: https://dawsbot.com
+- Website: ${SITE}
 - GitHub: https://github.com/dawsbot
 - Twitter: https://twitter.com/dawsonbotsford
 - LinkedIn: https://linkedin.com/in/dawsonbotsford
@@ -55,4 +54,45 @@ University of Colorado
 
 ## Contact
 
-Reach out via the contact form at https://dawsbot.com or connect on any of the profiles above.
+Reach out via the contact form at ${SITE} or connect on any of the profiles above.`;
+
+function postLine(post) {
+  const parts = [
+    `- **${post.title}** (${SITE}/blog/${post.slug}), ${post.dateLabel}: ${post.description}`,
+  ];
+  if (post.topics && post.topics.length > 0) {
+    parts.push(`Topics: ${post.topics.join(', ')}.`);
+  }
+  if (post.originalUrl) {
+    parts.push(`Originally published at ${post.originalUrl}.`);
+  }
+  return parts.join(' ');
+}
+
+export function buildLlmsTxt() {
+  const writing = [
+    '## Writing',
+    '',
+    `Blog: ${SITE}/blog`,
+    '',
+    ...posts.map(postLine),
+  ].join('\n');
+
+  return [PROFILE, writing, PROFILES_AND_CONTACT].join('\n\n') + '\n';
+}
+
+export async function getServerSideProps({ res }) {
+  res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+  res.setHeader(
+    'Cache-Control',
+    'public, s-maxage=3600, stale-while-revalidate',
+  );
+  res.write(buildLlmsTxt());
+  res.end();
+  return { props: {} };
+}
+
+// Never rendered — getServerSideProps writes the response directly.
+export default function LlmsTxt() {
+  return null;
+}

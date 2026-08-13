@@ -49,9 +49,22 @@ Site-wide `og:*` / `twitter:*` defaults live in `pages/_app.js`, each with a
 *replaces* the tag instead of emitting a second one for the scraper to choose
 between. Keep it that way; don't move social defaults back into `_document.js`.
 
+### sitemap.xml and llms.txt are generated
+
+Both are routes — `pages/sitemap.xml.js` and `pages/llms.txt.js` — rendered
+from `src/blog/posts.js`, not static files. Adding a post to the registry puts
+it in both. Don't recreate `public/sitemap.xml` or `public/llms.txt`: a file in
+`public/` shadows the route of the same name and would silently freeze them.
+
+Per-post fields they read: `title`, `slug`, `date`, `dateLabel`, `description`,
+plus optional `topics` (factual index labels) and `originalUrl` (for posts
+republished from elsewhere). The profile copy in `llms.txt.js` above the Writing
+section, and `STATIC_PAGES` in `sitemap.xml.js`, are still hand-maintained.
+
 ### After adding a post
 
 1. Register it in `src/blog/posts.js`
 2. `npm run og`
-3. Add the URL to `public/sitemap.xml` and `public/llms.txt`
-4. `npm run build`
+3. `npm run build`
+
+sitemap.xml and llms.txt update themselves from step 1.
