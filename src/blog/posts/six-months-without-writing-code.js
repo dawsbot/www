@@ -38,7 +38,7 @@ const PostBody = () => (
   <>
     <p>
       {`It's August 12, 2026. I haven't written a line of code in about 6 months.
-      I fulltime "vibe-code" now. It's faster than me and writes future bugs.`}
+      I fulltime "vibe-code" now. It's faster than me and writes fewer bugs.`}
     </p>
 
     <h2>The models have converged</h2>
