@@ -20,6 +20,12 @@ const typedJSOptions = {
 
 export const featuredProjects = [
   {
+    title: 'OnPremises',
+    href: 'https://onpremises.ai',
+    description: 'Private AI, installed and managed in your office.',
+    stars: null,
+  },
+  {
     title: 'Earnifi',
     href: 'https://earni.fi',
     description:

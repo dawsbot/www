@@ -29,6 +29,7 @@ CTO at Dark Triangle -- leading AI strategy, engineering, and product developmen
 
 ## Key Projects and Achievements
 
+- **OnPremises** (https://onpremises.ai): Private AI, installed and managed in your office.
 - **Earnifi** (https://earni.fi): Founded an airdrop checker that found $500M+ for web3 users. Acquired by Bankless.
 - **Essential Eth** (https://github.com/dawsbot/essential-eth): A lightweight alternative to ethers.js and web3.js with 10x smaller bundle size.
 - **Eth Labels** (https://github.com/dawsbot/eth-labels): A public dataset of labeled Ethereum addresses for the crypto ecosystem.
